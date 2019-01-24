@@ -2,14 +2,9 @@
 # System authorization information
 auth --enableshadow --passalgo=sha512
 
-# Network information
-network  --bootproto=dhcp --device=enp7s0 --onboot=on --ipv6=auto --activate
-network  --hostname=localhost.localdomain
-
-
 # Use network installation
+url --url="http://172.28.0.253/centos7_x64"
 # Run the Setup Agent on first boot
-url --url=http://172.28.0.253/centos7_x64
 firstboot --enable
 ignoredisk --only-use=sda
 # Keyboard layouts
@@ -17,6 +12,9 @@ keyboard --vckeymap=fi --xlayouts='fi'
 # System language
 lang en_US.UTF-8
 
+# Network information
+network  --bootproto=dhcp --device=ens160 --onboot=off --ipv6=auto --no-activate
+network  --hostname=localhost.localdomain
 
 # Root password
 rootpw --iscrypted $6$By.2MM8JmkSX52rp$RGjoTFQbUtC7033UJY57NFbDS7z1Hzd3HPMIMqsGmDC9oYmK12TvAHWWz4oLWHOjaqGiPhN6wAXZrKeV8Y4Pz/
@@ -29,8 +27,7 @@ user --groups=wheel --name=user --password=$6$7OokYJlwNWuZ9B5j$TXMoHD69Z67sKzets
 bootloader --append=" crashkernel=auto" --location=mbr --boot-drive=sda
 autopart --type=lvm
 # Partition clearing information
-clearpart --all
-reboot
+clearpart --none --initlabel
 
 %packages
 @^minimal
