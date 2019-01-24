@@ -33,8 +33,8 @@ systemctl enable docker
 systemctl start docker
 
 # Install Docker Compose
-yum install epel-release
+yum install -y epel-release
 yum install -y python-pip
 pip install docker-compose
 pip install --upgrade pip
-yum upgrade python*
+yum upgrade -y python*
