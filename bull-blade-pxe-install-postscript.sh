@@ -3,13 +3,39 @@
 #description:  This script is run after the PXE-install of KAMK Bull blades
 #ogranization: Kajaani University of Applied Sciences (KAMK)
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
-#author:       Jukka Jurvansuu
+#author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
 #created:      2019-01-24
-#modified:     2019-01-24
-#version:      1.0    
+#modified:     2019-01-27
+#version:      1.2
 #usage:        bash bull-blade-pxe-install-postscript.sh
 #OS:           CentOS 7
 #==============================================================================
+
+### Install tools and useful utilities
+yum install -y epel-release
+yum update -y
+
+### Install NVIDIA Driver
+
+# Development tools should be installed at the Kickstart for the NVIDIA script
+# yum groupinstall -y "Development Tools"
+# yum install -y kernel-devel
+# yum install -y kernel-headers
+
+# Unload nouveau driver to not conflict with the installation of the NVIDIA driver
+# https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-centos-7-linux
+rmmod nouveau
+
+# Disable nouveau driver at grub file 
+# https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-centos-7-linux
+# grub2-mkconfig -o /boot/grub2/grub.cfg
+# grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
+
+# Install NVIDIA driver
+cd /root
+yum install -y dkms
+wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
+sh NVIDIA-Linux-x86_64-410.79.run -s
 
 ### Docker installation
 
