@@ -17,25 +17,31 @@ yum update -y
 
 ### Install NVIDIA Driver
 
-# Development tools should be installed at the Kickstart for the NVIDIA script
+# Development tools should be installed at the Kickstart for the NVIDIA script because this install cannot find
+## kernel-devel and kernel-headers for the default kernel version
 # yum groupinstall -y "Development Tools"
-# yum install -y kernel-devel
-# yum install -y kernel-headers
+# yum install -y kernel-devel-$(uname -r)
+# yum install -y kernel-headers-$(uname -r)
 
 # Unload nouveau driver to not conflict with the installation of the NVIDIA driver
 # https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-centos-7-linux
 rmmod nouveau
 
-# Disable nouveau driver at grub file 
+# Disable nouveau driver from the grub file and generates a configuration files for GRUB
 # https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-centos-7-linux
-# grub2-mkconfig -o /boot/grub2/grub.cfg
-# grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
+sed -ri 's/GRUB_CMDLINE_LINUX="/GRUB_CMDLINE_LINUX="nouveau.modeset=0 rd.driver.blacklist=nouveau /g' /etc/default/grub
+grub2-mkconfig -o /boot/grub2/grub.cfg
+grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 
 # Install NVIDIA driver
 cd /root
 yum install -y dkms
 wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
 sh NVIDIA-Linux-x86_64-410.79.run -s
+
+# Info: How to test NVIDIA driver
+# lshw -numeric -C display
+# nvidia-smi
 
 ### Docker installation
 
