@@ -16,8 +16,7 @@ ignoredisk --only-use=sda
 keyboard --vckeymap=fi --xlayouts='fi'
 # System language
 lang en_US.UTF-8
-# Perform the Kickstart installation in text mode. Kickstart installations are performed in graphical mode by defaul
-text
+
 
 # Root password
 rootpw --iscrypted $6$By.2MM8JmkSX52rp$RGjoTFQbUtC7033UJY57NFbDS7z1Hzd3HPMIMqsGmDC9oYmK12TvAHWWz4oLWHOjaqGiPhN6wAXZrKeV8Y4Pz/
@@ -40,7 +39,7 @@ kexec-tools
 kernel-devel
 kernel-headers
 wget
-#nano
+nano
 
 %end
 
