@@ -1,0 +1,6 @@
+Alias /centos7_x64 /var/lib/tftpboot/centos7_x64/
+
+<Directory /var/lib/tftpboot/centos7_x64>
+Options Indexes FollowSymLinks
+Require all granted
+</Directory>

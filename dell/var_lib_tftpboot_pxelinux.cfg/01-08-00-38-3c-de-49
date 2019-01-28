@@ -1,0 +1,18 @@
+default menu.c32
+prompt 0
+timeout 30
+ONTIMEOUT 2
+
+menu title ########## PXE Boot Menu ##########
+
+label 1
+menu label ^1) Install CentOS 7 and kickstart ma hart
+kernel centos7_x64/images/pxeboot/vmlinuz
+append initrd=centos7_x64/images/pxeboot/initrd.img inst.ks=http://172.28.0.253/centos7_x64/anaconda-ks.cfg
+
+
+label 2
+menu label ^2) Boot from local drive localboot
+#LOCALBOOT 0
+COM32 chain.c32
+APPEND hd0

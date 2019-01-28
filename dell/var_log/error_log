@@ -1,0 +1,29 @@
+[Sun Jan 27 03:28:01.739389 2019] [auth_digest:notice] [pid 1325] AH01757: generating secret for digest authentication ...
+[Sun Jan 27 03:28:01.740290 2019] [lbmethod_heartbeat:notice] [pid 1325] AH02282: No slotmem from mod_heartmonitor
+[Sun Jan 27 03:28:01.740369 2019] [mpm_prefork:notice] [pid 1325] AH00163: Apache/2.4.6 (CentOS) configured -- resuming normal operations
+[Sun Jan 27 03:28:01.740376 2019] [core:notice] [pid 1325] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Jan 28 10:45:46.736076 2019] [autoindex:error] [pid 35889] [client 10.50.40.13:61684] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html) found, and server-generated directory index forbidden by Options directive
+[Mon Jan 28 11:53:28.014151 2019] [mpm_prefork:notice] [pid 1325] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jan 28 11:53:29.153345 2019] [core:notice] [pid 33984] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Mon Jan 28 11:53:29.154320 2019] [suexec:notice] [pid 33984] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::d789:8a1e:ee08:e1bf. Set the 'ServerName' directive globally to suppress this message
+[Mon Jan 28 11:53:29.219162 2019] [auth_digest:notice] [pid 33984] AH01757: generating secret for digest authentication ...
+[Mon Jan 28 11:53:29.219937 2019] [lbmethod_heartbeat:notice] [pid 33984] AH02282: No slotmem from mod_heartmonitor
+[Mon Jan 28 11:53:29.222540 2019] [mpm_prefork:notice] [pid 33984] AH00163: Apache/2.4.6 (CentOS) configured -- resuming normal operations
+[Mon Jan 28 11:53:29.222566 2019] [core:notice] [pid 33984] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Jan 28 14:03:34.950887 2019] [mpm_prefork:notice] [pid 33984] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jan 28 14:03:36.080224 2019] [core:notice] [pid 41473] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Mon Jan 28 14:03:36.081186 2019] [suexec:notice] [pid 41473] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::d789:8a1e:ee08:e1bf. Set the 'ServerName' directive globally to suppress this message
+[Mon Jan 28 14:03:36.144239 2019] [auth_digest:notice] [pid 41473] AH01757: generating secret for digest authentication ...
+[Mon Jan 28 14:03:36.145086 2019] [lbmethod_heartbeat:notice] [pid 41473] AH02282: No slotmem from mod_heartmonitor
+[Mon Jan 28 14:03:36.148043 2019] [mpm_prefork:notice] [pid 41473] AH00163: Apache/2.4.6 (CentOS) configured -- resuming normal operations
+[Mon Jan 28 14:03:36.148067 2019] [core:notice] [pid 41473] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon Jan 28 14:13:21.630378 2019] [mpm_prefork:notice] [pid 41473] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jan 28 14:13:22.760849 2019] [core:notice] [pid 42228] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Mon Jan 28 14:13:22.762553 2019] [suexec:notice] [pid 42228] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::d789:8a1e:ee08:e1bf. Set the 'ServerName' directive globally to suppress this message
+[Mon Jan 28 14:13:22.838533 2019] [auth_digest:notice] [pid 42228] AH01757: generating secret for digest authentication ...
+[Mon Jan 28 14:13:22.839999 2019] [lbmethod_heartbeat:notice] [pid 42228] AH02282: No slotmem from mod_heartmonitor
+[Mon Jan 28 14:13:22.844955 2019] [mpm_prefork:notice] [pid 42228] AH00163: Apache/2.4.6 (CentOS) configured -- resuming normal operations
+[Mon Jan 28 14:13:22.844996 2019] [core:notice] [pid 42228] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
