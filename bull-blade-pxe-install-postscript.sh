@@ -5,8 +5,8 @@
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
 #author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
 #created:      2019-01-24
-#modified:     2019-01-27
-#version:      1.2
+#modified:     2019-01-28
+#version:      1.3
 #usage:        bash bull-blade-pxe-install-postscript.sh
 #OS:           CentOS 7
 #==============================================================================
@@ -16,6 +16,7 @@
 #==============================================================================
 
 yum install -y epel-release
+yum install -y nano
 yum install -y telnet
 yum update -y
 
