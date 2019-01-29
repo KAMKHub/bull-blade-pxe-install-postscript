@@ -15,7 +15,14 @@
 # Install tools, useful utilities and settings
 #==============================================================================
 
-#yum update -y
+# Set time zone and NTP
+## Check settings: timedatectl
+yum -y install ntp
+chkconfig ntpd on
+service ntpd start
+timedatectl set-timezone Europe/Helsinki
+
+yum update -y
 yum install -y epel-release
 yum install -y nano
 yum install -y telnet
@@ -26,13 +33,6 @@ sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
 # Disable Firewall
 systemctl stop firewalld
 systemctl disable firewalld
-
-# Set time zone and NTP
-## Check settings: timedatectl
-yum -y install ntp
-chkconfig ntpd on
-service ntpd start
-timedatectl set-timezone Europe/Helsinki
 
 #==============================================================================
 # Install NVIDIA Driver
