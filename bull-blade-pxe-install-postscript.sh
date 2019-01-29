@@ -22,7 +22,6 @@ chkconfig ntpd on
 service ntpd start
 timedatectl set-timezone Europe/Helsinki
 
-yum update -y
 yum install -y epel-release
 yum install -y nano
 yum install -y telnet
@@ -102,3 +101,9 @@ yum install -y python-pip
 pip install docker-compose
 pip install --upgrade pip
 yum upgrade -y python*
+
+#==============================================================================
+# Install updates at the end of the script
+#==============================================================================
+
+yum update -y
