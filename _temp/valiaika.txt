@@ -1,1 +1,0 @@
-wget http://172.28.0.253/centos7_x64_everything_1804/cudnn-10.0-linux-x64-v7.4.2.24.tgz

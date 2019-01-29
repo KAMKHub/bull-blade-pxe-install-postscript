@@ -118,7 +118,7 @@ wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cu
 rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
 
 #==============================================================================
-# Verifying cuDNN Installation
+# Info: Verifying cuDNN Installation
 #==============================================================================
 
 # mkdir /root/cudnntest
@@ -171,6 +171,5 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.re
 yum install -y nvidia-docker2
 pkill -SIGHUP dockerd
 
-# Test nvidia-smi with the latest official CUDA image
+# Info: Test nvidia-smi with the latest official CUDA image
 # docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
-
