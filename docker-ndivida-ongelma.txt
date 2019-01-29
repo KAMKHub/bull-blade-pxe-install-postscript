@@ -1,6 +1,6 @@
 ==== NVIDIA Container Runtime for Docker ====
 
-Bladen boottauksen jälkeen yritän saada Dockerin CUDA-imagea toimimaanm, mutta antaa virheen (alla). Asennus on alla, muyös linikit sivuille. JJ/29.1.2019
+Bladen boottauksen jälkeen yritän saada Dockerin CUDA-imagea toimimaan, mutta antaa virheen (alla). Asennus on alla, muyös linikit sivuille. JJ/29.1.2019
 
 Linkit:
 * https://devblogs.nvidia.com/nvidia-docker-gpu-server-application-deployment-made-easy/
