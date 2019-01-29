@@ -67,7 +67,10 @@ sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 # lshw -numeric -C display
 # nvidia-smi
 
+#==============================================================================
 # Install CUDA Toolkit using repository and set path
+#==============================================================================
+
 cd /root
 wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-10.0.130-1.x86_64.rpm
 rpm -i cuda-repo-*.rpm
@@ -90,6 +93,40 @@ echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/
 # cd /usr/local/cuda/samples/1_Utilities/bandwidthTest
 # make
 # ./bandwidthTest
+
+#==============================================================================
+# Install cuDNN Runtime Library for RedHat/Centos 7.3 (RPM)
+#==============================================================================
+
+cd /root
+wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
+rpm -Uvh libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
+
+#==============================================================================
+# Install cuDNN Developer Library for RedHat/Centos 7.3 (RPM)
+#==============================================================================
+
+cd /root
+wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
+rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
+
+#==============================================================================
+# Install cuDNN Code Samples and User Guide for RedHat/Centos 7.3 (RPM)
+#==============================================================================
+
+wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
+rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
+
+#==============================================================================
+# Verifying cuDNN Installation
+#==============================================================================
+
+# mkdir /root/cudnntest
+# cd /root/cudnntest
+# cp -r /usr/src/cudnn_samples_v7/ /root/cudnntest
+# cd /root/cudnntest/cudnn_samples_v7/mnistCUDNN
+# make clean && make
+# ./mnistCUDNN
 
 #==============================================================================
 # Docker installation
@@ -136,3 +173,4 @@ pkill -SIGHUP dockerd
 
 # Test nvidia-smi with the latest official CUDA image
 # docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+
