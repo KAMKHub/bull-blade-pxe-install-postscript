@@ -5,14 +5,14 @@
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
 #author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
 #created:      2019-01-24
-#modified:     2019-01-28
-#version:      1.3
+#modified:     2019-01-29
+#version:      1.4
 #usage:        bash bull-blade-pxe-install-postscript.sh
 #OS:           CentOS 7
 #==============================================================================
 
 #==============================================================================
-# Install tools and useful utilities
+# Install tools, useful utilities and settings
 #==============================================================================
 
 #yum update -y
@@ -26,6 +26,13 @@ sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
 # Disable Firewall
 systemctl stop firewalld
 systemctl disable firewalld
+
+# Set time zone and NTP
+## Check settings: timedatectl
+yum -y install ntp
+chkconfig ntpd on
+service ntpd start
+timedatectl set-timezone Europe/Helsinki
 
 #==============================================================================
 # Install NVIDIA Driver
