@@ -9,6 +9,10 @@
 #version:      1.4
 #usage:        bash bull-blade-pxe-install-postscript.sh
 #OS:           CentOS 7
+#attention:    It is not allowed to run "yum update -y" in order to complete
+#              NVIDIA Driver installation successfully. The update will install
+#              incompatible kernel-headers and NVIDIA Driver installation
+#              fails.
 #==============================================================================
 
 #==============================================================================
@@ -53,24 +57,39 @@ sed -ri 's/GRUB_CMDLINE_LINUX="/GRUB_CMDLINE_LINUX="nouveau.modeset=0 rd.driver.
 grub2-mkconfig -o /boot/grub2/grub.cfg
 grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 
-# A) Install NVIDIA driver from the source
+# Install NVIDIA driver from the source (required approach for CentOT 7).
 cd /root
 yum install -y dkms
 wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
 sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 
-# B) Install NVIDIA driver and CUDA Toolkit using repository
-## NOT WORKING WITH CENTOS 7
-# cd /root
-# wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-10.0.130-1.x86_64.rpm
-# rpm -i cuda-repo-*.rpm
-# yum install cuda
-# export PATH=/usr/local/cuda/bin:$PATH
-# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-
 # Info: How to test NVIDIA driver
 # lshw -numeric -C display
 # nvidia-smi
+
+# Install CUDA Toolkit using repository and set path
+cd /root
+wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-10.0.130-1.x86_64.rpm
+rpm -i cuda-repo-*.rpm
+yum install -y cuda
+rm -f /etc/profile.d/cudapath.sh
+touch /etc/profile.d/cudapath.sh
+echo "PATH=/usr/local/cuda/bin:$PATH" > /etc/profile.d/cudapath.sh
+echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/cudapath.sh
+
+# Info: Verify driver version by looking at:
+# cat /proc/driver/nvidia/version
+
+# Info: Verify the CUDA Toolkit version
+# nvcc -V
+
+# Info: Verify running CUDA GPU jobs by compiling the samples and executing the deviceQuery or bandwidthTest programs
+# cd /usr/local/cuda/samples/1_Utilities/deviceQuery
+# make
+# ./deviceQuery
+# cd /usr/local/cuda/samples/1_Utilities/bandwidthTest
+# make
+# ./bandwidthTest
 
 #==============================================================================
 # Docker installation
@@ -103,7 +122,17 @@ pip install --upgrade pip
 yum upgrade -y python*
 
 #==============================================================================
-# Install updates at the end of the script
+# Install NVIDIA Container Runtime for Docker
 #==============================================================================
 
-#yum update -y
+## Add the package repositories
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.repo | \
+  sudo tee /etc/yum.repos.d/nvidia-docker.repo
+
+# Install nvidia-docker2 and reload the Docker daemon configuration
+yum install -y nvidia-docker2
+pkill -SIGHUP dockerd
+
+# Test nvidia-smi with the latest official CUDA image
+# docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
