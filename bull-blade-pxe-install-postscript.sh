@@ -57,7 +57,7 @@ grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 cd /root
 yum install -y dkms
 wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
-sh NVIDIA-Linux-x86_64-410.79.run -s
+sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 
 # B) Install NVIDIA driver and CUDA Toolkit using repository
 ## NOT WORKING WITH CENTOS 7
@@ -106,4 +106,4 @@ yum upgrade -y python*
 # Install updates at the end of the script
 #==============================================================================
 
-yum update -y
+#yum update -y
