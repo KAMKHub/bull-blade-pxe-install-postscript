@@ -1,0 +1,389 @@
+Blade62 kadotti yhteyden klo 15:46 ja löysi sen uudelleen klo 19:20
+- tätä ennen chassikseen oli asetettu NTP, mutta ei tuohon aikaan
+- blade lähettää reqeestin muutaman sekunnin välein
+- klo 19:54 requestien määrä väheni
+- testaus blade62:lla: journalctl -u NetworkManager
+
+Jan 30 15:46:30 bsuper dhcpd[47034]: DHCPOFFER on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+Jan 30 15:46:30 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 (172.28.0.253) from 08:00:38:3c:dd:d1 via eno1
+Jan 30 15:46:30 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 19:20:20 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:20:20 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:20:24 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:20:24 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:20:32 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:20:32 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 19:52:12 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:52:12 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:54:23 bsuper dhcpd[47034]: DHCPDISCOVER from 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:54:23 bsuper dhcpd[47034]: DHCPOFFER on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:54:23 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 (172.28.0.253) from 08:00:38:3c:dd:d1 via eno1
+Jan 30 19:54:23 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 20:20:14 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 20:20:14 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 20:43:40 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 20:43:40 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 21:10:39 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 21:10:39 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 21:40:23 bsuper dhcpd[47034]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 21:40:23 bsuper dhcpd[47034]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 22:07:22 bsuper dhcpd[19502]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 22:07:22 bsuper dhcpd[19502]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 22:30:51 bsuper dhcpd[19984]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 22:30:51 bsuper dhcpd[19984]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+Jan 30 22:54:12 bsuper dhcpd[19984]: DHCPREQUEST for 172.28.200.62 from 08:00:38:3c:dd:d1 via eno1
+Jan 30 22:54:12 bsuper dhcpd[19984]: DHCPACK on 172.28.200.62 to 08:00:38:3c:dd:d1 via eno1
+
+------
+
+Jan 30 15:46:44 blade62 dracut[2789]: Omitting driver nvidia_uvm
+Jan 30 15:46:44 blade62 dracut[2789]: Omitting driver nvidia
+Jan 30 15:46:46 blade62 containerd[1326]: time="2019-01-30T15:46:46.330601478+02:00" level=info msg="starting containerd" revision=9754871865f7fe2f4e74d43e2fc7ccd237edcbce version=1.2
+Jan 30 15:46:46 blade62 containerd[1326]: time="2019-01-30T15:46:46.392328731+02:00" level=info msg="loading plugin "io.containerd.content.v1.content"..." type=io.containerd.content.v
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.8030] dhcp4 (enp5s0f0):   nameserver '1.0.0.1'
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.8030] dhcp4 (enp5s0f0): state changed unknown -> bound
+Jan 30 18:52:21 localhost.localdomain dhclient[958]: bound to 172.28.200.62 -- renewal in 1679 seconds.
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.8302] device (enp5s0f0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.8314] device (enp5s0f0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.8318] device (enp5s0f0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'manage
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.8320] manager: NetworkManager state is now CONNECTED_LOCAL
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.8327] manager: NetworkManager state is now CONNECTED_SITE
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.8328] policy: set 'System enp5s0f0' (enp5s0f0) as default for IPv4 routing and DNS
+Jan 30 18:52:21 blade62 NetworkManager[842]: <info>  [1548867141.8330] policy: set-hostname: set hostname to 'blade62' (from DHCPv4)
+Jan 30 18:52:21 blade62 systemd-hostnamed[931]: Changed host name to 'blade62'
+Jan 30 18:52:21 blade62 NetworkManager[842]: <info>  [1548867141.8975] device (enp5s0f0): Activation: successful, device activated.
+Jan 30 18:52:21 blade62 NetworkManager[842]: <info>  [1548867141.8996] manager: NetworkManager state is now CONNECTED_GLOBAL
+Jan 30 18:52:21 blade62 nm-dispatcher[939]: req:2 'up' [enp5s0f0]: new request (2 scripts)
+Jan 30 18:52:21 blade62 nm-dispatcher[939]: req:2 'up' [enp5s0f0]: start running ordered scripts...
+Jan 30 18:52:21 blade62 nm-dispatcher[939]: req:3 'hostname': new request (2 scripts)
+Jan 30 18:52:21 blade62 nm-dispatcher[939]: req:4 'connectivity-change': new request (2 scripts)
+Jan 30 18:52:21 blade62 ntpd[908]: ntpd exiting on signal 15
+Jan 30 18:52:21 blade62 systemd[1]: Stopping Network Time Service...
+Jan 30 18:52:21 blade62 ntpd_intres[909]: ntpd exiting on signal 15
+Jan 30 18:52:22 blade62 systemd[1]: Starting Network Time Service...
+
+# Tässä kello on 6 tuntia pielessä
+Jan 30 18:52:22 blade62 ntpd[1000]: ntpd 4.2.6p5@1.2349-o Fri Apr 13 12:52:27 UTC 2018 (1)
+
+Jan 30 18:52:22 blade62 systemd[1]: Started Network Time Service.
+Jan 30 18:52:22 blade62 ntpd[1001]: proto: precision = 0.073 usec
+Jan 30 18:52:22 blade62 ntpd[1001]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+Jan 30 18:52:22 blade62 nm-dispatcher[939]: req:3 'hostname': start running ordered scripts...
+Jan 30 18:52:22 blade62 ntpd[1001]: ntp_io: estimated max descriptors: 1024, initial socket boundary: 16
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen and drop on 1 v6wildcard :: UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen normally on 2 lo 127.0.0.1 UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen normally on 3 enp5s0f0 172.28.200.62 UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen normally on 4 lo ::1 UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listening on routing socket on fd #21 for interface updates
+Jan 30 18:52:22 blade62 nm-dispatcher[939]: req:4 'connectivity-change': start running ordered scripts...
+Jan 30 18:52:22 blade62 ntpd[1001]: 0.0.0.0 c016 06 restart
+Jan 30 18:52:22 blade62 ntpd[1001]: 0.0.0.0 c012 02 freq_set kernel 0.000 PPM
+Jan 30 18:52:22 blade62 ntpd[1001]: 0.0.0.0 c011 01 freq_not_set
+Jan 30 18:52:22 blade62 systemd[1]: Started Builds and install new kernel modules through DKMS.
+Jan 30 18:52:25 blade62 ntpd[1001]: Listen normally on 5 enp5s0f0 fe80::a00:38ff:fe3c:ddd1 UDP 123
+Jan 30 18:52:25 blade62 ntpd[1001]: new interface(s) found: waking up resolver
+Jan 30 18:52:27 blade62 NetworkManager[842]: <info>  [1548867147.2835] manager: startup complete
+Jan 30 18:52:27 blade62 systemd[1]: Started Network Manager Wait Online.
+Jan 30 18:52:27 blade62 systemd[1]: Starting LSB: Bring up/down networking...
+Jan 30 18:52:27 blade62 network[1105]: Bringing up loopback interface:  [  OK  ]
+Jan 30 18:52:28 blade62 network[1105]: Bringing up interface enp5s0f0:  [  OK  ]
+Jan 30 18:52:28 blade62 systemd[1]: Started LSB: Bring up/down networking.
+Jan 30 18:52:28 blade62 systemd[1]: Reached target Network.
+Jan 30 18:52:28 blade62 systemd[1]: Starting Network.
+Jan 30 18:52:28 blade62 systemd[1]: Reached target Network is Online.
+Jan 30 18:52:28 blade62 systemd[1]: Starting Network is Online.
+Jan 30 18:52:28 blade62 systemd[1]: Starting Crash recovery kernel arming...
+Jan 30 18:52:28 blade62 systemd[1]: Starting Docker Application Container Engine...
+Jan 30 18:52:28 blade62 systemd[1]: Starting OpenSSH server daemon...
+Jan 30 18:52:28 blade62 systemd[1]: Starting Dynamic System Tuning Daemon...
+Jan 30 18:52:28 blade62 systemd[1]: Starting System Logging Service...
+Jan 30 18:52:28 blade62 systemd[1]: Starting containerd container runtime...
+Jan 30 18:52:28 blade62 systemd[1]: Starting Postfix Mail Transport Agent...
+Jan 30 18:52:28 blade62 systemd[1]: Started containerd container runtime.
+Jan 30 18:52:28 blade62 sshd[1272]: Server listening on 0.0.0.0 port 22.
+Jan 30 18:52:28 blade62 sshd[1272]: Server listening on :: port 22.
+Jan 30 18:52:28 blade62 systemd[1]: Started OpenSSH server daemon.
+
+# Tässä vaihtuu kellon aika
+Jan 30 18:52:29 blade62 ntpd[1001]: 0.0.0.0 c61c 0c clock_step -11151.669354 s
+Jan 30 15:46:37 blade62 ntpd[1001]: 0.0.0.0 c614 04 freq_mode
+
+Jan 30 15:46:37 blade62 systemd[1]: Time has been changed
+Jan 30 15:46:37 blade62 rsyslogd[1274]:  [origin software="rsyslogd" swVersion="8.24.0" x-pid="1274" x-info="http://www.rsyslog.com"] start
+Jan 30 15:46:37 blade62 systemd[1]: Started System Logging Service.
+Jan 30 15:46:37 blade62 kdumpctl[1270]: No kdump initial ramdisk found.
+Jan 30 15:46:37 blade62 kdumpctl[1270]: Rebuilding /boot/initramfs-3.10.0-862.el7.x86_64kdump.img
+Jan 30 15:46:38 blade62 ntpd[1001]: 0.0.0.0 c618 08 no_sys_peer
+Jan 30 15:46:38 blade62 postfix/postfix-script[2345]: starting the Postfix mail system
+Jan 30 15:46:39 blade62 postfix/master[2437]: daemon started -- version 2.10.1, configuration /etc/postfix
+Jan 30 15:46:39 blade62 systemd[1]: Started Postfix Mail Transport Agent.
+Jan 30 15:46:39 blade62 dracut[2787]: dracut-033-535.el7
+
+
+[root@blade62 ~]# journalctl -u ntpd
+-- Logs begin at Wed 2019-01-30 18:52:02 EET, end at Wed 2019-01-30 23:24:06 EET. --
+Jan 30 18:52:18 localhost.localdomain systemd[1]: Starting Network Time Service...
+Jan 30 18:52:18 localhost.localdomain ntpd[860]: ntpd 4.2.6p5@1.2349-o Fri Apr 13 12:52:27 UTC 2018 (1)
+Jan 30 18:52:18 localhost.localdomain systemd[1]: Started Network Time Service.
+Jan 30 18:52:18 localhost.localdomain ntpd[908]: proto: precision = 0.083 usec
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: ntp_io: estimated max descriptors: 1024, initial socket boundary: 16
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Listen and drop on 1 v6wildcard :: UDP 123
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Listen normally on 2 lo 127.0.0.1 UDP 123
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Listen normally on 3 lo ::1 UDP 123
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Listening on routing socket on fd #20 for interface updates
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Deferring DNS for 0.centos.pool.ntp.org 1
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Deferring DNS for 1.centos.pool.ntp.org 1
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Deferring DNS for 2.centos.pool.ntp.org 1
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: Deferring DNS for 3.centos.pool.ntp.org 1
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: 0.0.0.0 c016 06 restart
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: 0.0.0.0 c012 02 freq_set kernel 0.000 PPM
+Jan 30 18:52:19 localhost.localdomain ntpd[908]: 0.0.0.0 c011 01 freq_not_set
+Jan 30 18:52:19 localhost.localdomain ntpd[909]: signal_no_reset: signal 17 had flags 4000000
+Jan 30 18:52:21 localhost.localdomain ntpd_intres[909]: host name not found: 0.centos.pool.ntp.org
+Jan 30 18:52:21 localhost.localdomain ntpd_intres[909]: host name not found: 1.centos.pool.ntp.org
+Jan 30 18:52:21 localhost.localdomain ntpd_intres[909]: host name not found: 2.centos.pool.ntp.org
+Jan 30 18:52:21 localhost.localdomain ntpd_intres[909]: host name not found: 3.centos.pool.ntp.org
+Jan 30 18:52:21 blade62 ntpd[908]: ntpd exiting on signal 15
+Jan 30 18:52:21 blade62 systemd[1]: Stopping Network Time Service...
+Jan 30 18:52:21 blade62 ntpd_intres[909]: ntpd exiting on signal 15
+Jan 30 18:52:22 blade62 systemd[1]: Starting Network Time Service...
+Jan 30 18:52:22 blade62 ntpd[1000]: ntpd 4.2.6p5@1.2349-o Fri Apr 13 12:52:27 UTC 2018 (1)
+Jan 30 18:52:22 blade62 systemd[1]: Started Network Time Service.
+Jan 30 18:52:22 blade62 ntpd[1001]: proto: precision = 0.073 usec
+Jan 30 18:52:22 blade62 ntpd[1001]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+Jan 30 18:52:22 blade62 ntpd[1001]: ntp_io: estimated max descriptors: 1024, initial socket boundary: 16
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen and drop on 1 v6wildcard :: UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen normally on 2 lo 127.0.0.1 UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen normally on 3 enp5s0f0 172.28.200.62 UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listen normally on 4 lo ::1 UDP 123
+Jan 30 18:52:22 blade62 ntpd[1001]: Listening on routing socket on fd #21 for interface updates
+Jan 30 18:52:22 blade62 ntpd[1001]: 0.0.0.0 c016 06 restart
+Jan 30 18:52:22 blade62 ntpd[1001]: 0.0.0.0 c012 02 freq_set kernel 0.000 PPM
+Jan 30 18:52:22 blade62 ntpd[1001]: 0.0.0.0 c011 01 freq_not_set
+Jan 30 18:52:25 blade62 ntpd[1001]: Listen normally on 5 enp5s0f0 fe80::a00:38ff:fe3c:ddd1 UDP 123
+Jan 30 18:52:25 blade62 ntpd[1001]: new interface(s) found: waking up resolver
+Jan 30 18:52:29 blade62 ntpd[1001]: 0.0.0.0 c61c 0c clock_step -11151.669354 s
+Jan 30 15:46:37 blade62 ntpd[1001]: 0.0.0.0 c614 04 freq_mode
+Jan 30 15:46:38 blade62 ntpd[1001]: 0.0.0.0 c618 08 no_sys_peer
+Jan 30 15:46:53 blade62 ntpd[1001]: Listen normally on 6 docker0 172.17.0.1 UDP 123
+Jan 30 15:46:53 blade62 ntpd[1001]: new interface(s) found: waking up resolver
+Jan 30 16:02:29 blade62 ntpd[1001]: 0.0.0.0 c612 02 freq_set kernel -103.756 PPM
+Jan 30 16:02:29 blade62 ntpd[1001]: 0.0.0.0 c615 05 clock_sync
+Jan 30 16:46:31 localhost.localdomain ntpd[1001]: Deleting interface #3 enp5s0f0, 172.28.200.62#123, interface stats: received=220, sent=234, dropped=0, active_time=3601 secs
+Jan 30 16:46:31 localhost.localdomain ntpd[1001]: 194.100.49.139 interface 172.28.200.62 -> (none)
+Jan 30 16:46:31 localhost.localdomain ntpd[1001]: 193.166.4.60 interface 172.28.200.62 -> (none)
+Jan 30 16:46:31 localhost.localdomain ntpd[1001]: 62.236.120.71 interface 172.28.200.62 -> (none)
+Jan 30 16:46:31 localhost.localdomain ntpd[1001]: 194.100.100.151 interface 172.28.200.62 -> (none)
+Jan 30 16:46:31 localhost.localdomain ntpd[1001]: 213.28.138.38 interface 172.28.200.62 -> (none)
+Jan 30 17:03:09 localhost.localdomain ntpd[1001]: 0.0.0.0 0618 08 no_sys_peer
+Jan 30 19:54:25 blade62 ntpd[1001]: Listen normally on 7 enp5s0f0 172.28.200.62 UDP 123
+Jan 30 19:54:25 blade62 ntpd[1001]: new interface(s) found: waking up resolver
+Jan 30 22:07:22 blade62 ntpd[1001]: ntpd exiting on signal 15
+Jan 30 22:07:22 blade62 systemd[1]: Stopping Network Time Service...
+Jan 30 22:07:22 blade62 systemd[1]: Starting Network Time Service...
+Jan 30 22:07:22 blade62 systemd[1]: Started Network Time Service.
+Jan 30 22:07:22 blade62 ntpd[44851]: proto: precision = 0.046 usec
+Jan 30 22:07:22 blade62 ntpd[44851]: 0.0.0.0 c01d 0d kern kernel time sync enabled
+Jan 30 22:07:22 blade62 ntpd[44851]: ntp_io: estimated max descriptors: 1024, initial socket boundary: 16
+Jan 30 22:07:22 blade62 ntpd[44851]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Jan 30 22:07:22 blade62 ntpd[44851]: Listen and drop on 1 v6wildcard :: UDP 123
+Jan 30 22:07:22 blade62 ntpd[44851]: Listen normally on 2 lo 127.0.0.1 UDP 123
+Jan 30 22:07:22 blade62 ntpd[44851]: Listen normally on 3 enp5s0f0 172.28.200.62 UDP 123
+Jan 30 22:07:22 blade62 ntpd[44851]: Listen normally on 4 docker0 172.17.0.1 UDP 123
+Jan 30 22:07:22 blade62 ntpd[44851]: Listen normally on 5 lo ::1 UDP 123
+Jan 30 22:07:22 blade62 ntpd[44851]: Listen normally on 6 enp5s0f0 fe80::a00:38ff:fe3c:ddd1 UDP 123
+Jan 30 22:07:22 blade62 ntpd[44851]: Listening on routing socket on fd #23 for interface updates
+Jan 30 22:07:22 blade62 ntpd[44851]: 0.0.0.0 c016 06 restart
+Jan 30 22:07:22 blade62 ntpd[44851]: 0.0.0.0 c012 02 freq_set kernel -95.561 PPM
+Jan 30 22:07:29 blade62 ntpd[44851]: 0.0.0.0 c615 05 clock_sync
+
+
+[root@blade62 ~]# journalctl  | grep dhclient
+Jan 30 18:52:20 localhost.localdomain NetworkManager[842]: <info>  [1548867140.9062] dhcp-init: Using DHCP client 'dhclient'
+Jan 30 18:52:21 localhost.localdomain NetworkManager[842]: <info>  [1548867141.4943] dhcp4 (enp5s0f0): dhclient started with pid 958
+Jan 30 18:52:21 localhost.localdomain dhclient[958]: DHCPDISCOVER on enp5s0f0 to 255.255.255.255 port 67 interval 8 (xid=0x31083782)
+Jan 30 18:52:21 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 18:52:21 localhost.localdomain dhclient[958]: DHCPOFFER from 172.28.0.253
+Jan 30 18:52:21 localhost.localdomain dhclient[958]: DHCPACK from 172.28.0.253 (xid=0x31083782)
+Jan 30 18:52:21 localhost.localdomain dhclient[958]: bound to 172.28.200.62 -- renewal in 1679 seconds.
+Jan 30 19:20:20 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:20:24 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:20:32 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:20:47 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:21:04 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:21:25 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:21:42 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:21:53 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:22:04 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:22:21 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:22:37 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:22:44 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:23:03 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:23:24 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:23:33 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:23:54 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:24:01 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:24:11 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:24:23 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:24:38 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:24:52 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:25:13 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:25:20 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:25:34 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:25:47 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:26:03 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:26:24 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:26:39 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:26:58 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:27:08 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:27:15 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:27:35 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:27:54 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:28:13 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:28:24 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:28:39 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:28:46 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:29:00 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:29:21 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:29:40 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:29:47 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:29:58 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:30:13 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:30:28 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:30:38 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:30:54 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:31:09 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:31:30 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:31:40 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:31:48 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:31:57 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:32:16 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:32:31 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:32:39 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:32:50 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:33:06 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:33:17 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:33:34 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:33:49 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:34:07 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:34:25 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:34:39 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:34:49 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:35:08 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:35:29 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:35:48 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:36:07 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:36:18 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:36:25 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:36:39 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:36:55 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:37:06 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:37:14 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:37:26 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:37:38 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:37:50 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:38:00 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:38:20 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:38:35 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:38:51 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:39:12 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:39:27 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:39:45 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:40:05 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:40:13 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:40:25 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:40:36 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:40:50 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:41:04 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:41:19 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:41:29 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:41:36 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:41:48 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:41:55 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:42:07 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:42:18 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:42:33 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:42:41 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:42:50 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:43:07 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:43:18 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:43:30 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:43:43 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:44:03 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:44:12 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:44:19 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:44:40 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:44:51 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x31083782)
+Jan 30 19:45:09 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:45:24 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:45:31 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:45:39 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:45:56 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:46:11 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:46:31 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:46:45 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:46:59 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:47:19 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:47:26 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:47:39 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:47:56 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:48:04 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:48:12 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:48:31 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:48:43 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:48:54 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:49:10 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:49:24 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:49:45 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:49:56 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:50:16 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:50:33 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:50:51 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:51:03 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:51:24 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:51:37 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:51:55 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:52:12 localhost.localdomain dhclient[958]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x31083782)
+Jan 30 19:54:23 localhost.localdomain NetworkManager[842]: <info>  [1548870863.3432] dhcp4 (enp5s0f0): dhclient started with pid 44423
+Jan 30 19:54:23 localhost.localdomain dhclient[44423]: DHCPDISCOVER on enp5s0f0 to 255.255.255.255 port 67 interval 5 (xid=0x5ed9172)
+Jan 30 19:54:23 localhost.localdomain dhclient[44423]: DHCPREQUEST on enp5s0f0 to 255.255.255.255 port 67 (xid=0x5ed9172)
+Jan 30 19:54:23 localhost.localdomain dhclient[44423]: DHCPOFFER from 172.28.0.253
+Jan 30 19:54:23 localhost.localdomain dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 19:54:23 localhost.localdomain dhclient[44423]: bound to 172.28.200.62 -- renewal in 1551 seconds.
+Jan 30 20:20:14 blade62 dhclient[44423]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x5ed9172)
+Jan 30 20:20:14 blade62 dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 20:20:14 blade62 dhclient[44423]: bound to 172.28.200.62 -- renewal in 1406 seconds.
+Jan 30 20:43:40 blade62 dhclient[44423]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x5ed9172)
+Jan 30 20:43:40 blade62 dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 20:43:41 blade62 dhclient[44423]: bound to 172.28.200.62 -- renewal in 1617 seconds.
+Jan 30 21:10:39 blade62 dhclient[44423]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x5ed9172)
+Jan 30 21:10:39 blade62 dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 21:10:39 blade62 dhclient[44423]: bound to 172.28.200.62 -- renewal in 1784 seconds.
+Jan 30 21:40:23 blade62 dhclient[44423]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x5ed9172)
+Jan 30 21:40:23 blade62 dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 21:40:24 blade62 dhclient[44423]: bound to 172.28.200.62 -- renewal in 1618 seconds.
+Jan 30 22:07:22 blade62 dhclient[44423]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x5ed9172)
+Jan 30 22:07:22 blade62 dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 22:07:22 blade62 dhclient[44423]: bound to 172.28.200.62 -- renewal in 1409 seconds.
+Jan 30 22:30:51 blade62 dhclient[44423]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x5ed9172)
+Jan 30 22:30:51 blade62 dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 22:30:51 blade62 dhclient[44423]: bound to 172.28.200.62 -- renewal in 1401 seconds.
+Jan 30 22:54:13 blade62 dhclient[44423]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x5ed9172)
+Jan 30 22:54:13 blade62 dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 22:54:13 blade62 dhclient[44423]: bound to 172.28.200.62 -- renewal in 1793 seconds.
+Jan 30 23:24:06 blade62 dhclient[44423]: DHCPREQUEST on enp5s0f0 to 172.28.0.253 port 67 (xid=0x5ed9172)
+Jan 30 23:24:06 blade62 dhclient[44423]: DHCPACK from 172.28.0.253 (xid=0x5ed9172)
+Jan 30 23:24:06 blade62 dhclient[44423]: bound to 172.28.200.62 -- renewal in 1716 seconds.
