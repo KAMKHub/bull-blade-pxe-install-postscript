@@ -5,7 +5,7 @@
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
 #author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
 #created:      2019-01-24
-#modified:     2019-01-30
+#modified:     2019-01-31
 #version:      1.4
 #usage:        bash bull-blade-pxe-install-postscript.sh
 #OS:           CentOS 7
@@ -101,7 +101,6 @@ echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/
 #==============================================================================
 
 cd /root
-#wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
 wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda9.0.x86_64.rpm
 rpm -Uvh libcudnn7-7.4.2.24-1.cuda9.0.x86_64.rpm
 
@@ -110,7 +109,6 @@ rpm -Uvh libcudnn7-7.4.2.24-1.cuda9.0.x86_64.rpm
 #==============================================================================
 
 cd /root
-#wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
 wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda9.0.x86_64.rpm
 rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda9.0.x86_64.rpm
 
@@ -119,7 +117,6 @@ rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda9.0.x86_64.rpm
 #==============================================================================
 
 cd /root
-# wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
 wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda9.0.x86_64.rpm
 rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda9.0.x86_64.rpm
 
@@ -148,10 +145,10 @@ chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 #==============================================================================
 
 cd /root
+yum install -y python
+yum install -y python-pip
 pip install ipython
-#pip install pandas
 pip install tensorflow-gpu
-pip install tf-nightly-gpu
 
 #==============================================================================
 # Info: Testing Tensorflow
