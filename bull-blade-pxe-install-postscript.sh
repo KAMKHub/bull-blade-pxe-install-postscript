@@ -38,6 +38,9 @@ sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
 systemctl stop firewalld
 systemctl disable firewalld
 
+# Enable root-login
+sed -i -r 's/.?PermitRootLogin.+/PermitRootLogin yes/' /etc/ssh/sshd_config
+
 #==============================================================================
 # Install NVIDIA Driver
 #==============================================================================
