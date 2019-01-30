@@ -25,6 +25,7 @@ yum -y install ntp
 chkconfig ntpd on
 service ntpd start
 timedatectl set-timezone Europe/Helsinki
+sed -i 's/SYNC_HWCLOCK=no/SYNC_HWCLOCK=yes/g' /etc/sysconfig/ntpdate /etc/sysconfig/ntpdate
 
 yum install -y epel-release
 yum install -y nano
