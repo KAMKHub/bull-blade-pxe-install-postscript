@@ -1,0 +1,10 @@
+rpm -e <package name>
+
+rpm -e libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64 libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64 libcudnn7-7.4.2.24-1.cuda10.0.x86_64
+yum remove -y cuda
+rpm -e cuda-repo-rhel7-10.0.130-1.x86_64
+
+
+pip uninstall -y tf-nightly-gpu
+pip uninstall -y tensorflow-gpu
+pip uninstall -y ipython

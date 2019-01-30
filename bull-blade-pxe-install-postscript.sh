@@ -57,7 +57,7 @@ sed -ri 's/GRUB_CMDLINE_LINUX="/GRUB_CMDLINE_LINUX="nouveau.modeset=0 rd.driver.
 grub2-mkconfig -o /boot/grub2/grub.cfg
 grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 
-# Install NVIDIA driver from the source (required approach for CentOT 7).
+# Install NVIDIA driver from the source (required approach for CentOS 7).
 cd /root
 yum install -y dkms
 wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
@@ -72,9 +72,10 @@ sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 #==============================================================================
 
 cd /root
-wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-10.0.130-1.x86_64.rpm
-rpm -i cuda-repo-*.rpm
-yum install -y cuda
+#wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-10.0.130-1.x86_64.rpm
+wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-9.0.176-1.x86_64.rpm
+rpm -i cuda-repo-rhel7-9.0.176-1.x86_64.rpm
+yum install -y cuda-9.0.176-1
 rm -f /etc/profile.d/cudapath.sh
 touch /etc/profile.d/cudapath.sh
 echo "PATH=/usr/local/cuda/bin:$PATH" > /etc/profile.d/cudapath.sh
@@ -99,23 +100,27 @@ echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/
 #==============================================================================
 
 cd /root
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
-rpm -Uvh libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
+#wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda9.0.x86_64.rpm
+rpm -Uvh libcudnn7-7.4.2.24-1.cuda9.0.x86_64.rpm
 
 #==============================================================================
 # Install cuDNN Developer Library for RedHat/Centos 7.3 (RPM)
 #==============================================================================
 
 cd /root
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
-rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
+#wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda9.0.x86_64.rpm
+rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda9.0.x86_64.rpm
 
 #==============================================================================
 # Install cuDNN Code Samples and User Guide for RedHat/Centos 7.3 (RPM)
 #==============================================================================
 
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
-rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
+cd /root
+# wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda9.0.x86_64.rpm
+rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda9.0.x86_64.rpm
 
 #==============================================================================
 # Info: Verifying cuDNN Installation
@@ -134,9 +139,10 @@ rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
 #==============================================================================
 
 cd /root
+pip install ipython
+#pip install pandas
 pip install tensorflow-gpu
 pip install tf-nightly-gpu
-pip install ipython
 
 #==============================================================================
 # Info: Testing Tensorflow

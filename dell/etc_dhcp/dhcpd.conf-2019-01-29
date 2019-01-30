@@ -1,0 +1,737 @@
+
+# dhcpd.conf
+#
+# Sample configuration file for ISC dhcpd
+#
+
+# option definitions common to all supported networks...
+#option domain-name "example.org";
+#option domain-name-servers ns1.example.org, ns2.example.org;
+
+#default-lease-time 600;
+#max-lease-time 7200;
+
+default-lease-time 20;
+max-lease-time 60;
+
+
+
+
+# Use this to enble / disable dynamic dns updates globally.
+#ddns-update-style none;
+
+# If this DHCP server is the official DHCP server for the local
+# network, the authoritative directive should be uncommented.
+#authoritative;
+
+# Use this to send dhcp log messages to a different log file (you also
+# have to hack syslog.conf to complete the redirection).
+log-facility local7;
+
+# No service will be given on this subnet, but declaring it helps the 
+# DHCP server to understand the network topology.
+
+#subnet 10.152.187.0 netmask 255.255.255.0 {
+#}
+
+# This is a very basic subnet declaration.
+
+#subnet 10.254.239.0 netmask 255.255.255.224 {
+#  range 10.254.239.10 10.254.239.20;
+#  option routers rtr-239-0-1.example.org, rtr-239-0-2.example.org;
+#}
+
+# This declaration allows BOOTP clients to get dynamic addresses,
+# which we don't really recommend.
+
+#subnet 10.254.239.32 netmask 255.255.255.224 {
+#  range dynamic-bootp 10.254.239.40 10.254.239.60;
+#  option broadcast-address 10.254.239.31;
+#  option routers rtr-239-32-1.example.org;
+#}
+
+# A slightly different configuration for an internal subnet.
+#subnet 10.5.5.0 netmask 255.255.255.224 {
+#  range 10.5.5.26 10.5.5.30;
+#  option domain-name-servers ns1.internal.example.org;
+#  option domain-name "internal.example.org";
+#  option routers 10.5.5.1;
+#  option broadcast-address 10.5.5.31;
+#  default-lease-time 600;
+#  max-lease-time 7200;
+#}
+
+# Hosts which require special configuration options can be listed in
+# host statements.   If no address is specified, the address will be
+# allocated dynamically (if possible), but the host-specific information
+# will still come from the host declaration.
+
+#host passacaglia {
+#  hardware ethernet 0:0:c0:5d:bd:95;
+#  filename "vmunix.passacaglia";
+#  server-name "toccata.fugue.com";
+#}
+
+# Fixed IP addresses can also be specified for hosts.   These addresses
+# should not also be listed as being available for dynamic assignment.
+# Hosts for which fixed IP addresses have been specified can boot using
+# BOOTP or DHCP.   Hosts for which no fixed address is specified can only
+# be booted with DHCP, unless there is an address range on the subnet
+# to which a BOOTP client is connected which has the dynamic-bootp flag
+# set.
+#host fantasia {
+#  hardware ethernet 08:00:07:26:c0:a5;
+#  fixed-address fantasia.fugue.com;
+#}
+
+# You can declare a class of clients and then do address allocation
+# based on that.   The example below shows a case where all clients
+# in a certain class get addresses on the 10.17.224/24 subnet, and all
+# other clients get addresses on the 10.0.29/24 subnet.
+
+#class "foo" {
+#  match if substring (option vendor-class-identifier, 0, 4) = "SUNW";
+#}
+
+#shared-network 224-29 {
+#  subnet 10.17.224.0 netmask 255.255.255.0 {
+#    option routers rtr-224.example.org;
+#  }
+#  subnet 10.0.29.0 netmask 255.255.255.0 {
+#    option routers rtr-29.example.org;
+#  }
+#  pool {
+#    allow members of "foo";
+#    range 10.17.224.10 10.17.224.250;
+#  }
+#  pool {
+#    deny members of "foo";
+#    range 10.0.29.10 10.0.29.230;
+#  }
+#}
+
+include "/etc/dhcp/dhcpd.conf.network.172.28.0.0.conf";
+
+subnet 172.28.0.0 netmask 255.255.0.0
+{
+	# range 172.28.200.150 172.28.200.250;
+	 option broadcast-address 172.28.255.255;
+	 option routers 172.28.0.1;
+	 next-server 172.28.0.253;
+         option domain-name-servers 1.1.1.1, 1.0.0.1;
+}
+
+#Management start
+subnet 10.50.81.0 netmask 255.255.255.0 
+{
+	option broadcast-address 10.50.81.255;
+	option routers 10.50.81.1;
+}
+#Management end
+
+host cmc3__10.50.81.91 { 
+	hardware ethernet 08:00:38:3A:67:30;
+	fixed-address 172.28.0.86;
+	option host-name "cmc3";
+}
+
+host blade50
+{
+hardware ethernet 08:00:38:3c:dd:ad;
+fixed-address 172.28.200.50;
+option host-name "blade50";
+}
+
+host blade51
+{
+hardware ethernet 08:00:38:3c:dd:77;
+fixed-address 172.28.200.51;
+option host-name "blade51";
+}
+
+host blade52
+{
+hardware ethernet 08:00:38:3c:de:49;
+fixed-address 172.28.200.52;
+option host-name "blade52";
+}
+
+host blade53
+{
+hardware ethernet 08:00:38:3c:db:61;
+fixed-address 172.28.200.53;
+option host-name "blade53";
+}
+
+host blade55
+{
+hardware ethernet 08:00:38:3c:de:73;
+fixed-address 172.28.200.55;
+option host-name "blade55";
+}
+
+host blade56
+{
+hardware ethernet 08:00:38:3c:db:91;
+fixed-address 172.28.200.56;
+option host-name "blade56";
+}
+
+host blade60
+{
+hardware ethernet 08:00:38:3c:de:7f;
+fixed-address 172.28.200.60;
+option host-name "blade60";
+}
+
+host blade61
+{
+hardware ethernet 08:00:38:3c:de:13;
+fixed-address 172.28.200.61;
+option host-name "blade61";
+}
+
+host blade62
+{
+hardware ethernet 08:00:38:3c:dd:d1;
+fixed-address 172.28.200.62;
+option host-name "blade62";
+}
+
+host blade63
+{
+hardware ethernet 08:00:38:3c:dc:81;
+fixed-address 172.28.200.63;
+option host-name "blade63";
+}
+
+host blade64
+{
+hardware ethernet 08:00:38:3c:db:c7;
+fixed-address 172.28.200.64;
+option host-name "blade64";
+}
+
+host blade65
+{
+hardware ethernet 08:00:38:3c:db:9d;
+fixed-address 172.28.200.65;
+option host-name "blade65";
+}
+
+host blade66
+{
+hardware ethernet 08:00:38:3c:dc:0f;
+fixed-address 172.28.200.66;
+option host-name "blade66";
+}
+
+host blade70
+{
+hardware ethernet 08:00:38:3c:db:3d;
+fixed-address 172.28.200.70;
+option host-name "blade70";
+}
+
+host blade71
+{
+hardware ethernet 08:00:38:3c:dc:ed;
+fixed-address 172.28.200.71;
+option host-name "blade71";
+}
+
+host blade72
+{
+hardware ethernet 08:00:38:3c:dd:29;
+fixed-address 172.28.200.72;
+option host-name "blade72";
+}
+
+
+host blade73
+{
+hardware ethernet 08:00:38:3c:dc:93;
+fixed-address 172.28.200.73;
+option host-name "blade73";
+}
+
+
+host blade74
+{
+hardware ethernet 08:00:38:3c:db:7f;
+fixed-address 172.28.200.74;
+option host-name "blade74";
+}
+
+
+host blade75
+{
+hardware ethernet 08:00:38:3c:dc:33;
+fixed-address 172.28.200.75;
+option host-name "blade75";
+}
+
+
+host blade76
+{
+hardware ethernet 08:00:38:3c:dc:21;
+fixed-address 172.28.200.76;
+option host-name "blade76";
+}
+
+
+host blade77
+{
+hardware ethernet 08:00:38:3c:de:67;
+fixed-address 172.28.200.77;
+option host-name "blade77";
+}
+
+
+host blade80
+{
+hardware ethernet 08:00:38:3c:dd:5f;
+fixed-address 172.28.200.80;
+option host-name "blade80";
+}
+
+host blade81
+{
+hardware ethernet 08:00:38:3c:de:3d;
+fixed-address 172.28.200.81;
+option host-name "blade81";
+}
+
+host blade82
+{
+hardware ethernet 08:00:38:3c:de:37;
+fixed-address 172.28.200.82;
+option host-name "blade82";
+}
+
+host blade83
+{
+hardware ethernet 08:00:38:3c:dd:65;
+fixed-address 172.28.200.83;
+option host-name "blade83";
+}
+
+host blade84
+{
+hardware ethernet 08:00:38:3c:db:f7;
+fixed-address 172.28.200.84;
+option host-name "blade84";
+}
+
+host blade85
+{
+hardware ethernet 08:00:38:3c:dd:e9;
+fixed-address 172.28.200.85;
+option host-name "blade85";
+}
+
+host blade86
+{
+hardware ethernet 08:00:38:3c:db:3d;
+fixed-address 172.28.200.86;
+option host-name "blade86";
+}
+
+host blade87
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.87;
+option host-name "blade87";
+}
+
+host blade90
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.90;
+option host-name "blade90";
+}
+
+host blade91
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.91;
+option host-name "blade91";
+}
+
+host blade92
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.92;
+option host-name "blade92";
+}
+
+host blade93
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.93;
+option host-name "blade93";
+}
+
+host blade94
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.94;
+option host-name "blade94";
+}
+
+host blade95
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.95;
+option host-name "blade95";
+}
+
+host blade96
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.96;
+option host-name "blade96";
+}
+
+host blade97
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.97;
+option host-name "blade97";
+}
+
+host csc0-ic__172.29.0.1 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:F4:52:14:03:00:00:76:61;
+	fixed-address 172.29.0.1;
+	option host-name "csc0";
+	filename "pxelinux.0";
+}
+host csc1-ic__172.29.0.2 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:66;
+	fixed-address 172.29.0.2;
+	option host-name "csc1";
+	filename "pxelinux.0";
+}
+host csc2-ic__172.29.0.3 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:FC;
+	fixed-address 172.29.0.3;
+	option host-name "csc2";
+	filename "pxelinux.0";
+}
+host csc3-ic__172.29.0.4 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:4C;
+	fixed-address 172.29.0.4;
+	option host-name "csc3";
+	filename "pxelinux.0";
+}
+host csc4-ic__172.29.0.5 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:58;
+	fixed-address 172.29.0.5;
+	option host-name "csc4";
+	filename "pxelinux.0";
+}
+host csc5-ic__172.29.0.6 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:28;
+	fixed-address 172.29.0.6;
+	option host-name "csc5";
+	filename "pxelinux.0";
+}
+host csc6-ic__172.29.0.7 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:A6;
+	fixed-address 172.29.0.7;
+	option host-name "csc6";
+	filename "pxelinux.0";
+}
+host csc7-ic__172.29.0.8 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:A8;
+	fixed-address 172.29.0.8;
+	option host-name "csc7";
+	filename "pxelinux.0";
+}
+host csc8-ic__172.29.0.9 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DD:32;
+	fixed-address 172.29.0.9;
+	option host-name "csc8";
+	filename "pxelinux.0";
+}
+host csc9-ic__172.29.0.10 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:54;
+	fixed-address 172.29.0.10;
+	option host-name "csc9";
+	filename "pxelinux.0";
+}
+host csc10-ic__172.29.0.11 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:7C;
+	fixed-address 172.29.0.11;
+	option host-name "csc10";
+	filename "pxelinux.0";
+}
+host csc11-ic__172.29.0.12 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:D2;
+	fixed-address 172.29.0.12;
+	option host-name "csc11";
+	filename "pxelinux.0";
+}
+host csc12-ic__172.29.0.13 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:AC;
+	fixed-address 172.29.0.13;
+	option host-name "csc12";
+	filename "pxelinux.0";
+}
+host csc13-ic__172.29.0.14 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:5E;
+	fixed-address 172.29.0.14;
+	option host-name "csc13";
+	filename "pxelinux.0";
+}
+host csc14-ic__172.29.0.15 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:5A;
+	fixed-address 172.29.0.15;
+	option host-name "csc14";
+	filename "pxelinux.0";
+}
+host csc15-ic__172.29.0.16 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:A2;
+	fixed-address 172.29.0.16;
+	option host-name "csc15";
+	filename "pxelinux.0";
+}
+host csc16-ic__172.29.0.17 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:9C;
+	fixed-address 172.29.0.17;
+	option host-name "csc16";
+	filename "pxelinux.0";
+}
+host csc17-ic__172.29.0.18 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DD:1A;
+	fixed-address 172.29.0.18;
+	option host-name "csc17";
+	filename "pxelinux.0";
+}
+host csc18-ic__172.29.0.19 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:8E;
+	fixed-address 172.29.0.19;
+	option host-name "csc18";
+	filename "pxelinux.0";
+}
+host csc19-ic__172.29.0.20 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:4E;
+	fixed-address 172.29.0.20;
+	option host-name "csc19";
+	filename "pxelinux.0";
+}
+host csc20-ic__172.29.0.21 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:E2;
+	fixed-address 172.29.0.21;
+	option host-name "csc20";
+	filename "pxelinux.0";
+}
+host csc21-ic__172.29.0.22 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:D0;
+	fixed-address 172.29.0.22;
+	option host-name "csc21";
+	filename "pxelinux.0";
+}
+host csc22-ic__172.29.0.23 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:98;
+	fixed-address 172.29.0.23;
+	option host-name "csc22";
+	filename "pxelinux.0";
+}
+host csc23-ic__172.29.0.24 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:CC;
+	fixed-address 172.29.0.24;
+	option host-name "csc23";
+	filename "pxelinux.0";
+}
+host csc24-ic__172.29.0.25 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:76;
+	fixed-address 172.29.0.25;
+	option host-name "csc24";
+	filename "pxelinux.0";
+}
+host csc25-ic__172.29.0.26 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:1E;
+	fixed-address 172.29.0.26;
+	option host-name "csc25";
+	filename "pxelinux.0";
+}
+host csc26-ic__172.29.0.27 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:18;
+	fixed-address 172.29.0.27;
+	option host-name "csc26";
+	filename "pxelinux.0";
+}
+host csc27-ic__172.29.0.28 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:30;
+	fixed-address 172.29.0.28;
+	option host-name "csc27";
+	filename "pxelinux.0";
+}
+host csc28-ic__172.29.0.29 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:90;
+	fixed-address 172.29.0.29;
+	option host-name "csc28";
+	filename "pxelinux.0";
+}
+host csc29-ic__172.29.0.30 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:06;
+	fixed-address 172.29.0.30;
+	option host-name "csc29";
+	filename "pxelinux.0";
+}
+host csc30-ic__172.29.0.31 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:C6;
+	fixed-address 172.29.0.31;
+	option host-name "csc30";
+	filename "pxelinux.0";
+}
+host csc31-ic__172.29.0.32 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:72;
+	fixed-address 172.29.0.32;
+	option host-name "csc31";
+	filename "pxelinux.0";
+}
+host csc32-ic__172.29.0.33 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:52;
+	fixed-address 172.29.0.33;
+	option host-name "csc32";
+	filename "pxelinux.0";
+}
+host csc33-ic__172.29.0.34 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:42;
+	fixed-address 172.29.0.34;
+	option host-name "csc33";
+	filename "pxelinux.0";
+}
+host csc34-ic__172.29.0.35 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:9A;
+	fixed-address 172.29.0.35;
+	option host-name "csc34";
+	filename "pxelinux.0";
+}
+host csc35-ic__172.29.0.36 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:78;
+	fixed-address 172.29.0.36;
+	option host-name "csc35";
+	filename "pxelinux.0";
+}
+host csc36-ic__172.29.0.37 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:E8;
+	fixed-address 172.29.0.37;
+	option host-name "csc36";
+	filename "pxelinux.0";
+}
+host csc37-ic__172.29.0.38 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DD:4A;
+	fixed-address 172.29.0.38;
+	option host-name "csc37";
+	filename "pxelinux.0";
+}
+host csc38-ic__172.29.0.39 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:1C;
+	fixed-address 172.29.0.39;
+	option host-name "csc38";
+	filename "pxelinux.0";
+}
+host csc39-ic__172.29.0.40 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:16;
+	fixed-address 172.29.0.40;
+	option host-name "csc39";
+	filename "pxelinux.0";
+}
+host csc40-ic__172.29.0.41 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:D8;
+	fixed-address 172.29.0.41;
+	option host-name "csc40";
+	filename "pxelinux.0";
+}
+host csc41-ic__172.29.0.42 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:04;
+	fixed-address 172.29.0.42;
+	option host-name "csc41";
+	filename "pxelinux.0";
+}
+host csc42-ic__172.29.0.43 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:EE;
+	fixed-address 172.29.0.43;
+	option host-name "csc42";
+	filename "pxelinux.0";
+}
+host csc43-ic__172.29.0.44 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DC:BA;
+	fixed-address 172.29.0.44;
+	option host-name "csc43";
+	filename "pxelinux.0";
+}
+host csc44-ic__172.29.0.45 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:22;
+	fixed-address 172.29.0.45;
+	option host-name "csc44";
+	filename "pxelinux.0";
+}
+host csc45-ic__172.29.0.46 {
+	option dhcp-client-identifier 
+ff:00:00:00:00:00:02:00:00:02:c9:00:08:00:38:00:01:3C:DB:0A;
+	fixed-address 172.29.0.46;
+	option host-name "csc45";
+	filename "pxelinux.0";
+}
+host csctest {
+	option dhcp-client-identifier 80:00:02:08:fe:80:00:00:00:00:00:00:00:02:c9:03:00:a3:28:e1;
+	fixed-address 172.29.0.47;
+	option host-name "csc46";
+	filename "pxelinux.0";
+}
+
+allow booting;
+allow bootp;
+option option-128 code 128 = string;
+option option-129 code 129 = text;
+next-server 172.28.0.253;
+filename "pxelinux.0";

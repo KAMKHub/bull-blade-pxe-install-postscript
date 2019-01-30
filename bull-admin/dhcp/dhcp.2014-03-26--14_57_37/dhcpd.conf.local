@@ -1,0 +1,12 @@
+# README_FIRST
+#
+# This file will not be overwritten, you can add your local configuration here
+# Please edit the file /usr/share/clusterdb-synchro/dhcp-conf-internal/dhcp-internal-tpl.conf to add you change permanently
+#
+#
+allow booting;
+deny bootp;
+default-lease-time 259200;
+max-lease-time     259200;
+not authoritative;
+allow unknown-clients;
