@@ -5,7 +5,7 @@
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
 #author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
 #created:      2019-01-24
-#modified:     2019-01-29
+#modified:     2019-01-30
 #version:      1.4
 #usage:        bash bull-blade-pxe-install-postscript.sh
 #OS:           CentOS 7
@@ -129,6 +129,27 @@ rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
 # ./mnistCUDNN
 
 #==============================================================================
+# Install Tensorflow Nightly build with GPU support (unstable). Support for
+# CUDA 10 and cuDNN 7.
+#==============================================================================
+
+cd /root
+pip install tensorflow-gpu
+pip install tf-nightly-gpu
+pip install ipython
+
+#==============================================================================
+# Info: Testing Tensorflow
+# ipython
+# In [1]: from __future__ import print_function
+# In [2]: import tensorflow as tf
+# In [3]: hello = tf.constant('Hello, TensorFlow!')
+# In [4]: sess = tf.Session()
+# In [5]: print(sess.run(hello))
+# In [6]: quit
+#==============================================================================
+
+#==============================================================================
 # Docker installation
 #==============================================================================
 
@@ -173,3 +194,8 @@ pkill -SIGHUP dockerd
 
 # Info: Test nvidia-smi with the latest official CUDA image
 # docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+
+# Info: Run a TensorFlow container
+# cd /root
+# docker pull tensorflow/tensorflow # Download latest image
+# docker run -it -p 8888:8888 tensorflow/tensorflow # Start a Jupyter notebook server
