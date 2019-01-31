@@ -16,6 +16,9 @@
 # Install tools, useful utilities and settings
 #==============================================================================
 
+# Clear the yum Caches
+yum clean all
+
 # Set time zone and NTP
 ## Check settings: timedatectl
 yum -y install ntp

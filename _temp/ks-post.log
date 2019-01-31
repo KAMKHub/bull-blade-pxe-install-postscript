@@ -1,8 +1,334 @@
---2012-01-02 04:55:22--  https://raw.githubusercontent.com/KAMKHub/bull-blade-pxe-install-postscript/master/bull-blade-pxe-install-postscript-intel.sh
+--2012-01-02 05:18:16--  https://raw.githubusercontent.com/KAMKHub/bull-blade-pxe-install-postscript/master/bull-blade-pxe-install-postscript-intel.sh
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.244.133
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.244.133|:443... connected.
-ERROR: cannot verify raw.githubusercontent.com's certificate, issued by '/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert SHA2 High Assurance Server CA':
+WARNING: cannot verify raw.githubusercontent.com's certificate, issued by '/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert SHA2 High Assurance Server CA':
   Issued certificate not yet valid.
-To connect to raw.githubusercontent.com insecurely, use `--no-check-certificate'.
-chmod: cannot access '/root/bull-blade-pxe-install-postscript-intel.sh': No such file or directory
-sh: bull-blade-pxe-install-postscript-intel.sh: No such file or directory
+HTTP request sent, awaiting response... 200 OK
+Length: 2285 (2.2K) [text/plain]
+Saving to: 'bull-blade-pxe-install-postscript-intel.sh'
+
+     0K ..                                                    100% 19.9M=0s
+
+2012-01-02 05:18:16 (19.9 MB/s) - 'bull-blade-pxe-install-postscript-intel.sh' saved [2285/2285]
+
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+ * base: centos.mirror.far.fi
+ * extras: centos.mirror.far.fi
+ * updates: centos.mirror.far.fi
+Resolving Dependencies
+--> Running transaction check
+---> Package ntp.x86_64 0:4.2.6p5-28.el7.centos will be installed
+--> Processing Dependency: ntpdate = 4.2.6p5-28.el7.centos for package: ntp-4.2.6p5-28.el7.centos.x86_64
+--> Processing Dependency: libopts.so.25()(64bit) for package: ntp-4.2.6p5-28.el7.centos.x86_64
+--> Running transaction check
+---> Package autogen-libopts.x86_64 0:5.18-5.el7 will be installed
+---> Package ntpdate.x86_64 0:4.2.6p5-28.el7.centos will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package              Arch        Version                       Repository
+                                                                           Size
+================================================================================
+Installing:
+ ntp                  x86_64      4.2.6p5-28.el7.centos         base      549 k
+Installing for dependencies:
+ autogen-libopts      x86_64      5.18-5.el7                    base       66 k
+ ntpdate              x86_64      4.2.6p5-28.el7.centos         base       86 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+2 Dependent packages)
+
+Total download size: 701 k
+Installed size: 1.6 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/base/packages/ntpdate-4.2.6p5-28.el7.centos.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for ntpdate-4.2.6p5-28.el7.centos.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              2.3 MB/s | 701 kB  00:00     
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-5.1804.el7.centos.x86_64 (@anaconda)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : autogen-libopts-5.18-5.el7.x86_64                            1/3 
+  Installing : ntpdate-4.2.6p5-28.el7.centos.x86_64                         2/3 
+  Installing : ntp-4.2.6p5-28.el7.centos.x86_64                             3/3 
+  Verifying  : ntpdate-4.2.6p5-28.el7.centos.x86_64                         1/3 
+  Verifying  : autogen-libopts-5.18-5.el7.x86_64                            2/3 
+  Verifying  : ntp-4.2.6p5-28.el7.centos.x86_64                             3/3 
+
+Installed:
+  ntp.x86_64 0:4.2.6p5-28.el7.centos                                            
+
+Dependency Installed:
+  autogen-libopts.x86_64 0:5.18-5.el7   ntpdate.x86_64 0:4.2.6p5-28.el7.centos  
+
+Complete!
+Note: Forwarding request to 'systemctl enable ntpd.service'.
+Created symlink /etc/systemd/system/multi-user.target.wants/ntpd.service, pointing to /usr/lib/systemd/system/ntpd.service.
+Redirecting to /bin/systemctl start ntpd.service
+Running in chroot, ignoring request.
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos.mirror.far.fi
+ * extras: centos.mirror.far.fi
+ * updates: centos.mirror.far.fi
+Resolving Dependencies
+--> Running transaction check
+---> Package epel-release.noarch 0:7-11 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch             Version         Repository        Size
+================================================================================
+Installing:
+ epel-release           noarch           7-11            extras            15 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 15 k
+Installed size: 24 k
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : epel-release-7-11.noarch                                     1/1 
+  Verifying  : epel-release-7-11.noarch                                     1/1 
+
+Installed:
+  epel-release.noarch 0:7-11                                                    
+
+Complete!
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+
+
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=<repoid> ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable <repoid>
+        or
+            subscription-manager repos --disable=<repoid>
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=<repoid>.skip_if_unavailable=true
+
+Cannot retrieve metalink for repository: epel/x86_64. Please verify its path and try again
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+
+
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=<repoid> ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable <repoid>
+        or
+            subscription-manager repos --disable=<repoid>
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=<repoid>.skip_if_unavailable=true
+
+Cannot retrieve metalink for repository: epel/x86_64. Please verify its path and try again
+Running in chroot, ignoring request.
+Removed /etc/systemd/system/multi-user.target.wants/firewalld.service.
+Removed /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+
+
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=<repoid> ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable <repoid>
+        or
+            subscription-manager repos --disable=<repoid>
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=<repoid>.skip_if_unavailable=true
+
+Cannot retrieve metalink for repository: epel/x86_64. Please verify its path and try again
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+
+
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=<repoid> ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable <repoid>
+        or
+            subscription-manager repos --disable=<repoid>
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=<repoid>.skip_if_unavailable=true
+
+Cannot retrieve metalink for repository: epel/x86_64. Please verify its path and try again
+bull-blade-pxe-install-postscript-intel.sh: line 47: pip: command not found
+bull-blade-pxe-install-postscript-intel.sh: line 48: pip: command not found
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+
+
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=<repoid> ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable <repoid>
+        or
+            subscription-manager repos --disable=<repoid>
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=<repoid>.skip_if_unavailable=true
+
+Cannot retrieve metalink for repository: epel/x86_64. Please verify its path and try again
+bull-blade-pxe-install-postscript-intel.sh: line 61: yum-config-manager: command not found
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+
+
+ One of the configured repositories failed (Unknown),
+ and yum doesn't have enough cached data to continue. At this point the only
+ safe thing yum can do is fail. There are a few ways to work "fix" this:
+
+     1. Contact the upstream for the repository and get them to fix the problem.
+
+     2. Reconfigure the baseurl/etc. for the repository, to point to a working
+        upstream. This is most often useful if you are using a newer
+        distribution release than is supported by the repository (and the
+        packages for the previous distribution release still work).
+
+     3. Run the command with the repository temporarily disabled
+            yum --disablerepo=<repoid> ...
+
+     4. Disable the repository permanently, so yum won't use it by default. Yum
+        will then just ignore the repository until you permanently enable it
+        again or use --enablerepo for temporary usage:
+
+            yum-config-manager --disable <repoid>
+        or
+            subscription-manager repos --disable=<repoid>
+
+     5. Configure the failing repository to be skipped, if it is unavailable.
+        Note that yum will try to contact the repo. when it runs most commands,
+        so will have to try and fail each time (and thus. yum will be be much
+        slower). If it is a very temporary problem though, this is often a nice
+        compromise:
+
+            yum-config-manager --save --setopt=<repoid>.skip_if_unavailable=true
+
+Cannot retrieve metalink for repository: epel/x86_64. Please verify its path and try again
+Operation failed: No such file or directory
+Running in chroot, ignoring request.
+bull-blade-pxe-install-postscript-intel.sh: line 74: pip: command not found
