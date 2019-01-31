@@ -143,14 +143,19 @@ chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 # ./mnistCUDNN
 
 #==============================================================================
+# Install Python
+#==============================================================================
+
+yum install -y python
+yum install -y python-pip
+pip install --upgrade pip
+pip install ipython
+
+#==============================================================================
 # Install Tensorflow Nightly build with GPU support (unstable). Support for
 # CUDA 10 and cuDNN 7.
 #==============================================================================
 
-cd /root
-yum install -y python
-yum install -y python-pip
-pip install ipython
 pip install tensorflow-gpu
 
 #==============================================================================
@@ -188,11 +193,7 @@ systemctl enable docker
 systemctl start docker
 
 # Install Docker Compose
-yum install -y epel-release
-yum install -y python-pip
 pip install docker-compose
-pip install --upgrade pip
-yum upgrade -y python*
 
 #==============================================================================
 # Install NVIDIA Container Runtime for Docker
