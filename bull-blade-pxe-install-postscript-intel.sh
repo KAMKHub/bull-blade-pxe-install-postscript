@@ -59,10 +59,11 @@ systemctl enable mpss
 systemctl start mpss
 
 #==============================================================================
-# Info: Xeon Phi driver installation test
+# Info: Xeon Phi driver installation status
 #==============================================================================
 
 # micctrl --status
+# micinfo
 
 #==============================================================================
 # Install Python
