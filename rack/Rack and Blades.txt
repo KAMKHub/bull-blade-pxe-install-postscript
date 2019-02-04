@@ -4,9 +4,9 @@ Rack 1
 * CMC11 Chassis (1st from up): http://172.28.0.94
 
 Rack 2
-* CMC11 Chassis (räkki2, 1. ylhäältä): http://172.28.0.94
-* CMC12 Chassis (räkki2, 2. ylhäältä): http://172.28.0.95
-* CMC13 Chassis (räkki2, 3. ylhäältä): http://172.28.0.96
+* CMC11 Chassis (1st from up): http://172.28.0.94
+* CMC12 Chassis (2nd from up): http://172.28.0.95
+* CMC13 Chassis (3rd from up: http://172.28.0.96
 
 
 == Blade-management ==
