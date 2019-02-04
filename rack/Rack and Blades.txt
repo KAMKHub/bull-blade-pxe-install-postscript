@@ -1,0 +1,45 @@
+=== Rack / Chassis ===
+
+Rack 1
+* CMC11 Chassis (1st from up): http://172.28.0.94
+
+Rack 2
+* CMC11 Chassis (räkki2, 1. ylhäältä): http://172.28.0.94
+* CMC12 Chassis (räkki2, 2. ylhäältä): http://172.28.0.95
+* CMC13 Chassis (räkki2, 3. ylhäältä): http://172.28.0.96
+
+
+== Blade-management ==
+
+CMC11 Chassis (1st from up): http://172.28.0.94
+* CSC50 / blade50: http://172.28.0.172/home.asp
+* CSC51 / blade51: http://172.28.0.173/home.asp
+* CSC52 / blade52: http://172.28.0.174/home.asp
+* CSC53 / blade53: http://172.28.0.175/home.asp
+* CSC54 / blade54 EMPTY
+* CSC55 / blade55: http://172.28.0.177/home.asp
+* CSC56 / blade56: http://172.28.0.178/home.asp
+* CSC57 / blade57 EMPTY
+* CSC58 / blade58 EMPTY
+
+CMC12 Chassis (2nd from up): http://172.28.0.93
+* CSC60 / blade60: http://172.28.0.165/home.asp
+* CSC61 / blade61: http://172.28.0.166/home.asp
+* CSC62 / blade62: http://172.28.0.167/home.asp
+* CSC63 / blade63: http://172.28.0.168/home.asp
+* CSC64 / blade64: http://172.28.0.169/home.asp
+* CSC65 / blade65: http://172.28.0.170/home.asp
+* CSC66 / blade66: http://172.28.0.171/home.asp
+* CSC67 / blade67 EMPTY
+* CSC68 / blade68 EMPTY
+
+CMC13 Chassis (3rd from up): http://172.28.0.92
+* CSC21 / blade21: http://172.28.0.114/home.asp
+* CSC22 / blade22: http://172.28.0.115/home.asp
+* CSC23 / blade23: http://172.28.0.116/home.asp
+* CSC24 / blade24: http://172.28.0.117/home.asp
+* CSC25 / blade25: http://172.28.0.118/home.asp
+* CSC26 / blade26: http://172.28.0.119/home.asp
+* CSC27 / blade27: http://172.28.0.120/home.asp
+* CSC28 / blade28: http://172.28.0.121/home.asp
+* CSC29 / blade29: http://172.28.0.122/home.asp
