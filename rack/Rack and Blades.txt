@@ -18,6 +18,38 @@ RACK 2
 
 RACK 1
 
+CMC6 Chassis (1st from up): http://172.28.0.89 (rack1)
+* CSC01 / blade01: http://172.28.0.132/home.asp
+* CSC02 / blade02: http://172.28.0.133/home.asp <--- management ei saa osoitetta, asennuksen jälkeen ainakaan ping ei mene läpi
+* CSC03 / blade03: http://172.28.0.134/home.asp
+* CSC04 / blade04: http://172.28.0.135/home.asp
+* CSC05 / blade05: http://172.28.0.136/home.asp
+* CSC06 / blade06: http://172.28.0.137/home.asp
+* CSC07 / blade07: http://172.28.0.138/home.asp
+* CSC08 / blade08: http://172.28.0.139/home.asp
+* CSC09 / blade09: http://172.28.0.140/home.asp
+
+CMC5 Chassis (2nd from up): http://172.28.0.88 (rack1)
+* CSC11 / blade11: http://172.28.0.123/home.asp
+* CSC12 / blade12: http://172.28.0.124/home.asp
+* CSC13 / blade13: http://172.28.0.125/home.asp
+* CSC14 / blade14: http://172.28.0.126/home.asp
+* CSC15 / blade15: http://172.28.0.127/home.asp
+* CSC16 / blade16: http://172.28.0.128/home.asp
+* CSC17 / blade17: http://172.28.0.129/home.asp
+* CSC18 / blade18: http://172.28.0.130/home.asp
+* CSC19 / blade19: http://172.28.0.131/home.asp
+
+CMC4 Chassis (3rd from up): http://172.28.0.87 (rack1)
+* CSC70 / blade70: http://172.28.0.157/home.asp
+* CSC71 / blade71: http://172.28.0.158/home.asp
+* CSC72 / blade72: http://172.28.0.159/home.asp
+* CSC73 / blade73: http://172.28.0.160/home.asp
+* CSC74 / blade74: http://172.28.0.161/home.asp
+* CSC75 / blade75: http://172.28.0.162/home.asp  <--- I/O error /dev/sda asennuksessa, kiintolevy rikki?
+* CSC76 / blade76: http://172.28.0.163/home.asp
+* CSC77 / blade77: http://172.28.0.164/home.asp
+
 CMC3 Chassis (4th from up): http://172.28.0.86
 * CSC31 / blade31: http://172.28.0.105/home.asp
 * CSC32 / blade32: http://172.28.0.106/home.asp
