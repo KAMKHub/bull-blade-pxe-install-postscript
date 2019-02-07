@@ -30,7 +30,7 @@ CMC6 Chassis (1st from up): http://172.28.0.89 (rack1)
 * CSC09 / blade09: http://172.28.0.140/home.asp
 
 CMC5 Chassis (2nd from up): http://172.28.0.88 (rack1)
-* CSC11 / blade11: http://172.28.0.123/home.asp
+* CSC11 / blade11: http://172.28.201.11/home.asp
 * CSC12 / blade12: http://172.28.0.124/home.asp
 * CSC13 / blade13: http://172.28.0.125/home.asp
 * CSC14 / blade14: http://172.28.0.126/home.asp

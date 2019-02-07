@@ -27,3 +27,6 @@ Verify
 
 Logging
 # journalctl -f -u ntpd
+
+Monitor queries
+# tcpdump -i eno1 port 123
