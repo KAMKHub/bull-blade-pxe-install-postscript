@@ -1,0 +1,32 @@
+#description:  Dell admin NTP Server installation
+#ogranization: Kajaani University of Applied Sciences (KAMK)
+#project:      Bull Supercomputer - bullx DLC blade system - B700 Series
+#author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
+#created:      2019-02-06
+#modified:     2019-02-06
+#version:      1.0
+#OS:           CentOS 7
+#==============================================================================
+
+Instructions
+* https://www.tecmint.com/install-ntp-server-in-centos/
+
+Installation
+# yum install -y ntp
+# systemctl start ntpd
+# systemctl enable ntpd
+# systemctl status ntpd
+
+Configurations
+* no modifications to: /etc/ntp.conf
+
+Verify
+# ntpq -p
+# date -R
+# ntpdate -q  0.ro.pool.ntp.org  1.ro.pool.ntp.org
+
+Logging
+# journalctl -f -u ntpd
+
+Monitor queries
+# tcpdump -i eno1 port 123
