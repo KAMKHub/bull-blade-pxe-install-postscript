@@ -1,5 +1,5 @@
 #host csc0__172.28.0.1 { 
-#	# option ntp-servers time.mikes.fi;
+#	option ntp-servers ntp-server.bullx;
 #	hardware ethernet 00:25:90:C3:C8:F8;
 #	fixed-address 172.28.0.1;
 #	option host-name "csc0";
@@ -7,876 +7,987 @@
 #
 #}
 
+
 host cmc0__172.28.0.85 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:67:FC;
 	fixed-address 172.28.0.85;
 	option host-name "cmc0";
-	log(info, log_msg_inventory);	option routers 172.28.0.1;
+	log(info, log_msg_inventory);
+	option routers 172.28.0.1;
 }
 
+
 host cmc4__172.28.0.87 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:CF:6B;
 	fixed-address 172.28.0.87;
 	option host-name "cmc4";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host cmc5__172.28.0.88 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:68:E8;
 	fixed-address 172.28.0.88;
 	option host-name "cmc5";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host cmc6__172.28.0.89 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:68:10;
 	fixed-address 172.28.0.89;
 	option host-name "cmc6";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
-host cmc7__172.28.0.90 { 
-	# option ntp-servers time.mikes.fi;
+host cmc7__10.50.81.94 { 
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6A:F8;
-	fixed-address 172.28.0.90;
+	fixed-address 10.50.81.94;
 	option host-name "cmc7";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host cmc10__172.28.0.91 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6B:3C;
 	fixed-address 172.28.0.91;
 	option host-name "cmc10";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host cmc11__172.28.0.92 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6A:C0;
 	fixed-address 172.28.0.92;
 	option host-name "cmc11";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host cmc12__172.28.0.93 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6B:70;
 	fixed-address 172.28.0.93;
 	option host-name "cmc12";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host cmc13__172.28.0.94 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6B:08;
 	fixed-address 172.28.0.94;
 	option host-name "cmc13";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host bmc1__172.28.0.96 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:62;
 	fixed-address 172.28.0.96;
 	option host-name "bmc1";
+
 	option routers 172.28.0.1;
 }
 
 host bmc2__172.28.0.97 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:F8;
 	fixed-address 172.28.0.97;
 	option host-name "bmc2";
+
 	option routers 172.28.0.1;
 }
 
 host bmc3__172.28.0.98 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:48;
 	fixed-address 172.28.0.98;
 	option host-name "bmc3";
+
 	option routers 172.28.0.1;
 }
 
 host bmc4__172.28.0.99 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:54;
 	fixed-address 172.28.0.99;
 	option host-name "bmc4";
+
 	option routers 172.28.0.1;
 }
 
 host bmc5__172.28.0.100 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:24;
 	fixed-address 172.28.0.100;
 	option host-name "bmc5";
+
 	option routers 172.28.0.1;
 }
 
 host bmc6__172.28.0.101 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:A2;
 	fixed-address 172.28.0.101;
 	option host-name "bmc6";
+
 	option routers 172.28.0.1;
 }
 
 host bmc7__172.28.0.102 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:A4;
 	fixed-address 172.28.0.102;
 	option host-name "bmc7";
+
 	option routers 172.28.0.1;
 }
 
 host bmc8__172.28.0.103 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:2E;
 	fixed-address 172.28.0.103;
 	option host-name "bmc8";
+
 	option routers 172.28.0.1;
 }
 
 host bmc9__172.28.0.104 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:50;
 	fixed-address 172.28.0.104;
 	option host-name "bmc9";
+
 	option routers 172.28.0.1;
 }
 
 host bmc10__172.28.0.105 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:78;
 	fixed-address 172.28.0.105;
 	option host-name "bmc10";
+
 	option routers 172.28.0.1;
 }
 
 host bmc11__172.28.0.106 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:CE;
 	fixed-address 172.28.0.106;
 	option host-name "bmc11";
+
 	option routers 172.28.0.1;
 }
 
 host bmc12__172.28.0.107 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:A8;
 	fixed-address 172.28.0.107;
 	option host-name "bmc12";
+
 	option routers 172.28.0.1;
 }
 
 host bmc13__172.28.0.108 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:5A;
 	fixed-address 172.28.0.108;
 	option host-name "bmc13";
+
 	option routers 172.28.0.1;
 }
 
 host bmc14__172.28.0.109 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:56;
 	fixed-address 172.28.0.109;
 	option host-name "bmc14";
+
 	option routers 172.28.0.1;
 }
 
 host bmc15__172.28.0.110 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:9E;
 	fixed-address 172.28.0.110;
 	option host-name "bmc15";
+
 	option routers 172.28.0.1;
 }
 
 host bmc16__172.28.0.111 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:98;
 	fixed-address 172.28.0.111;
 	option host-name "bmc16";
+
 	option routers 172.28.0.1;
 }
 
 host bmc17__172.28.0.112 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:16;
 	fixed-address 172.28.0.112;
 	option host-name "bmc17";
+
 	option routers 172.28.0.1;
 }
 
 host bmc18__172.28.0.113 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:8A;
 	fixed-address 172.28.0.113;
 	option host-name "bmc18";
+
 	option routers 172.28.0.1;
 }
 
 host bmc19__172.28.0.114 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:4A;
 	fixed-address 172.28.0.114;
 	option host-name "bmc19";
+
 	option routers 172.28.0.1;
 }
 
 host bmc20__172.28.0.115 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:DE;
 	fixed-address 172.28.0.115;
 	option host-name "bmc20";
+
 	option routers 172.28.0.1;
 }
 
 host bmc21__172.28.0.116 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:CC;
 	fixed-address 172.28.0.116;
 	option host-name "bmc21";
+
 	option routers 172.28.0.1;
 }
 
 host bmc22__172.28.0.117 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:94;
 	fixed-address 172.28.0.117;
 	option host-name "bmc22";
+
 	option routers 172.28.0.1;
 }
 
 host bmc23__172.28.0.118 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:C8;
 	fixed-address 172.28.0.118;
 	option host-name "bmc23";
+
 	option routers 172.28.0.1;
 }
 
 host bmc24__172.28.0.119 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:72;
 	fixed-address 172.28.0.119;
 	option host-name "bmc24";
+
 	option routers 172.28.0.1;
 }
 
 host bmc25__172.28.0.120 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:1A;
 	fixed-address 172.28.0.120;
 	option host-name "bmc25";
+
 	option routers 172.28.0.1;
 }
 
 host bmc26__172.28.0.121 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:14;
 	fixed-address 172.28.0.121;
 	option host-name "bmc26";
+
 	option routers 172.28.0.1;
 }
 
 host bmc27__172.28.0.122 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:2C;
 	fixed-address 172.28.0.122;
 	option host-name "bmc27";
+
 	option routers 172.28.0.1;
 }
 
-host bmc28__172.28.201.11 { 
-	# old adderss 172.28.0.124
+host bmc28__172.28.0.123 { 
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:8C;
-	fixed-address 172.28.201.11;
+	fixed-address 172.28.0.123;
 	option host-name "bmc28";
+
 	option routers 172.28.0.1;
 }
 
 host bmc29__172.28.0.124 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:02;
 	fixed-address 172.28.0.124;
 	option host-name "bmc29";
+
 	option routers 172.28.0.1;
 }
 
 host bmc30__172.28.0.125 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:C2;
 	fixed-address 172.28.0.125;
 	option host-name "bmc30";
+
 	option routers 172.28.0.1;
 }
 
 host bmc31__172.28.0.126 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:6E;
 	fixed-address 172.28.0.126;
 	option host-name "bmc31";
+
 	option routers 172.28.0.1;
 }
 
 host bmc32__172.28.0.127 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:4E;
 	fixed-address 172.28.0.127;
 	option host-name "bmc32";
+
 	option routers 172.28.0.1;
 }
 
 host bmc33__172.28.0.128 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:3E;
 	fixed-address 172.28.0.128;
 	option host-name "bmc33";
+
 	option routers 172.28.0.1;
 }
 
 host bmc34__172.28.0.129 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:96;
 	fixed-address 172.28.0.129;
 	option host-name "bmc34";
+
 	option routers 172.28.0.1;
 }
 
 host bmc35__172.28.0.130 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:74;
 	fixed-address 172.28.0.130;
 	option host-name "bmc35";
+
 	option routers 172.28.0.1;
 }
 
 host bmc36__172.28.0.131 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:E4;
 	fixed-address 172.28.0.131;
 	option host-name "bmc36";
+
 	option routers 172.28.0.1;
 }
 
 host bmc37__172.28.0.132 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:46;
 	fixed-address 172.28.0.132;
 	option host-name "bmc37";
+
 	option routers 172.28.0.1;
 }
 
 host bmc38__172.28.0.133 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:18;
 	fixed-address 172.28.0.133;
 	option host-name "bmc38";
+
 	option routers 172.28.0.1;
 }
 
 host bmc39__172.28.0.134 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:12;
 	fixed-address 172.28.0.134;
 	option host-name "bmc39";
+
 	option routers 172.28.0.1;
 }
 
 host bmc40__172.28.0.135 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DE:42;
 	fixed-address 172.28.0.135;
 	option host-name "bmc40";
+
 	option routers 172.28.0.1;
 }
 
 host bmc41__172.28.0.136 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:00;
 	fixed-address 172.28.0.136;
 	option host-name "bmc41";
+
 	option routers 172.28.0.1;
 }
 
 host bmc42__172.28.0.137 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:EA;
 	fixed-address 172.28.0.137;
 	option host-name "bmc42";
+
 	option routers 172.28.0.1;
 }
 
 host bmc43__172.28.0.138 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:B6;
 	fixed-address 172.28.0.138;
 	option host-name "bmc43";
+
 	option routers 172.28.0.1;
 }
 
 host bmc44__172.28.0.139 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:1E;
 	fixed-address 172.28.0.139;
 	option host-name "bmc44";
+
 	option routers 172.28.0.1;
 }
 
 host bmc45__172.28.0.140 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:06;
 	fixed-address 172.28.0.140;
 	option host-name "bmc45";
+
 	option routers 172.28.0.1;
 }
 #CMC 7 BLADE 10 - 17
 host bmc46__172.28.0.141 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:D8;
 	fixed-address 172.28.0.141;
 	option host-name "bmc46";
+
 	option routers 172.28.0.1;
 }
 
 host bmc47__172.28.0.142 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:30;
 	fixed-address 172.28.0.142;
 	option host-name "bmc47";
+
 	option routers 172.28.0.1;
 }
 
 host bmc48__172.28.0.143 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:E2;
 	fixed-address 172.28.0.143;
 	option host-name "bmc48";
+
 	option routers 172.28.0.1;
 }
 
 host bmc49__172.28.0.144 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:0C;
 	fixed-address 172.28.0.144;
 	option host-name "bmc49";
+
 	option routers 172.28.0.1;
 }
 
 host bmc50__172.28.0.145 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:7A;
 	fixed-address 172.28.0.145;
 	option host-name "bmc50";
+
 	option routers 172.28.0.1;
 }
 
 host bmc51__172.28.0.146 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:38;
 	fixed-address 172.28.0.146;
 	option host-name "bmc51";
+
 	option routers 172.28.0.1;
 }
 
 host bmc52__172.28.0.147 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:42;
 	fixed-address 172.28.0.147;
 	option host-name "bmc52";
+
 	option routers 172.28.0.1;
 }
 
 host bmc53__172.28.0.148 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:2A;
 	fixed-address 172.28.0.148;
 	option host-name "bmc53";
+
 	option routers 172.28.0.1;
 }
 
 host bmc54__172.28.0.149 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:5E;
 	fixed-address 172.28.0.149;
 	option host-name "bmc54";
+
 	option routers 172.28.0.1;
 }
 
 host bmc55__172.28.0.150 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DE:3C;
 	fixed-address 172.28.0.150;
 	option host-name "bmc55";
+
 	option routers 172.28.0.1;
 }
 
 host bmc56__172.28.0.151 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DE:36;
 	fixed-address 172.28.0.151;
 	option host-name "bmc56";
+
 	option routers 172.28.0.1;
 }
 
 host bmc57__172.28.0.152 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:64;
 	fixed-address 172.28.0.152;
 	option host-name "bmc57";
+
 	option routers 172.28.0.1;
 }
 
 host bmc58__172.28.0.153 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:F6;
 	fixed-address 172.28.0.153;
 	option host-name "bmc58";
+
 	option routers 172.28.0.1;
 }
 
 host bmc59__172.28.0.154 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:E8;
 	fixed-address 172.28.0.154;
 	option host-name "bmc59";
+
 	option routers 172.28.0.1;
 }
 
 host bmc60__172.28.0.155 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:66;
 	fixed-address 172.28.0.155;
 	option host-name "bmc60";
+
 	option routers 172.28.0.1;
 }
 
 host bmc61__172.28.0.156 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:36;
 	fixed-address 172.28.0.156;
 	option host-name "bmc61";
+
 	option routers 172.28.0.1;
 }
 
 host bmc62__172.28.0.157 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:3C;
 	fixed-address 172.28.0.157;
 	option host-name "bmc62";
+
 	option routers 172.28.0.1;
 }
 
 host bmc63__172.28.0.158 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:EC;
 	fixed-address 172.28.0.158;
 	option host-name "bmc63";
+
 	option routers 172.28.0.1;
 }
 
 host bmc64__172.28.0.159 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:28;
 	fixed-address 172.28.0.159;
 	option host-name "bmc64";
+
 	option routers 172.28.0.1;
 }
 
 host bmc65__172.28.0.160 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:92;
 	fixed-address 172.28.0.160;
 	option host-name "bmc65";
+
 	option routers 172.28.0.1;
 }
 
 host bmc66__172.28.0.161 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:7E;
 	fixed-address 172.28.0.161;
 	option host-name "bmc66";
+
 	option routers 172.28.0.1;
 }
 
 host bmc67__172.28.0.162 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:32;
 	fixed-address 172.28.0.162;
 	option host-name "bmc67";
+
 	option routers 172.28.0.1;
 }
 
 host bmc68__172.28.0.163 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:20;
 	fixed-address 172.28.0.163;
 	option host-name "bmc68";
+
 	option routers 172.28.0.1;
 }
 
 host bmc69__172.28.0.164 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DE:66;
 	fixed-address 172.28.0.164;
 	option host-name "bmc69";
+
 	option routers 172.28.0.1;
 }
 #CMC12 BLADE 10-16
 host bmc70__172.28.0.165 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DE:7E;
 	fixed-address 172.28.0.165;
 	option host-name "bmc70";
+
 	option routers 172.28.0.1;
 }
 
 host bmc71__172.28.0.166 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DE:12;
 	fixed-address 172.28.0.166;
 	option host-name "bmc71";
+
 	option routers 172.28.0.1;
 }
 
 host bmc72__172.28.0.167 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:D0; 
 	fixed-address 172.28.0.167;
 	option host-name "bmc72";
+
 	option routers 172.28.0.1;
 }
 
 host bmc73__172.28.0.168 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:80;
 	fixed-address 172.28.0.168;
 	option host-name "bmc73";
+
 	option routers 172.28.0.1;
 }
 
 host bmc74__172.28.0.169 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:C6;
 	fixed-address 172.28.0.169;
 	option host-name "bmc74";
+
 	option routers 172.28.0.1;
 }
 
 host bmc75__172.28.0.170 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:9C;
 	fixed-address 172.28.0.170;
 	option host-name "bmc75";
+
 	option routers 172.28.0.1;
 }
 
 host bmc76__172.28.0.171 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DC:0E;
 	fixed-address 172.28.0.171;
 	option host-name "bmc76";
+
 	option routers 172.28.0.1;
 }
 #CMC13 BLADE 10-16
 host bmc77__172.28.0.172 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:AC;
 	fixed-address 172.28.0.172;
 	option host-name "bmc77";
+
 	option routers 172.28.0.1;
 }
 
 host bmc78__172.28.0.173 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DD:76;
 	fixed-address 172.28.0.173;
 	option host-name "bmc78";
+
 	option routers 172.28.0.1;
 }
 
 host bmc79__172.28.0.174 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DE:48; 
 	fixed-address 172.28.0.174;
 	option host-name "bmc79";
+
 	option routers 172.28.0.1;
 }
 
 host bmc80__172.28.0.175 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:60;
 	fixed-address 172.28.0.175;
 	option host-name "bmc80";
+
 	option routers 172.28.0.1;
 }
 
 host bmc81__172.28.0.176 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:F0; 
 	fixed-address 172.28.0.176;
 	option host-name "bmc81";
+
 	option routers 172.28.0.1;
 }
 
 host bmc82__172.28.0.177 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DE:72;
 	fixed-address 172.28.0.177;
 	option host-name "bmc82";
+
 	option routers 172.28.0.1;
 }
 
 host bmc83__172.28.0.178 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:DB:90;
 	fixed-address 172.28.0.178;
 	option host-name "bmc83";
+
 	option routers 172.28.0.1;
 }
 
 host rmc2__172.28.0.179 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:CF:00;
 	fixed-address 172.28.0.179;
 	option host-name "rmc2";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host rmc9__172.28.0.180 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:66:48;
 	fixed-address 172.28.0.180;
 	option host-name "rmc9";
 	log(info, log_msg_inventory);
+
 	option routers 172.28.0.1;
 }
 
 host esw6c0p1__172.28.0.190 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6C:F4;
 	fixed-address 172.28.0.190;
 	option host-name "esw6";
+
 	option routers 172.28.0.1;
 }
 
 host esw8c0p1__172.28.0.192 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6C:30;
 	fixed-address 172.28.0.192;
 	option host-name "esw8";
+
 	option routers 172.28.0.1;
 }
 
 host esw5c0p1__172.28.0.189 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:D0:D1;
 	fixed-address 172.28.0.189;
 	option host-name "esw5";
+
 	option routers 172.28.0.1;
 }
 
 host esw7c0p1__172.28.0.191 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6C:54;
 	fixed-address 172.28.0.191;
 	option host-name "esw7";
+
 	option routers 172.28.0.1;
 }
 
 host esw9c0p1__172.28.0.193 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6C:64;
 	fixed-address 172.28.0.193;
 	option host-name "esw9";
+
 	option routers 172.28.0.1;
 }
 
 host esw2c0p1__172.28.0.186 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:67:88;
 	fixed-address 172.28.0.186;
 	option host-name "esw2";
+
 	option routers 172.28.0.1;
 }
 
 host esw4c0p1__172.28.0.188 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:D0:75;
 	fixed-address 172.28.0.188;
 	option host-name "esw4";
+
 	option routers 172.28.0.1;
 }
 
 host esw0c4p1__172.28.0.184 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet BC:16:65:D8:F7:40;
 	fixed-address 172.28.0.184;
 	option host-name "esw0";
+
 	option routers 172.28.0.1;
 }
 
 host esw3c0p1__172.28.0.187 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3C:CF:DD;
 	fixed-address 172.28.0.187;
 	option host-name "esw3";
+
 	option routers 172.28.0.1;
 }
 
 host esw1c0p1__172.28.0.185 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:68:6C;
 	fixed-address 172.28.0.185;
 	option host-name "esw1";
+
 	option routers 172.28.0.1;
 }
 
 host isw0c0p1__172.28.0.181 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 00:02:C9:B7:BF:18;
 	fixed-address 172.28.0.181;
 	option host-name "isw0";
+
 	option routers 172.28.0.1;
 }
 
 host isw1c0p1__172.28.0.182 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 00:02:C9:B7:B6:E0;
 	fixed-address 172.28.0.182;
 	option host-name "isw1";
+
 	option routers 172.28.0.1;
 }
 
 host esw10c0p1__172.28.0.194 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 08:00:38:3A:6C:74;
 	fixed-address 172.28.0.194;
 	option host-name "esw10";
+
 	option routers 172.28.0.1;
 }
 
 host isw2c0p1__172.28.0.183 { 
-	# option ntp-servers time.mikes.fi;
+	option ntp-servers ntp-server.bullx;
 	hardware ethernet 00:02:C9:64:00:C6;
 	fixed-address 172.28.0.183;
 	option host-name "isw2";
+
 	option routers 172.28.0.1;
 }
+
