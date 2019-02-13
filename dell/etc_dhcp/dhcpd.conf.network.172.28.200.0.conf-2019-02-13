@@ -1,0 +1,594 @@
+# Blade ethernet addresses
+
+host blade1
+{
+hardware ethernet 08:00:38:3c:dd:47;
+fixed-address 172.28.200.1;
+option host-name "blade1";
+}
+
+host blade2
+{
+hardware ethernet 08:00:38:3c:db:19;
+fixed-address 172.28.200.2;
+option host-name "blade2";
+}
+
+host blade3
+{
+hardware ethernet 08:00:38:3c:db:13;
+fixed-address 172.28.200.3;
+option host-name "blade3";
+}
+
+host blade4
+{
+hardware ethernet 08:00:38:3c:de:43;
+fixed-address 172.28.200.4;
+option host-name "blade4";
+}
+
+host blade5
+{
+hardware ethernet 08:00:38:3c:db:01;
+fixed-address 172.28.200.5;
+option host-name "blade5";
+}
+
+host blade6
+{
+hardware ethernet 08:00:38:3c:db:eb;
+fixed-address 172.28.200.6;
+option host-name "blade6";
+}
+
+host blade7
+{
+hardware ethernet 08:00:38:3c:dc:b7;
+fixed-address 172.28.200.7;
+option host-name "blade7";
+}
+
+host blade8
+{
+hardware ethernet 08:00:38:3c:db:1f;
+fixed-address 172.28.200.8;
+option host-name "blade8";
+}
+
+host blade9
+{
+hardware ethernet 08:00:38:3c:db:07;
+fixed-address 172.28.200.9;
+option host-name "blade9";
+}
+
+host blade11
+{
+hardware ethernet 08:00:38:3c:dc:8d;
+fixed-address 172.28.200.11;
+option host-name "blade11";
+}
+
+host blade12
+{
+hardware ethernet 08:00:38:3c:dc:03;
+fixed-address 172.28.200.12;
+option host-name "blade12";
+}
+
+host blade13
+{
+hardware ethernet 08:00:38:3c:dc:c3;
+fixed-address 172.28.200.13;
+option host-name "blade13";
+}
+
+host blade14
+{
+hardware ethernet 08:00:38:3c:dc:6f;
+fixed-address 172.28.200.14;
+option host-name "blade14";
+}
+
+host blade15
+{
+hardware ethernet 08:00:38:3c:db:4f;
+fixed-address 172.28.200.15;
+option host-name "blade15";
+}
+
+host blade16
+{
+hardware ethernet 08:00:38:3c:dc:3f;
+fixed-address 172.28.200.16;
+option host-name "blade16";
+}
+
+host blade17
+{
+hardware ethernet 08:00:38:3c:db:97;
+fixed-address 172.28.200.17;
+option host-name "blade17";
+}
+
+host blade18
+{
+hardware ethernet 08:00:38:3c:dc:75;
+fixed-address 172.28.200.18;
+option host-name "blade18";
+}
+
+host blade19
+{
+hardware ethernet 08:00:38:3c:db:e5;
+fixed-address 172.28.200.19;
+option host-name "blade19";
+}
+
+
+
+host blade21
+{
+hardware ethernet 08:00:38:3c:dc:4b;
+fixed-address 172.28.200.21;
+option host-name "blade21";
+}
+
+host blade22
+{
+hardware ethernet 08:00:38:3c:db:df;
+fixed-address 172.28.200.22;
+option host-name "blade22";
+}
+
+host blade23
+{
+hardware ethernet 08:00:38:3c:db:cd;
+fixed-address 172.28.200.23;
+option host-name "blade23";
+}
+
+host blade24
+{
+hardware ethernet 08:00:38:3c:db:95;
+fixed-address 172.28.200.24;
+option host-name "blade24";
+}
+
+host blade25
+{
+hardware ethernet 08:00:38:3c:dc:c9;
+fixed-address 172.28.200.25;
+option host-name "blade25";
+}
+
+host blade26
+{
+hardware ethernet 08:00:38:3c:db:73;
+fixed-address 172.28.200.26;
+option host-name "blade26";
+}
+
+host blade27
+{
+hardware ethernet 08:00:38:3c:dc:1b;
+fixed-address 172.28.200.27;
+option host-name "blade27";
+}
+
+host blade28
+{
+hardware ethernet 08:00:38:3c:dc:15;
+fixed-address 172.28.200.28;
+option host-name "blade28";
+}
+
+host blade29
+{
+hardware ethernet 08:00:38:3c:dc:2d;
+fixed-address 172.28.200.29;
+option host-name "blade29";
+}
+
+
+host blade31
+{
+hardware ethernet 08:00:38:3c:db:79;
+fixed-address 172.28.200.31;
+option host-name "blade31";
+}
+
+
+host blade32
+{
+hardware ethernet 08:00:38:3c:dc:cf;
+fixed-address 172.28.200.32;
+option host-name "blade32";
+}
+
+host blade33
+{
+hardware ethernet 08:00:38:3c:db:a9;
+fixed-address 172.28.200.33;
+option host-name "blade33";
+}
+
+host blade34
+{
+hardware ethernet 08:00:38:3c:db:5b;
+fixed-address 172.28.200.34;
+option host-name "blade34";
+}
+
+host blade35
+{
+hardware ethernet 08:00:38:3c:dc:57;
+fixed-address 172.28.200.35;
+option host-name "blade35";
+}
+
+host blade36
+{
+hardware ethernet 08:00:38:3c:dc:9f;
+fixed-address 172.28.200.36;
+option host-name "blade36";
+}
+
+host blade37
+{
+hardware ethernet 08:00:38:3c:dc:99;
+fixed-address 172.28.200.37;
+option host-name "blade37";
+}
+
+host blade38
+{
+hardware ethernet 08:00:38:3c:dd:17;
+fixed-address 172.28.200.38;
+option host-name "blade38";
+}
+
+host blade39
+{
+hardware ethernet 08:00:38:3c:db:8b;
+fixed-address 172.28.200.39;
+option host-name "blade39";
+}
+
+
+host blade41
+{
+hardware ethernet 08:00:38:3c:dc:63;
+fixed-address 172.28.200.41;
+option host-name "blade41";
+}
+
+
+host blade42
+{
+hardware ethernet 08:00:38:3c:dc:f9;
+fixed-address 172.28.200.42;
+option host-name "blade42";
+}
+
+host blade43
+{
+hardware ethernet 08:00:38:3c:db:49;
+fixed-address 172.28.200.43;
+option host-name "blade43";
+}
+
+host blade44
+{
+hardware ethernet 08:00:38:3c:db:55;
+fixed-address 172.28.200.44;
+option host-name "blade44";
+}
+
+host blade45
+{
+hardware ethernet 08:00:38:3c:db:25;
+fixed-address 172.28.200.45;
+option host-name "blade45";
+}
+
+host blade46
+{
+hardware ethernet 08:00:38:3c:db:a3;
+fixed-address 172.28.200.46;
+option host-name "blade46";
+}
+
+host blade47
+{
+hardware ethernet 08:00:38:3c:dc:a5;
+fixed-address 172.28.200.47;
+option host-name "blade47";
+}
+
+host blade48
+{
+hardware ethernet 08:00:38:3c:dd:2f;
+fixed-address 172.28.200.48;
+option host-name "blade48";
+}
+
+host blade49
+{
+hardware ethernet 08:00:38:3c:dc:51;
+fixed-address 172.28.200.49;
+option host-name "blade49";
+}
+
+host blade50
+{
+hardware ethernet 08:00:38:3c:dd:ad;
+fixed-address 172.28.200.50;
+option host-name "blade50";
+}
+
+host blade51
+{
+hardware ethernet 08:00:38:3c:dd:77;
+fixed-address 172.28.200.51;
+option host-name "blade51";
+}
+
+host blade52
+{
+hardware ethernet 08:00:38:3c:de:49;
+fixed-address 172.28.200.52;
+option host-name "blade52";
+}
+
+host blade53
+{
+hardware ethernet 08:00:38:3c:db:61;
+fixed-address 172.28.200.53;
+option host-name "blade53";
+}
+
+host blade54
+{
+hardware ethernet 08:00:38:3c:db:f1;
+fixed-address 172.28.200.54;
+option host-name "blade54";
+}
+
+host blade55
+{
+hardware ethernet 08:00:38:3c:de:73;
+fixed-address 172.28.200.55;
+option host-name "blade55";
+}
+
+host blade56
+{
+hardware ethernet 08:00:38:3c:db:91;
+fixed-address 172.28.200.56;
+option host-name "blade56";
+}
+
+host blade60
+{
+hardware ethernet 08:00:38:3c:de:7f;
+fixed-address 172.28.200.60;
+option host-name "blade60";
+}
+
+host blade61
+{
+hardware ethernet 08:00:38:3c:de:13;
+fixed-address 172.28.200.61;
+option host-name "blade61";
+}
+
+host blade62
+{
+hardware ethernet 08:00:38:3c:dd:d1;
+fixed-address 172.28.200.62;
+option host-name "blade62";
+}
+
+host blade63
+{
+hardware ethernet 08:00:38:3c:dc:81;
+fixed-address 172.28.200.63;
+option host-name "blade63";
+}
+
+host blade64
+{
+hardware ethernet 08:00:38:3c:db:c7;
+fixed-address 172.28.200.64;
+option host-name "blade64";
+}
+
+host blade65
+{
+hardware ethernet 08:00:38:3c:db:9d;
+fixed-address 172.28.200.65;
+option host-name "blade65";
+}
+
+host blade66
+{
+hardware ethernet 08:00:38:3c:dc:0f;
+fixed-address 172.28.200.66;
+option host-name "blade66";
+}
+
+host blade70
+{
+hardware ethernet 08:00:38:3c:db:3d;
+fixed-address 172.28.200.70;
+option host-name "blade70";
+}
+
+host blade71
+{
+hardware ethernet 08:00:38:3c:dc:ed;
+fixed-address 172.28.200.71;
+option host-name "blade71";
+}
+
+host blade72
+{
+hardware ethernet 08:00:38:3c:dd:29;
+fixed-address 172.28.200.72;
+option host-name "blade72";
+}
+
+
+host blade73
+{
+hardware ethernet 08:00:38:3c:dc:93;
+fixed-address 172.28.200.73;
+option host-name "blade73";
+}
+
+
+host blade74
+{
+hardware ethernet 08:00:38:3c:db:7f;
+fixed-address 172.28.200.74;
+option host-name "blade74";
+}
+
+
+host blade75
+{
+hardware ethernet 08:00:38:3c:dc:33;
+fixed-address 172.28.200.75;
+option host-name "blade75";
+}
+
+
+host blade76
+{
+hardware ethernet 08:00:38:3c:dc:21;
+fixed-address 172.28.200.76;
+option host-name "blade76";
+}
+
+
+host blade77
+{
+hardware ethernet 08:00:38:3c:de:67;
+fixed-address 172.28.200.77;
+option host-name "blade77";
+}
+
+
+host blade80
+{
+hardware ethernet 08:00:38:3c:dd:5f;
+fixed-address 172.28.200.80;
+option host-name "blade80";
+}
+
+host blade81
+{
+hardware ethernet 08:00:38:3c:de:3d;
+fixed-address 172.28.200.81;
+option host-name "blade81";
+}
+
+host blade82
+{
+hardware ethernet 08:00:38:3c:de:37;
+fixed-address 172.28.200.82;
+option host-name "blade82";
+}
+
+host blade83
+{
+hardware ethernet 08:00:38:3c:dd:65;
+fixed-address 172.28.200.83;
+option host-name "blade83";
+}
+
+host blade84
+{
+hardware ethernet 08:00:38:3c:db:f7;
+fixed-address 172.28.200.84;
+option host-name "blade84";
+}
+
+host blade85
+{
+hardware ethernet 08:00:38:3c:dd:e9;
+fixed-address 172.28.200.85;
+option host-name "blade85";
+}
+
+host blade86
+{
+hardware ethernet 08:00:38:3c:db:67;
+fixed-address 172.28.200.86;
+option host-name "blade86";
+}
+
+host blade87
+{
+hardware ethernet 08:00:38:3c:db:37;
+fixed-address 172.28.200.87;
+option host-name "blade87";
+}
+
+host blade90
+{
+hardware ethernet 08:00:38:3c:db:d9;
+fixed-address 172.28.200.90;
+option host-name "blade90";
+}
+
+#host blade91
+#{
+#hardware ethernet 08:00:38:******;
+#fixed-address 172.28.200.91;
+#option host-name "blade91";
+#}
+
+host blade92
+{
+hardware ethernet 08:00:38:3c:dd:e3;
+fixed-address 172.28.200.92;
+option host-name "blade92";
+}
+
+host blade93
+{
+hardware ethernet 08:00:38:3c:db:0d;
+fixed-address 172.28.200.93;
+option host-name "blade93";
+}
+
+host blade94
+{
+hardware ethernet 08:00:38:3c:dc:7b;
+fixed-address 172.28.200.94;
+option host-name "blade94";
+}
+
+host blade95
+{
+hardware ethernet 08:00:38:3c:dc:39;
+fixed-address 172.28.200.95;
+option host-name "blade95";
+}
+
+host blade96
+{
+hardware ethernet 08:00:38:3c:db:43;
+fixed-address 172.28.200.96;
+option host-name "blade96";
+}
+
+host blade97
+{
+hardware ethernet 08:00:38:3c:db:2b;
+fixed-address 172.28.200.97;
+option host-name "blade97";
+}

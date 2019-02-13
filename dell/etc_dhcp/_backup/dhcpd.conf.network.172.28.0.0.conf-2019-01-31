@@ -48,10 +48,10 @@ host cmc6__172.28.0.89 {
 	option routers 172.28.0.1;
 }
 
-host cmc7__172.28.0.90 { 
+host cmc7__10.50.81.94 { 
 	option ntp-servers time.mikes.fi;
 	hardware ethernet 08:00:38:3A:6A:F8;
-	fixed-address 172.28.0.90;
+	fixed-address 10.50.81.94;
 	option host-name "cmc7";
 	log(info, log_msg_inventory);
 
@@ -341,13 +341,12 @@ host bmc27__172.28.0.122 {
 	option routers 172.28.0.1;
 }
 
-host bmc28__172.28.201.11 { 
-	# old adderss 172.28.0.124
-	# option ntp-servers time.mikes.fi;
-	option ntp-servers 172.28.0.253;
+host bmc28__172.28.0.123 { 
+	option ntp-servers time.mikes.fi;
 	hardware ethernet 08:00:38:3C:DC:8C;
-	fixed-address 172.28.201.11;
+	fixed-address 172.28.0.123;
 	option host-name "bmc28";
+
 	option routers 172.28.0.1;
 }
 
