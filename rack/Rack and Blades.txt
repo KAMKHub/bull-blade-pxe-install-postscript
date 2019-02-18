@@ -1,3 +1,20 @@
+=== Blades in use (DO NOT TOCUH) ===
+
+RACK 1 - CMC6 Chassis (1st from up): http://172.28.0.89 (rack1)
+* HULIS - Whole rack for testing purposes
+
+RACK 2 - CMC11 Chassis (1st from up): http://172.28.0.94
+* JUKKA     CSC50 / blade50: http://172.28.201.50/home.asp
+* CUSTOMER  CSC51 / blade51: http://172.28.201.51/home.asp
+* HULIS     CSC52 / blade52: http://172.28.201.52/home.asp
+* HULIS     CSC53 / blade53: http://172.28.201.53/home.asp
+* KAMK      CSC54 / blade54: http://172.28.201.54/home.asp
+* JUKKA     CSC55 / blade55: http://172.28.201.55/home.asp
+* JUKKA     CSC56 / blade56: http://172.28.201.56/home.asp
+
+RACK 2 - CMC13 Chassis (3rd from up): http://172.28.0.92
+* KAMK      CSC22 / blade22: http://172.28.201.22/home.asp
+
 === Rack / Chassis ===
 
 RACK 1
@@ -16,113 +33,111 @@ RACK 2
 
 == Blade-management ==
 
-RACK 1
+RACK 1 - CMC6 Chassis (1st from up): http://172.28.0.89
+* CSC01 / blade01: http://172.28.201.1/home.asp
+* CSC02 / blade02: http://172.28.201.2/home.asp <--- management ei saa osoitetta, asennuksen jälkeen ainakaan ping ei mene läpi
+* CSC03 / blade03: http://172.28.201.3/home.asp
+* CSC04 / blade04: http://172.28.201.4/home.asp
+* CSC05 / blade05: http://172.28.201.5/home.asp
+* CSC06 / blade06: http://172.28.201.6/home.asp
+* CSC07 / blade07: http://172.28.201.7/home.asp
+* CSC08 / blade08: http://172.28.201.8/home.asp
+* CSC09 / blade09: http://172.28.201.9/home.asp
 
-CMC6 Chassis (1st from up): http://172.28.0.89 (rack1)
-* CSC01 / blade01: http://172.28.0.132/home.asp
-* CSC02 / blade02: http://172.28.0.133/home.asp <--- management ei saa osoitetta, asennuksen jälkeen ainakaan ping ei mene läpi
-* CSC03 / blade03: http://172.28.0.134/home.asp
-* CSC04 / blade04: http://172.28.0.135/home.asp
-* CSC05 / blade05: http://172.28.0.136/home.asp
-* CSC06 / blade06: http://172.28.0.137/home.asp
-* CSC07 / blade07: http://172.28.0.138/home.asp
-* CSC08 / blade08: http://172.28.0.139/home.asp
-* CSC09 / blade09: http://172.28.0.140/home.asp
-
-CMC5 Chassis (2nd from up): http://172.28.0.88 (rack1)
+RACK 1 - CMC5 Chassis (2nd from up): http://172.28.0.88
 * CSC11 / blade11: http://172.28.201.11/home.asp
-* CSC12 / blade12: http://172.28.0.124/home.asp
-* CSC13 / blade13: http://172.28.0.125/home.asp
-* CSC14 / blade14: http://172.28.0.126/home.asp
-* CSC15 / blade15: http://172.28.0.127/home.asp
-* CSC16 / blade16: http://172.28.0.128/home.asp
-* CSC17 / blade17: http://172.28.0.129/home.asp
-* CSC18 / blade18: http://172.28.0.130/home.asp
-* CSC19 / blade19: http://172.28.0.131/home.asp
+* CSC12 / blade12: http://172.28.201.12/home.asp
+* CSC13 / blade13: http://172.28.201.13/home.asp
+* CSC14 / blade14: http://172.28.201.14/home.asp
+* CSC15 / blade15: http://172.28.201.15/home.asp
+* CSC16 / blade16: http://172.28.201.16/home.asp
+* CSC17 / blade17: http://172.28.201.17/home.asp
+* CSC18 / blade18: http://172.28.201.18/home.asp
+* CSC19 / blade19: http://172.28.201.19/home.asp
 
-CMC4 Chassis (3rd from up): http://172.28.0.87 (rack1)
-* CSC70 / blade70: http://172.28.0.157/home.asp
-* CSC71 / blade71: http://172.28.0.158/home.asp
-* CSC72 / blade72: http://172.28.0.159/home.asp
-* CSC73 / blade73: http://172.28.0.160/home.asp
-* CSC74 / blade74: http://172.28.0.161/home.asp
-* CSC75 / blade75: http://172.28.0.162/home.asp  <--- I/O error /dev/sda asennuksessa, kiintolevy rikki?
-* CSC76 / blade76: http://172.28.0.163/home.asp
-* CSC77 / blade77: http://172.28.0.164/home.asp
+RACK 1 - CMC4 Chassis (3rd from up): http://172.28.0.87
+* CSC70 / blade70: http://172.28.201.70/home.asp
+* CSC71 / blade71: http://172.28.201.71/home.asp
+* CSC72 / blade72: http://172.28.201.72/home.asp
+* CSC73 / blade73: http://172.28.201.73/home.asp
+* CSC74 / blade74: http://172.28.201.74/home.asp
+* CSC75 / blade75: http://172.28.201.75/home.asp  <--- I/O error /dev/sda asennuksessa, kiintolevy rikki?
+* CSC76 / blade76: http://172.28.201.76/home.asp
+* CSC77 / blade77: http://172.28.201.77/home.asp
 
-CMC3 Chassis (4th from up): http://172.28.0.86
-* CSC31 / blade31: http://172.28.0.105/home.asp
-* CSC32 / blade32: http://172.28.0.106/home.asp
-* CSC33 / blade33: http://172.28.0.107/home.asp
-* CSC34 / blade34: http://172.28.0.108/home.asp
-* CSC35 / blade35: http://172.28.0.109/home.asp
-* CSC36 / blade36: http://172.28.0.110/home.asp
-* CSC37 / blade37: http://172.28.0.111/home.asp
-* CSC38 / blade38: http://172.28.0.112/home.asp
-* CSC39 / blade39: http://172.28.0.113/home.asp
+RACK 1 - CMC3 Chassis (4th from up): http://172.28.0.86
+* CSC31 / blade31: http://172.28.201.31/home.asp
+* CSC32 / blade32: http://172.28.201.32/home.asp
+* CSC33 / blade33: http://172.28.201.33/home.asp
+* CSC34 / blade34: http://172.28.201.34/home.asp
+* CSC35 / blade35: http://172.28.201.35/home.asp
+* CSC36 / blade36: http://172.28.201.36/home.asp
+* CSC37 / blade37: http://172.28.201.37/home.asp
+* CSC38 / blade38: http://172.28.201.38/home.asp
+* CSC39 / blade39: http://172.28.201.39/home.asp
 
-CMC0 Chassis (5th from up): http://172.28.0.85
-* CSC41 / blade41: http://172.28.0.96/home.asp
-* CSC42 / blade42: http://172.28.0.97/home.asp
-* CSC43 / blade43: http://172.28.0.98/home.asp
-* CSC44 / blade44: http://172.28.0.99/home.asp
-* CSC45 / blade45: http://172.28.0.100/home.asp
-* CSC46 / blade46: http://172.28.0.101/home.asp
-* CSC47 / blade47: http://172.28.0.102/home.asp
-* CSC48 / blade48: http://172.28.0.103/home.asp
-* CSC49 / blade49: http://172.28.0.104/home.asp
+RACK 1 - CMC0 Chassis (5th from up): http://172.28.0.85
+* CSC41 / blade41: http://172.28.201.41/home.asp
+* CSC42 / blade42: http://172.28.201.42/home.asp
+* CSC43 / blade43: http://172.28.201.43/home.asp
+* CSC44 / blade44: http://172.28.201.44/home.asp
+* CSC45 / blade45: http://172.28.201.45/home.asp
+* CSC46 / blade46: http://172.28.201.46/home.asp
+* CSC47 / blade47: http://172.28.201.47/home.asp
+* CSC48 / blade48: http://172.28.201.48/home.asp
+* CSC49 / blade49: http://172.28.201.49/home.asp
 
 RACK 2
 
-CMC11 Chassis (1st from up): http://172.28.0.94
-* CSC50 / blade50: http://172.28.0.172/home.asp
-* CSC51 / blade51: http://172.28.0.173/home.asp
-* CSC52 / blade52: http://172.28.0.174/home.asp
-* CSC53 / blade53: http://172.28.0.175/home.asp
-* CSC54 / blade54 EMPTY
-* CSC55 / blade55: http://172.28.0.177/home.asp
-* CSC56 / blade56: http://172.28.0.178/home.asp
+RACK 2 - CMC11 Chassis (1st from up): http://172.28.0.94
+* CSC50 / blade50: http://172.28.201.50/home.asp
+* CSC51 / blade51: http://172.28.201.51/home.asp
+* CSC52 / blade52: http://172.28.201.52/home.asp
+* CSC53 / blade53: http://172.28.201.53/home.asp
+* CSC54 / blade54: http://172.28.201.54/home.asp
+* CSC55 / blade55: http://172.28.201.55/home.asp
+* CSC56 / blade56: http://172.28.201.56/home.asp
 * CSC57 / blade57 EMPTY
 * CSC58 / blade58 EMPTY
 
-CMC12 Chassis (2nd from up): http://172.28.0.93
-* CSC60 / blade60: http://172.28.0.165/home.asp
-* CSC61 / blade61: http://172.28.0.166/home.asp
-* CSC62 / blade62: http://172.28.0.167/home.asp
-* CSC63 / blade63: http://172.28.0.168/home.asp
-* CSC64 / blade64: http://172.28.0.169/home.asp
-* CSC65 / blade65: http://172.28.0.170/home.asp
-* CSC66 / blade66: http://172.28.0.171/home.asp
+RACK 2 - CMC12 Chassis (2nd from up): http://172.28.0.93
+* CSC60 / blade60: http://172.28.201.60/home.asp
+* CSC61 / blade61: http://172.28.201.61/home.asp
+* CSC62 / blade62: http://172.28.201.62/home.asp
+* CSC63 / blade63: http://172.28.201.63/home.asp
+* CSC64 / blade64: http://172.28.201.64/home.asp
+* CSC65 / blade65: http://172.28.201.65/home.asp
+* CSC66 / blade66: http://172.28.201.66/home.asp
 * CSC67 / blade67 EMPTY
 * CSC68 / blade68 EMPTY
 
-CMC13 Chassis (3rd from up): http://172.28.0.92
-* CSC21 / blade21: http://172.28.0.114/home.asp
-* CSC22 / blade22: http://172.28.0.115/home.asp
-* CSC23 / blade23: http://172.28.0.116/home.asp
-* CSC24 / blade24: http://172.28.0.117/home.asp
-* CSC25 / blade25: http://172.28.0.118/home.asp
-* CSC26 / blade26: http://172.28.0.119/home.asp
-* CSC27 / blade27: http://172.28.0.120/home.asp
-* CSC28 / blade28: http://172.28.0.121/home.asp
-* CSC29 / blade29: http://172.28.0.122/home.asp
+RACK 2 - CMC13 Chassis (3rd from up): http://172.28.0.92
+* CSC21 / blade21: http://172.28.201.21/home.asp
+* CSC22 / blade22: http://172.28.201.22/home.asp
+* CSC23 / blade23: http://172.28.201.23/home.asp
+* CSC24 / blade24: http://172.28.201.24/home.asp
+* CSC25 / blade25: http://172.28.201.25/home.asp
+* CSC26 / blade26: http://172.28.201.26/home.asp
+* CSC27 / blade27: http://172.28.201.27/home.asp
+* CSC28 / blade28: http://172.28.201.28/home.asp
+* CSC29 / blade29: http://172.28.201.29/home.asp
 
-CMC14 Chassis (4th from up): http://172.28.0.91 (rack2)
-* CSC80 / blade80: http://172.28.0.149/home.asp
-* CSC81 / blade81: http://172.28.0.150/home.asp
-* CSC82 / blade82: http://172.28.0.151/home.asp
-* CSC83 / blade83: http://172.28.0.152/home.asp
-* CSC84 / blade84: http://172.28.0.153/home.asp
-* CSC85 / blade85: http://172.28.0.154/home.asp
-* CSC86 / blade86: http://172.28.0.155/home.asp
-* CSC87 / blade87: http://172.28.0.156/home.asp
+RACK 2 - CMC14 Chassis (4th from up): http://172.28.0.91
+* CSC80 / blade80: http://172.28.201.80/home.asp
+* CSC81 / blade81: http://172.28.201.81/home.asp
+* CSC82 / blade82: http://172.28.201.82/home.asp
+* CSC83 / blade83: http://172.28.201.83/home.asp
+* CSC84 / blade84: http://172.28.201.84/home.asp
+* CSC85 / blade85: http://172.28.201.85/home.asp
+* CSC86 / blade86: http://172.28.201.86/home.asp
+* CSC87 / blade87: http://172.28.201.87/home.asp
 
-CMC15 Chassis (5th from up): http://172.28.0.90 (rack2)
-* CSC90 / blade90: http://172.28.0.141/home.asp
-* CSC91 / blade91: http://172.28.0.142/home.asp <--- standby tilassa. ei käynnisty
-* CSC92 / blade92: http://172.28.0.143/home.asp
-* CSC93 / blade93: http://172.28.0.144/home.asp
-* CSC94 / blade94: http://172.28.0.145/home.asp
-* CSC95 / blade95: http://172.28.0.146/home.asp
-* CSC96 / blade96: http://172.28.0.147/home.asp
-* CSC97 / blade97: http://172.28.0.148/home.asp
+RACK 2 - CMC15 Chassis (5th from up): http://172.28.0.90
+* CSC90 / blade90: http://172.28.201.90/home.asp
+* CSC91 / blade91: http://172.28.201.91/home.asp <--- standby tilassa. ei käynnisty
+* CSC92 / blade92: http://172.28.201.92/home.asp
+* CSC93 / blade93: http://172.28.201.93/home.asp
+* CSC94 / blade94: http://172.28.201.94/home.asp
+* CSC95 / blade95: http://172.28.201.95/home.asp
+* CSC96 / blade96: http://172.28.201.96/home.asp
+* CSC97 / blade97: http://172.28.201.97/home.asp
