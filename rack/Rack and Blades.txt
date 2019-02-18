@@ -1,4 +1,4 @@
-=== Blades in use (DO NOT TOCUH) ===
+=== Blades in use (DO NOT TOUCH) ===
 
 RACK 1 - CMC6 Chassis (1st from up): http://172.28.0.89 (rack1)
 * HULIS - Whole rack for testing purposes
@@ -8,8 +8,8 @@ RACK 2 - CMC11 Chassis (1st from up): http://172.28.0.94
 * CUSTOMER  CSC51 / blade51: http://172.28.201.51/home.asp
 * HULIS     CSC52 / blade52: http://172.28.201.52/home.asp
 * HULIS     CSC53 / blade53: http://172.28.201.53/home.asp
-* KAMK      CSC54 / blade54: http://172.28.201.54/home.asp
-* JUKKA     CSC55 / blade55: http://172.28.201.55/home.asp
+* JUKKA     CSC54 / blade54: http://172.28.201.54/home.asp
+* KAMK      CSC55 / blade55: http://172.28.201.55/home.asp
 * JUKKA     CSC56 / blade56: http://172.28.201.56/home.asp
 
 RACK 2 - CMC13 Chassis (3rd from up): http://172.28.0.92
