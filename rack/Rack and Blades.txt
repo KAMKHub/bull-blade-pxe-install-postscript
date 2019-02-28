@@ -1,35 +1,35 @@
 === Blades in use (DO NOT TOUCH) ===
 
-RACK 1 - CMC6 Chassis (1st from up): http://172.28.0.89 (rack1)
+RACKS and Managements:
+* OFF - RACK 1: 172.28.0.179
+* RACK 2: 172.28.0.180
+
+RACK 2 CHASSIS 1 - CMC11 Chassis (1st from up): http://172.28.0.94
+* JUKKA     CSC50 / blade50n: http://172.28.201.50/home.asp
+* CUSTOMER  CSC51 / blade51n: http://172.28.201.51/home.asp
+* JUKKA     CSC21 / blade21i: http://172.28.201.21/home.asp
+* JANNE     CSC22 / blade22i: http://172.28.201.22/home.asp
+* KAMK      CSC55 / blade55n: http://172.28.201.55/home.asp
+* JUKKA     CSC56 / blade56n: http://172.28.201.56/home.asp
+
+RACK 2 CHASIS 3 - CMC13 Chassis (3rd from up): http://172.28.0.92
 * HULIS - Whole rack for testing purposes
-
-RACK 2 - CMC11 Chassis (1st from up): http://172.28.0.94
-* JUKKA     CSC50 / blade50: http://172.28.201.50/home.asp
-* CUSTOMER  CSC51 / blade51: http://172.28.201.51/home.asp
-* HULIS     CSC52 / blade52: http://172.28.201.52/home.asp
-* HULIS     CSC53 / blade53: http://172.28.201.53/home.asp
-* JUKKA     CSC54 / blade54: http://172.28.201.54/home.asp
-* KAMK      CSC55 / blade55: http://172.28.201.55/home.asp
-* JUKKA     CSC56 / blade56: http://172.28.201.56/home.asp
-
-RACK 2 - CMC13 Chassis (3rd from up): http://172.28.0.92
-* KAMK      CSC22 / blade22: http://172.28.201.22/home.asp
 
 === Rack / Chassis ===
 
 RACK 1
-* CMC6 Chassis (1st from up): http://172.28.0.89
-* CMC5 Chassis (1st from up): http://172.28.0.88
-* CMC4 Chassis (1st from up): http://172.28.0.87
-* CMC3 Chassis (1st from up): http://172.28.0.86
-* CMC0 Chassis (1st from up): http://172.28.0.85
+* OFF - CMC6 Chassis (1st from up): http://172.28.0.89
+* OFF - CMC5 Chassis (1st from up): http://172.28.0.88
+* OFF - CMC4 Chassis (1st from up): http://172.28.0.87
+* OFF - CMC3 Chassis (1st from up): http://172.28.0.86
+* OFF - CMC0 Chassis (1st from up): http://172.28.0.85
 
 RACK 2
 * CMC13 Chassis (1st from up): http://172.28.0.94
-* CMC12 Chassis (2nd from up): http://172.28.0.93
+* OFF - CMC12 Chassis (2nd from up): http://172.28.0.93
 * CMC11 Chassis (3rd from up): http://172.28.0.92
-* CMC10 Chassis (4th from up): http://172.28.0.91
-* CMC7  Chassis (5th from up): http://172.28.0.90
+* OFF - CMC10 Chassis (4th from up): http://172.28.0.91
+* OFF - CMC7  Chassis (5th from up): http://172.28.0.90
 
 == Blade-management ==
 
@@ -93,8 +93,8 @@ RACK 2 - CMC11 Chassis (1st from up): http://172.28.0.94
 * CSC50 / blade50: http://172.28.201.50/home.asp
 * CSC51 / blade51: http://172.28.201.51/home.asp
 * CSC52 / blade52: http://172.28.201.52/home.asp
-* CSC53 / blade53: http://172.28.201.53/home.asp
-* CSC54 / blade54: http://172.28.201.54/home.asp
+* CSC21 / blade21: http://172.28.201.21/home.asp
+* CSC22 / blade22: http://172.28.201.22/home.asp
 * CSC55 / blade55: http://172.28.201.55/home.asp
 * CSC56 / blade56: http://172.28.201.56/home.asp
 * CSC57 / blade57 EMPTY
@@ -112,8 +112,8 @@ RACK 2 - CMC12 Chassis (2nd from up): http://172.28.0.93
 * CSC68 / blade68 EMPTY
 
 RACK 2 - CMC13 Chassis (3rd from up): http://172.28.0.92
-* CSC21 / blade21: http://172.28.201.21/home.asp
-* CSC22 / blade22: http://172.28.201.22/home.asp
+* CSC53 / blade53: http://172.28.201.53/home.asp
+* CSC54 / blade54: http://172.28.201.54/home.asp
 * CSC23 / blade23: http://172.28.201.23/home.asp
 * CSC24 / blade24: http://172.28.201.24/home.asp
 * CSC25 / blade25: http://172.28.201.25/home.asp
@@ -141,3 +141,42 @@ RACK 2 - CMC15 Chassis (5th from up): http://172.28.0.90
 * CSC95 / blade95: http://172.28.201.95/home.asp
 * CSC96 / blade96: http://172.28.201.96/home.asp
 * CSC97 / blade97: http://172.28.201.97/home.asp
+
+=== Käynnistystestaukset 28.2.2019 ===
+
+Kaikki alhaalla
+* käynnistetty HYCs --> ei tapahdu mitään
+* käynnistetty Shelf-1
+  --> käynnistyy HYC
+  --> 3 power bladessa on valot
+* käynnistetty Shelf-2
+  --> 7 power bladessa on valot
+* käynnistetty Shelf-3
+  --> 11 power bladessa on valot
+* käynnistetty Shelf-4
+  --> 15 power bladessa on valot
+* käynnistetty Shelf-5
+  --> 19 power bladessa on valot (kaikki päällä)
+* käynnistetty Shelf-6 ja Shelf-7
+  --> ei vaikutusta
+
+* sammutettu kaikki
+* käynnistetty HYCs --> ei tapahdu mitään
+* käynnistetty Supplies --> ei tapahdu mitään
+* käynnistetty Shelf-1 --> HYC; 3 power bladessa on valot
+* käynnistetty loput Shelfit --> kaikki valot päällä
+* käynnistetty räkki managementin kautta
+  - chassiksia ei saa ammutettua yksitellen
+* sammutettu kaikki shelf paitsi viimeinen
+  --> osa powereista sammui
+* sammutettu viimeinen shelf
+  --> kaikki powerit sammuivat ja chassikset ja HYC sammuivat
+
+* käynnistetty supplies, hycs ja shelf1
+* käynnistetty räkki managementin kautta
+  --> chassikset syttyi ja sammui (Cool kabinet Off
+  --> 2019-02-28 12:33:46    	BMC Message    	Insufficient power supply resources: 19 PSU Present 3 Ready for 11 required 
+  --> 2019-02-28 12:33:46    	BMC Message    	CPC Power sequencer halted on error step 2  
+* käynnistetty supplies, hycs ja kaikki shelf
+* käynnistetty räkki managementin kautta
+* --> käynnissä
