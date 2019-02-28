@@ -7,6 +7,7 @@ RACKS and Managements:
 RACK 2 CHASSIS 1 - CMC11 Chassis (1st from up): http://172.28.0.94
 * JUKKA     CSC50 / blade50n: http://172.28.201.50/home.asp
 * CUSTOMER  CSC51 / blade51n: http://172.28.201.51/home.asp
+* JUKKA     CSC52 / blade52n: http://172.28.201.52/home.asp
 * JUKKA     CSC21 / blade21i: http://172.28.201.21/home.asp
 * JANNE     CSC22 / blade22i: http://172.28.201.22/home.asp
 * KAMK      CSC55 / blade55n: http://172.28.201.55/home.asp
@@ -33,9 +34,12 @@ RACK 2
 
 == Blade-management ==
 
+* CSC02 / blade02: http://172.28.201.2/home.asp <--- management ei saa osoitetta, asennuksen jälkeen ainakaan ping ei mene läpi
+
+
 RACK 1 - CMC6 Chassis (1st from up): http://172.28.0.89
 * CSC01 / blade01: http://172.28.201.1/home.asp
-* CSC02 / blade02: http://172.28.201.2/home.asp <--- management ei saa osoitetta, asennuksen jälkeen ainakaan ping ei mene läpi
+* CSC71 / blade71: http://172.28.201.71/home.asp
 * CSC03 / blade03: http://172.28.201.3/home.asp
 * CSC04 / blade04: http://172.28.201.4/home.asp
 * CSC05 / blade05: http://172.28.201.5/home.asp
@@ -57,7 +61,7 @@ RACK 1 - CMC5 Chassis (2nd from up): http://172.28.0.88
 
 RACK 1 - CMC4 Chassis (3rd from up): http://172.28.0.87
 * CSC70 / blade70: http://172.28.201.70/home.asp
-* CSC71 / blade71: http://172.28.201.71/home.asp
+* TYHJÄ
 * CSC72 / blade72: http://172.28.201.72/home.asp
 * CSC73 / blade73: http://172.28.201.73/home.asp
 * CSC74 / blade74: http://172.28.201.74/home.asp
@@ -131,6 +135,7 @@ RACK 2 - CMC14 Chassis (4th from up): http://172.28.0.91
 * CSC85 / blade85: http://172.28.201.85/home.asp
 * CSC86 / blade86: http://172.28.201.86/home.asp
 * CSC87 / blade87: http://172.28.201.87/home.asp
+* CSC88 / blade88: EMPTY
 
 RACK 2 - CMC15 Chassis (5th from up): http://172.28.0.90
 * CSC90 / blade90: http://172.28.201.90/home.asp
@@ -141,6 +146,7 @@ RACK 2 - CMC15 Chassis (5th from up): http://172.28.0.90
 * CSC95 / blade95: http://172.28.201.95/home.asp
 * CSC96 / blade96: http://172.28.201.96/home.asp
 * CSC97 / blade97: http://172.28.201.97/home.asp
+* CSC98 / blade98: EMPTY
 
 === Käynnistystestaukset 28.2.2019 ===
 
