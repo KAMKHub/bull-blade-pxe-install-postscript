@@ -5,12 +5,12 @@ RACKS and Managements:
 * RACK 2: 172.28.0.180
 
 RACK 2 CHASSIS 1 - CMC11 Chassis (1st from up): http://172.28.0.94
-* JUKKA     CSC50 / blade50n: http://172.28.201.50/home.asp
+* HANNU     CSC50 / blade50n: http://172.28.201.50/home.asp
 * CUSTOMER  CSC51 / blade51n: http://172.28.201.51/home.asp
 * JUKKA     CSC52 / blade52n: http://172.28.201.52/home.asp
 * JUKKA     CSC21 / blade21i: http://172.28.201.21/home.asp
 * JANNE     CSC22 / blade22i: http://172.28.201.22/home.asp
-* KAMK      CSC55 / blade55n: http://172.28.201.55/home.asp
+* JANNE     CSC55 / blade55n: http://172.28.201.55/home.asp
 * JUKKA     CSC56 / blade56n: http://172.28.201.56/home.asp
 
 RACK 2 CHASIS 3 - CMC13 Chassis (3rd from up): http://172.28.0.92

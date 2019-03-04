@@ -1,0 +1,28 @@
+#title:        docker-compose.yaml
+#description:  This docker compose file is user to start Tensorflow with Jupyter, Python 3 and GPU support (CUDA)
+#ogranization: Kajaani University of Applied Sciences (KAMK)
+#project:      Bull Supercomputer - bullx DLC blade system - B700 Series
+#author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
+#created:      2019-02-28
+#modified:     2019-02-28
+#version:      1.1
+#usage:        docker-compose up -d
+#OS:           CentOS 7 with Docker Compose
+#info:         https://hub.docker.com/r/tensorflow/tensorflow
+
+version: '3'
+
+services:
+
+  citius:
+    image: tensorflow/tensorflow:tensorflow:latest-gpu-py3-jupyter
+    container_name: tensorflow-gpu-py3-jupyter
+    hostname: tensorflow-gpu-py3-jupyter
+    privileged: true
+    restart: 'no'
+    network_mode: bridge
+    tty: true
+    ports:
+      - "8888:8888"
+    volumes:
+      - ~/tf/notebooks:/tf/notebooks
