@@ -1,0 +1,367 @@
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.3.5
+
+# authoring-byte-order entry is generated, DO NOT DELETE
+authoring-byte-order little-endian;
+
+lease 172.31.1.3 {
+  starts 5 2019/02/22 13:01:21;
+  ends 5 2019/02/22 13:06:21;
+  tstp 5 2019/02/22 13:06:21;
+  cltt 5 2019/02/22 13:01:21;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:00;
+}
+lease 172.31.1.5 {
+  starts 5 2019/02/22 13:01:22;
+  ends 5 2019/02/22 13:06:22;
+  tstp 5 2019/02/22 13:06:22;
+  cltt 5 2019/02/22 13:01:22;
+  binding state free;
+  hardware ethernet 08:00:38:3c:de:42;
+}
+lease 172.31.1.4 {
+  starts 5 2019/02/22 13:01:23;
+  ends 5 2019/02/22 13:06:23;
+  tstp 5 2019/02/22 13:06:23;
+  cltt 5 2019/02/22 13:01:23;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:06;
+}
+lease 172.31.1.7 {
+  starts 5 2019/02/22 13:01:24;
+  ends 5 2019/02/22 13:06:24;
+  tstp 5 2019/02/22 13:06:24;
+  cltt 5 2019/02/22 13:01:24;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:ea;
+}
+lease 172.31.1.8 {
+  starts 5 2019/02/22 13:01:25;
+  ends 5 2019/02/22 13:06:25;
+  tstp 5 2019/02/22 13:06:25;
+  cltt 5 2019/02/22 13:01:25;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:1e;
+}
+lease 172.31.1.9 {
+  starts 5 2019/02/22 13:01:25;
+  ends 5 2019/02/22 13:06:26;
+  tstp 5 2019/02/22 13:06:26;
+  cltt 5 2019/02/22 13:01:25;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dc:b6;
+}
+lease 172.31.1.13 {
+  starts 5 2019/02/22 13:02:05;
+  ends 5 2019/02/22 13:07:05;
+  tstp 5 2019/02/22 13:07:05;
+  cltt 5 2019/02/22 13:02:05;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dc:ec;
+}
+lease 172.31.1.2 {
+  starts 5 2019/02/22 13:06:02;
+  ends 5 2019/02/22 13:11:03;
+  tstp 5 2019/02/22 13:11:03;
+  cltt 5 2019/02/22 13:06:02;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dd:46;
+}
+lease 172.31.1.15 {
+  starts 5 2019/02/22 13:05:26;
+  ends 5 2019/02/22 13:15:26;
+  tstp 5 2019/02/22 13:15:26;
+  cltt 5 2019/02/22 13:05:26;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:13;
+  set clht = "ubuntu";
+  set cllt = "600";
+  set clip = "172.31.1.15";
+  set clhw = "8:0:38:3c:db:13";
+  set vendor-class-identifier = "Linux ipconfig";
+}
+lease 172.31.1.16 {
+  starts 5 2019/02/22 13:30:31;
+  ends 5 2019/02/22 13:40:31;
+  tstp 5 2019/02/22 13:40:31;
+  cltt 5 2019/02/22 13:30:31;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dc:ed;
+  set vendor-class-identifier = "Linux ipconfig";
+  set clhw = "8:0:38:3c:dc:ed";
+  set clip = "172.31.1.16";
+  set cllt = "600";
+  set clht = "ubuntu";
+}
+lease 172.31.1.18 {
+  starts 1 2019/02/25 07:59:06;
+  ends 1 2019/02/25 08:09:06;
+  tstp 1 2019/02/25 08:09:06;
+  cltt 1 2019/02/25 07:59:06;
+  binding state free;
+  hardware ethernet 08:00:38:3c:de:43;
+  set vendor-class-identifier = "Linux ipconfig";
+  set clhw = "8:0:38:3c:de:43";
+  set clip = "172.31.1.18";
+  set cllt = "600";
+  set clht = "ubuntu";
+}
+lease 172.31.1.12 {
+  starts 1 2019/02/25 08:03:33;
+  ends 1 2019/02/25 08:13:33;
+  tstp 1 2019/02/25 08:13:33;
+  cltt 1 2019/02/25 08:03:33;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:01;
+  set vendor-class-identifier = "Linux ipconfig";
+  set clhw = "8:0:38:3c:db:1";
+  set clip = "172.31.1.12";
+  set cllt = "600";
+  set clht = "ubuntu";
+}
+lease 172.31.1.10 {
+  starts 1 2019/02/25 08:08:31;
+  ends 1 2019/02/25 08:18:31;
+  tstp 1 2019/02/25 08:18:31;
+  cltt 1 2019/02/25 08:08:31;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:eb;
+  set vendor-class-identifier = "Linux ipconfig";
+  set clhw = "8:0:38:3c:db:eb";
+  set clip = "172.31.1.10";
+  set cllt = "600";
+  set clht = "ubuntu";
+}
+lease 172.31.1.11 {
+  starts 1 2019/02/25 08:11:04;
+  ends 1 2019/02/25 08:21:04;
+  tstp 1 2019/02/25 08:21:04;
+  cltt 1 2019/02/25 08:11:04;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dc:b7;
+  set vendor-class-identifier = "Linux ipconfig";
+  set clhw = "8:0:38:3c:dc:b7";
+  set clip = "172.31.1.11";
+  set cllt = "600";
+  set clht = "ubuntu";
+}
+lease 172.31.1.19 {
+  starts 1 2019/02/25 08:11:06;
+  ends 1 2019/02/25 08:21:06;
+  tstp 1 2019/02/25 08:21:06;
+  cltt 1 2019/02/25 08:11:06;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:1f;
+  set vendor-class-identifier = "Linux ipconfig";
+  set clhw = "8:0:38:3c:db:1f";
+  set clip = "172.31.1.19";
+  set cllt = "600";
+  set clht = "ubuntu";
+}
+lease 172.31.1.20 {
+  starts 1 2019/02/25 08:12:35;
+  ends 1 2019/02/25 08:22:35;
+  tstp 1 2019/02/25 08:22:35;
+  cltt 1 2019/02/25 08:12:35;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:07;
+  set vendor-class-identifier = "Linux ipconfig";
+  set clhw = "8:0:38:3c:db:7";
+  set clip = "172.31.1.20";
+  set cllt = "600";
+  set clht = "ubuntu";
+}
+lease 172.31.1.17 {
+  starts 1 2019/02/25 10:49:44;
+  ends 1 2019/02/25 10:59:44;
+  tstp 1 2019/02/25 10:59:44;
+  cltt 1 2019/02/25 10:49:44;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dd:47;
+  set vendor-class-identifier = "Linux ipconfig";
+  set clhw = "8:0:38:3c:dd:47";
+  set clip = "172.31.1.17";
+  set cllt = "600";
+  set clht = "ubuntu";
+}
+lease 172.31.1.6 {
+  starts 1 2019/02/25 11:03:35;
+  ends 1 2019/02/25 11:13:35;
+  tstp 1 2019/02/25 11:13:35;
+  cltt 1 2019/02/25 11:03:35;
+  binding state free;
+  hardware ethernet 08:00:38:3c:d0:d1;
+  set clht = "(none)";
+  set cllt = "600";
+  set clip = "172.31.1.6";
+  set clhw = "8:0:38:3c:d0:d1";
+}
+lease 172.31.1.14 {
+  starts 1 2019/02/25 11:03:53;
+  ends 1 2019/02/25 11:13:53;
+  tstp 1 2019/02/25 11:13:53;
+  cltt 1 2019/02/25 11:03:53;
+  binding state free;
+  hardware ethernet 08:00:38:3a:68:10;
+  set clht = "(none)";
+  set cllt = "600";
+  set clip = "172.31.1.14";
+  set clhw = "8:0:38:3a:68:10";
+  set vendor-class-identifier = "Linux 2.6.23.1 armv5tejl";
+}
+lease 172.31.1.36 {
+  starts 1 2019/02/25 12:39:57;
+  ends 1 2019/02/25 12:48:40;
+  tstp 1 2019/02/25 12:48:40;
+  cltt 1 2019/02/25 12:39:57;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:cd;
+}
+lease 172.31.1.22 {
+  starts 1 2019/02/25 12:39:02;
+  ends 1 2019/02/25 12:49:02;
+  tstp 1 2019/02/25 12:49:02;
+  cltt 1 2019/02/25 12:39:02;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:f1;
+  set clhw = "8:0:38:3c:db:f1";
+  set clip = "172.31.1.22";
+  set cllt = "600";
+  set clht = "(none)";
+}
+lease 172.31.1.31 {
+  starts 1 2019/02/25 12:39:55;
+  ends 1 2019/02/25 12:49:55;
+  tstp 1 2019/02/25 12:49:55;
+  cltt 1 2019/02/25 12:39:55;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:73;
+  set clht = "ubuntu";
+  set cllt = "600";
+  set clip = "172.31.1.31";
+  set clhw = "8:0:38:3c:db:73";
+}
+lease 172.31.1.32 {
+  starts 1 2019/02/25 12:39:55;
+  ends 1 2019/02/25 12:49:55;
+  tstp 1 2019/02/25 12:49:55;
+  cltt 1 2019/02/25 12:39:55;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dc:1b;
+  set clht = "ubuntu";
+  set cllt = "600";
+  set clip = "172.31.1.32";
+  set clhw = "8:0:38:3c:dc:1b";
+}
+lease 172.31.1.33 {
+  starts 1 2019/02/25 12:39:56;
+  ends 1 2019/02/25 12:49:56;
+  tstp 1 2019/02/25 12:49:56;
+  cltt 1 2019/02/25 12:39:56;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dc:2d;
+  set clht = "ubuntu";
+  set cllt = "600";
+  set clip = "172.31.1.33";
+  set clhw = "8:0:38:3c:dc:2d";
+}
+lease 172.31.1.34 {
+  starts 1 2019/02/25 12:39:56;
+  ends 1 2019/02/25 12:49:56;
+  tstp 1 2019/02/25 12:49:56;
+  cltt 1 2019/02/25 12:39:56;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:95;
+  set clht = "ubuntu";
+  set cllt = "600";
+  set clip = "172.31.1.34";
+  set clhw = "8:0:38:3c:db:95";
+}
+lease 172.31.1.35 {
+  starts 1 2019/02/25 12:39:56;
+  ends 1 2019/02/25 12:49:56;
+  tstp 1 2019/02/25 12:49:56;
+  cltt 1 2019/02/25 12:39:56;
+  binding state free;
+  hardware ethernet 08:00:38:3c:dc:15;
+  set clht = "ubuntu";
+  set cllt = "600";
+  set clip = "172.31.1.35";
+  set clhw = "8:0:38:3c:dc:15";
+}
+lease 172.31.1.24 {
+  starts 1 2019/02/25 12:41:23;
+  ends 1 2019/02/25 12:50:06;
+  tstp 1 2019/02/25 12:50:06;
+  cltt 1 2019/02/25 12:41:23;
+  binding state free;
+  hardware ethernet 08:00:38:3c:db:61;
+}
+lease 172.31.1.21 {
+  starts 5 2019/03/08 07:49:48;
+  ends 5 2019/03/08 07:59:48;
+  tstp 5 2019/03/08 07:59:48;
+  cltt 5 2019/03/08 07:49:48;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 08:00:38:3a:6c:30;
+  set clht = "(none)";
+  set cllt = "600";
+  set clip = "172.31.1.21";
+  set clhw = "8:0:38:3a:6c:30";
+  on expiry {
+    set clhw = 
+       binary-to-ascii (16, 8, ":", 
+                        substring (hardware, 1, 6)) ;
+    set clip = 
+       binary-to-ascii (10, 8, ".", leased-address) ;
+    execute ("/usr/sbin/maas-dhcp-helper", "notify", "--action", "expiry", 
+        "--mac", clhw, "--ip-family", "ipv4", "--ip", clip, "--socket", "/var/lib/maas/dhcpd.sock");
+  }
+  on release {
+    set clhw = 
+       binary-to-ascii (16, 8, ":", 
+                        substring (hardware, 1, 6)) ;
+    set clip = 
+       binary-to-ascii (10, 8, ".", leased-address) ;
+    execute ("/usr/sbin/maas-dhcp-helper", "notify", "--action", "release",
+        "--mac", clhw, "--ip-family", "ipv4", "--ip", clip, "--socket", "/var/lib/maas/dhcpd.sock");
+  }
+}
+lease 172.31.1.23 {
+  starts 5 2019/03/08 07:51:43;
+  ends 5 2019/03/08 08:01:43;
+  tstp 5 2019/03/08 08:01:43;
+  cltt 5 2019/03/08 07:51:43;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 08:00:38:3a:6a:c0;
+  set vendor-class-identifier = "Linux 2.6.23.1 armv5tejl";
+  set clhw = "8:0:38:3a:6a:c0";
+  set clip = "172.31.1.23";
+  set cllt = "600";
+  set clht = "(none)";
+  on expiry {
+    set clhw = 
+       binary-to-ascii (16, 8, ":", 
+                        substring (hardware, 1, 6)) ;
+    set clip = 
+       binary-to-ascii (10, 8, ".", leased-address) ;
+    execute ("/usr/sbin/maas-dhcp-helper", "notify", "--action", "expiry", 
+        "--mac", clhw, "--ip-family", "ipv4", "--ip", clip, "--socket", "/var/lib/maas/dhcpd.sock");
+  }
+  on release {
+    set clhw = 
+       binary-to-ascii (16, 8, ":", 
+                        substring (hardware, 1, 6)) ;
+    set clip = 
+       binary-to-ascii (10, 8, ".", leased-address) ;
+    execute ("/usr/sbin/maas-dhcp-helper", "notify", "--action", "release",
+        "--mac", clhw, "--ip-family", "ipv4", "--ip", clip, "--socket", "/var/lib/maas/dhcpd.sock");
+  }
+}
+server-duid "\000\001\000\001$\024\330\212\220\261\034%4\310";
+

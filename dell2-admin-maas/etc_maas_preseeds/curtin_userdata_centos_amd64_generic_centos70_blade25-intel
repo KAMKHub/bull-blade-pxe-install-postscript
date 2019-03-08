@@ -1,4 +1,18 @@
+#Asennuksen jälkeen pitäisi saada ajettua seuraavat komennot:
+#systemctl stop mpss
+#micctrl --initdefaults --users=none
+#micctrl --useradd=user
+#systemctl start mpss
+#
+#Tällä hetkellä micctrl-komennot ajetaan phiscript.sh ja initphi.servicen avulla.
+#Komentojen suorittamisen jälkeen systeemi boottaa vielä kerran ja poistaa samalla
+#initphi.servicen.
+#
+#
 #cloud-config
+
+ssh_pwauth: yes
+
 debconf_selections:
  maas: |
   {{for line in str(curtin_preseed).splitlines()}}
@@ -6,11 +20,15 @@ debconf_selections:
   {{endfor}}
 
 #early_commands:
-#   disable_reboot: touch /run/block-curtin-poweroff /tmp/block-poweroff /tmp/block-reboot
+#   01_disable_reboot: touch /run/block-curtin-poweroff /tmp/block-poweroff /tmp/block-reboot
+#   02_touch: touch /lallallaa
 
 late_commands:
   maas: [wget, '--no-proxy', '{{node_disable_pxe_url}}', '--post-data', '{{node_disable_pxe_data}}', '-O', '/dev/null']
   01_selinux: ["curtin", "in-target", "--", "sh", "-c", "sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config"]
+  02_rootlogin: ["curtin", "in-target", "--", "sh", "-c", "sed -i -r 's/.?PermitRootLogin.+/PermitRootLogin yes/' /etc/ssh/sshd_config"]
+#  03_passwordauth: ["curtin", "in-target", "--", "sh", "-c", "sed -i -r 's/.?PasswordAuthentication.+/PasswordAuthentication yes/' /etc/ssh/sshd_config"]
+#  04_rootlogin: ["curtin", "in-target", "--", "sh", "-c", "rm -rf /root/.ssh/authorized_keys"]
   10_kb: ["curtin", "in-target", "--", "sh", "-c", "mv /etc/localtime /etc/localtime.old"]
   11_rootpw: ["curtin", "in-target", "--", "sh", "-c", "usermod -p '$6$cWhAgRmieHdERO4N$fCTnOFDxAKY.csUUwhLPiFQ.P1PDuiriIbayy2yGZuQFTEuzeHD55K7XwauFD/W2afbndAh9pgt798ygAW6xv0' root"]
   12_adduser: ["curtin", "in-target", "--", "sh", "-c", "adduser -m -p '$6$Q1CMDKd7k7QgkYSi$SviZu6DDns2N0ZN6jLaWOsa1oPLGcds2jnOu2lNsU0GSyCMKYHb.x4LrWVx2eLpltiam4Iq1RbzI4adgaFENr1' user"]
@@ -31,9 +49,9 @@ late_commands:
   29_install_more: ["curtin", "in-target", "--", "sh", "-c", "yum -y install /intel_install_packages/mpss-3.8.4/perf/*.rpm"]
   30_micctrl: ["curtin", "in-target", "--", "sh", "-c", "wget http://172.28.0.253/centos7_x64_everything_1804/intel_install_packages/phiscript.sh"]
   31_micctrl: ["curtin", "in-target", "--", "sh", "-c", "wget http://172.28.0.253/centos7_x64_everything_1804/intel_install_packages/initphi.service"]
-  32_micctrl: ["curtin", "in-target", "--", "sh", "-c", "wget http://172.28.0.253/centos7_x64_everything_1804/intel_install_packages/mpss.service"]
+#  32_micctrl: ["curtin", "in-target", "--", "sh", "-c", "wget http://172.28.0.253/centos7_x64_everything_1804/intel_install_packages/mpss.service"]
   33_micctrl: ["curtin", "in-target", "--", "sh", "-c", "mv -v initphi.service /etc/systemd/system/"]
-  34_micctrl: ["curtin", "in-target", "--", "sh", "-c", "mv -v mpss.service /etc/systemd/system/"]
+#  34_micctrl: ["curtin", "in-target", "--", "sh", "-c", "mv -v mpss.service /etc/systemd/system/"]
   35_micctrl: ["curtin", "in-target", "--", "sh", "-c", "mkdir /phirelated"]
   36_micctrl: ["curtin", "in-target", "--", "sh", "-c", "mv -v phiscript.sh /phirelated/phiscript.sh"]
   37_micctrl: ["curtin", "in-target", "--", "sh", "-c", "chmod +x /phirelated/phiscript.sh"]
@@ -48,10 +66,10 @@ late_commands:
   57_docker_install: ["curtin", "in-target", "--", "sh", "-c", "yum install docker-ce -y"]
   60_docker_systemctl: ["curtin", "in-target", "--", "sh", "-c", "systemctl enable docker"]
   61_docker_systemctl: ["curtin", "in-target", "--", "sh", "-c", "systemctl start docker"]
-#  70_docker_compose: ["curtin", "in-target", "--", "sh", "-c", "pip install docker-compose"]
-
-#  30_installpkg: ["curtin", "in-target", "--", "sh", "-c", "yum -y install intel_install_packages/kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm"]
-#  31_installpkg: ["curtin", "in-target", "--", "sh", "-c", "yum -y install intel_install_packages/kernel-headers-3.10.0-862.14.4.el7.x86_64.rpm"]
+  70_docker_compose: ["curtin", "in-target", "--", "sh", "-c", "pip install --upgrade --force-reinstall pip==9.0.3"]
+  71_docker_compose: ["curtin", "in-target", "--", "sh", "-c", "pip install docker-compose"]
+  72_docker_compose: ["curtin", "in-target", "--", "sh", "-c", "pip install --upgrade pip"]
+  
 
 showtrace: true
 verbosity: 3

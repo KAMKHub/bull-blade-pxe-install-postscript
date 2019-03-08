@@ -1,7 +1,7 @@
 #!/bin/bash -       
 #title:        bull-blade-pxe-install-postscript.sh
-#description:  This script is run after the PXE-install of KAMK Bull blades
-#ogranization: Kajaani University of Applied Sciences (KAMK)
+#description:  This script is run after the PXE-install of KAMK Bull NVIDIA GPU blades
+#organization: Kajaani University of Applied Sciences (KAMK)
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
 #author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
 #created:      2019-01-24
@@ -83,7 +83,7 @@ echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/
 # Info: Verify driver version by looking at:
 # cat /proc/driver/nvidia/version
 
-# Info: Verify the CUDA Toolkit version
+# Info: Verify the CUDA Toolkit version (requires reboot after the PATH has been set)
 # nvcc -V
 
 # Info: Verify running CUDA GPU jobs by compiling the samples and executing the deviceQuery or bandwidthTest programs

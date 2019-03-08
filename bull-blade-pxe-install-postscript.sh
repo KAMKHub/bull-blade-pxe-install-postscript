@@ -1,7 +1,7 @@
 #!/bin/bash -       
 #title:        bull-blade-pxe-install-postscript.sh
 #description:  This script is run after the PXE-install of KAMK Bull blades
-#ogranization: Kajaani University of Applied Sciences (KAMK)
+#organization: Kajaani University of Applied Sciences (KAMK)
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
 #author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
 #created:      2019-01-24
