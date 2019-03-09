@@ -35,6 +35,7 @@ sed -i 's/SYNC_HWCLOCK=no/SYNC_HWCLOCK=yes/g' /etc/sysconfig/ntpdate /etc/syscon
 yum install -y epel-release
 yum install -y nano
 yum install -y telnet
+yum install -y rsync
 
 # Disable SELinux
 sed -i 's/enforcing/disabled/g' /etc/selinux/config /etc/selinux/config
