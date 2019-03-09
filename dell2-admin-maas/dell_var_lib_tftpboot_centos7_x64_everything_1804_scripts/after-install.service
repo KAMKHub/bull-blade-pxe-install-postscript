@@ -1,0 +1,10 @@
+[Unit]
+Description=AfterInstallNVIDIA
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/bin/bash /opt/purkkaskripti.sh
+
+[Install]
+WantedBy=default.target
