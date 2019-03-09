@@ -30,8 +30,8 @@ late_commands:
   15_yum: ["curtin", "in-target", "--", "sh", "-c", "yum install -y kexec-tools wget nano ntp"]
   16_kernel: ["curtin", "in-target", "--", "sh", "-c", "curl http://172.28.0.253/centos7_x64_everything_1804/intel_install_packages/kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm -o /root/kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm"]
   17_head: ["curtin", "in-target", "--", "sh", "-c", "curl http://172.28.0.253/centos7_x64_everything_1804/intel_install_packages/kernel-headers-3.10.0-862.14.4.el7.x86_64.rpm -o /root/kernel-headers-3.10.0-862.14.4.el7.x86_64.rpm"]
-  #18_kinst: ["curtin", "in-target", "--", "sh", "-c", "yum -y install /root/kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm"]
-  #19_hinst: ["curtin", "in-target", "--", "sh", "-c", "yum -y install /root/kernel-headers-3.10.0-862.14.4.el7.x86_64.rpm"]
+  18_kinst: ["curtin", "in-target", "--", "sh", "-c", "yum -y install /root/kernel-devel-3.10.0-862.14.4.el7.x86_64.rpm"]
+  19_hinst: ["curtin", "in-target", "--", "sh", "-c", "yum -y install /root/kernel-headers-3.10.0-862.14.4.el7.x86_64.rpm"]
 
   20_getsh: ["curtin", "in-target", "--", "sh", "-c", "curl http://172.28.0.253/centos7_x64_everything_1804/scripts/after-install-nvidia.sh -o /opt/after-install-nvidia.sh"]
   21_getsh: ["curtin", "in-target", "--", "sh", "-c", "curl http://172.28.0.253/centos7_x64_everything_1804/scripts/after-install-nvidia.service -o /usr/lib/systemd/system/after-install-nvidia.service"]
