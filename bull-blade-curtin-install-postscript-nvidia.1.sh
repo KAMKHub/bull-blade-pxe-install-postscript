@@ -70,10 +70,40 @@ grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 # Install NVIDIA driver from the source (required approach for CentOS 7).
 cd /root
 yum install -y dkms
-wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
-#wget http://172.28.0.253/centos7_x64_everything_1804/nvidia/NVIDIA-Linux-x86_64-410.79.run
+wget http://172.28.0.253/centos7_x64_everything_1804/nvidia/NVIDIA-Linux-x86_64-410.79.run
 sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 
 # Info: How to test NVIDIA driver
 # lshw -numeric -C display
 # nvidia-smi
+
+#==============================================================================
+# Install CUDA Toolkit using repository and set path
+#==============================================================================
+
+cd /root
+wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-10.0.130-1.x86_64.rpm
+rpm -i cuda-repo-*.rpm
+yum install -y cuda
+rm -f /etc/profile.d/cudapath.sh
+touch /etc/profile.d/cudapath.sh
+PATH=/usr/local/cuda/bin:$PATH
+LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+echo "PATH=/usr/local/cuda/bin:$PATH" > /etc/profile.d/cudapath.sh
+echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/cudapath.sh
+
+# Info: Verify driver version by looking at:
+# cat /proc/driver/nvidia/version
+
+# Info: Verify the CUDA Toolkit version
+# nvcc -V
+
+# Info: Verify running CUDA GPU jobs by compiling the samples and executing the deviceQuery or bandwidthTest programs
+# cd /usr/local/cuda/samples/1_Utilities/deviceQuery
+# make
+# ./deviceQuery
+# cd /usr/local/cuda/samples/1_Utilities/bandwidthTest
+# make
+# ./bandwidthTest
+
+yum update -y
