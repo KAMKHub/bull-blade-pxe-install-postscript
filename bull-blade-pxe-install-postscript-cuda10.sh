@@ -78,7 +78,7 @@ rpm -i cuda-repo-*.rpm
 yum install -y cuda
 rm -f /etc/profile.d/cudapath.sh
 touch /etc/profile.d/cudapath.sh
-PATH=/usr/local/cuda/bin:$PATH"
+PATH=/usr/local/cuda/bin:$PATH
 LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 echo "PATH=/usr/local/cuda/bin:$PATH" > /etc/profile.d/cudapath.sh
 echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/cudapath.sh
