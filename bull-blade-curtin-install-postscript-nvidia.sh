@@ -58,19 +58,19 @@ sed -i -r 's/.?PermitRootLogin.+/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # Unload nouveau driver to not conflict with the installation of the NVIDIA driver
 # https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-centos-7-linux
-rmmod nouveau
+# rmmod nouveau
 
 # Disable nouveau driver from the grub file and generates a configuration files for GRUB
 # https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-centos-7-linux
-sed -ri 's/GRUB_CMDLINE_LINUX="/GRUB_CMDLINE_LINUX="nouveau.modeset=0 rd.driver.blacklist=nouveau /g' /etc/default/grub
-grub2-mkconfig -o /boot/grub2/grub.cfg
-grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
+# sed -ri 's/GRUB_CMDLINE_LINUX="/GRUB_CMDLINE_LINUX="nouveau.modeset=0 rd.driver.blacklist=nouveau /g' /etc/default/grub
+# grub2-mkconfig -o /boot/grub2/grub.cfg
+# grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 
 # Install NVIDIA driver from the source (required approach for CentOS 7).
-cd /root
-yum install -y dkms
-wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
-sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
+# cd /root
+# yum install -y dkms
+# wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
+# sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 
 # Info: How to test NVIDIA driver
 # lshw -numeric -C display

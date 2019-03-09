@@ -60,7 +60,8 @@ grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 # Install NVIDIA driver from the source (required approach for CentOS 7).
 cd /root
 yum install -y dkms
-wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
+
+#wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
 sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 
 # Info: How to test NVIDIA driver
@@ -77,6 +78,8 @@ rpm -i cuda-repo-*.rpm
 yum install -y cuda
 rm -f /etc/profile.d/cudapath.sh
 touch /etc/profile.d/cudapath.sh
+PATH=/usr/local/cuda/bin:$PATH"
+LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 echo "PATH=/usr/local/cuda/bin:$PATH" > /etc/profile.d/cudapath.sh
 echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/cudapath.sh
 

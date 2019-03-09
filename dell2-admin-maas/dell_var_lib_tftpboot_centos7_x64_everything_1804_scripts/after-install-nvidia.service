@@ -4,7 +4,7 @@ Requires=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=/bin/bash /opt/purkkaskripti.sh
+ExecStart=/bin/bash /opt/after-install-nvidia.sh
 
 [Install]
 WantedBy=default.target

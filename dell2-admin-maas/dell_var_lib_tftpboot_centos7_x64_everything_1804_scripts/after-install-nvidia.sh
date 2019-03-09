@@ -1,8 +1,15 @@
-#!/bin/sh
-
-#########################################################
-## Purkkaviritelmä joka asentaa NVIDIAn vehkeet kuntoon #
-#########################################################
+#!/bin/bash
+#title:        after-install-nvidia.sh
+#description:  This script is run after the MAAS-install of KAMK Bull NVIDIA GPU blades
+#organization: Kajaani University of Applied Sciences (KAMK)
+#project:      Bull Supercomputer - bullx DLC blade system - B700 Series
+#author:       Otto Kemppainen
+#created:      2019-03-08
+#modified:     2019-03-09
+#version:      1.1
+#usage:        bash after-install-nvidia.sh
+#OS:           CentOS 7
+#==============================================================================
 
 if [ ! -f /opt/.installcomplete ]; then
 #	sleep 15s
