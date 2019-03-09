@@ -107,4 +107,3 @@ echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/
 # ./bandwidthTest
 
 yum update -y
-reboot
