@@ -70,10 +70,11 @@ grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 # Install NVIDIA driver from the source (required approach for CentOS 7).
 cd /root
 yum install -y dkms
-wget http://fr.download.nvidia.com/tesla/410.79/NVIDIA-Linux-x86_64-410.79.run
-#wget http://172.28.0.253/centos7_x64_everything_1804/nvidia/NVIDIA-Linux-x86_64-410.79.run
+wget http://172.28.0.253/centos7_x64_everything_1804/nvidia/NVIDIA-Linux-x86_64-410.79.run
 sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 
 # Info: How to test NVIDIA driver
 # lshw -numeric -C display
 # nvidia-smi
+
+yum update -y
