@@ -37,7 +37,7 @@ RACK 2
 * CSC02 / blade02: http://172.28.201.2/home.asp <--- management ei saa osoitetta, asennuksen jälkeen ainakaan ping ei mene läpi
 
 
-RACK 1 - CMC6 Chassis (1st from up): http://172.28.0.89
+RACK 1 - CMC6 Chassis 1 (1st from up): http://172.28.0.89
 * CSC01 / blade01: http://172.28.201.1/home.asp
 * CSC71 / blade71: http://172.28.201.71/home.asp
 * CSC03 / blade03: http://172.28.201.3/home.asp
@@ -48,7 +48,7 @@ RACK 1 - CMC6 Chassis (1st from up): http://172.28.0.89
 * CSC08 / blade08: http://172.28.201.8/home.asp
 * CSC09 / blade09: http://172.28.201.9/home.asp
 
-RACK 1 - CMC5 Chassis (2nd from up): http://172.28.0.88
+RACK 1 - CMC5 Chassis 2 (2nd from up): http://172.28.0.88
 * CSC11 / blade11: http://172.28.201.11/home.asp
 * CSC12 / blade12: http://172.28.201.12/home.asp
 * CSC13 / blade13: http://172.28.201.13/home.asp
@@ -59,7 +59,7 @@ RACK 1 - CMC5 Chassis (2nd from up): http://172.28.0.88
 * CSC18 / blade18: http://172.28.201.18/home.asp
 * CSC19 / blade19: http://172.28.201.19/home.asp
 
-RACK 1 - CMC4 Chassis (3rd from up): http://172.28.0.87
+RACK 1 - CMC4 Chassis 3 (3rd from up): http://172.28.0.87
 * CSC70 / blade70: http://172.28.201.70/home.asp
 * TYHJÄ
 * CSC72 / blade72: http://172.28.201.72/home.asp
@@ -68,8 +68,9 @@ RACK 1 - CMC4 Chassis (3rd from up): http://172.28.0.87
 * CSC75 / blade75: http://172.28.201.75/home.asp  <--- I/O error /dev/sda asennuksessa, kiintolevy rikki?
 * CSC76 / blade76: http://172.28.201.76/home.asp
 * CSC77 / blade77: http://172.28.201.77/home.asp
+* CSC78 / blade78: EMPTY
 
-RACK 1 - CMC3 Chassis (4th from up): http://172.28.0.86
+RACK 1 - CMC3 Chassis 4 (4th from up): http://172.28.0.86
 * CSC31 / blade31: http://172.28.201.31/home.asp
 * CSC32 / blade32: http://172.28.201.32/home.asp
 * CSC33 / blade33: http://172.28.201.33/home.asp
@@ -80,7 +81,7 @@ RACK 1 - CMC3 Chassis (4th from up): http://172.28.0.86
 * CSC38 / blade38: http://172.28.201.38/home.asp
 * CSC39 / blade39: http://172.28.201.39/home.asp
 
-RACK 1 - CMC0 Chassis (5th from up): http://172.28.0.85
+RACK 1 - CMC0 Chassis 5 (5th from up): http://172.28.0.85
 * CSC41 / blade41: http://172.28.201.41/home.asp
 * CSC42 / blade42: http://172.28.201.42/home.asp
 * CSC43 / blade43: http://172.28.201.43/home.asp
@@ -93,7 +94,7 @@ RACK 1 - CMC0 Chassis (5th from up): http://172.28.0.85
 
 RACK 2
 
-RACK 2 - CMC11 Chassis (1st from up): http://172.28.0.94
+RACK 2 - CMC11 Chassis 1 (1st from up): http://172.28.0.94
 * CSC50 / blade50: http://172.28.201.50/home.asp
 * CSC51 / blade51: http://172.28.201.51/home.asp
 * CSC52 / blade52: http://172.28.201.52/home.asp
@@ -101,10 +102,10 @@ RACK 2 - CMC11 Chassis (1st from up): http://172.28.0.94
 * CSC22 / blade22: http://172.28.201.22/home.asp
 * CSC55 / blade55: http://172.28.201.55/home.asp
 * CSC56 / blade56: http://172.28.201.56/home.asp
-* CSC57 / blade57 EMPTY
-* CSC58 / blade58 EMPTY
+* CSC57 / blade57: EMPTY
+* CSC58 / blade58: EMPTY
 
-RACK 2 - CMC12 Chassis (2nd from up): http://172.28.0.93
+RACK 2 - CMC12 Chassis 2 (2nd from up): http://172.28.0.93
 * CSC60 / blade60: http://172.28.201.60/home.asp
 * CSC61 / blade61: http://172.28.201.61/home.asp
 * CSC62 / blade62: http://172.28.201.62/home.asp
@@ -112,10 +113,10 @@ RACK 2 - CMC12 Chassis (2nd from up): http://172.28.0.93
 * CSC64 / blade64: http://172.28.201.64/home.asp
 * CSC65 / blade65: http://172.28.201.65/home.asp
 * CSC66 / blade66: http://172.28.201.66/home.asp
-* CSC67 / blade67 EMPTY
-* CSC68 / blade68 EMPTY
+* CSC67 / blade67: EMPTY
+* CSC68 / blade68: EMPTY
 
-RACK 2 - CMC13 Chassis (3rd from up): http://172.28.0.92
+RACK 2 - CMC13 Chassis 3 (3rd from up): http://172.28.0.92
 * CSC53 / blade53: http://172.28.201.53/home.asp
 * CSC54 / blade54: http://172.28.201.54/home.asp
 * CSC23 / blade23: http://172.28.201.23/home.asp
@@ -126,7 +127,7 @@ RACK 2 - CMC13 Chassis (3rd from up): http://172.28.0.92
 * CSC28 / blade28: http://172.28.201.28/home.asp
 * CSC29 / blade29: http://172.28.201.29/home.asp
 
-RACK 2 - CMC14 Chassis (4th from up): http://172.28.0.91
+RACK 2 - CMC14 Chassis 4 (4th from up): http://172.28.0.91
 * CSC80 / blade80: http://172.28.201.80/home.asp
 * CSC81 / blade81: http://172.28.201.81/home.asp
 * CSC82 / blade82: http://172.28.201.82/home.asp
@@ -137,7 +138,7 @@ RACK 2 - CMC14 Chassis (4th from up): http://172.28.0.91
 * CSC87 / blade87: http://172.28.201.87/home.asp
 * CSC88 / blade88: EMPTY
 
-RACK 2 - CMC15 Chassis (5th from up): http://172.28.0.90
+RACK 2 - CMC15 Chassis 5 (5th from up): http://172.28.0.90
 * CSC90 / blade90: http://172.28.201.90/home.asp
 * CSC02 / blade02: http://172.28.201.2/home.asp
 * CSC92 / blade92: http://172.28.201.92/home.asp
