@@ -32,9 +32,12 @@ RACK 2
 * OFF - CMC10 Chassis (4th from up): http://172.28.0.91
 * OFF - CMC7  Chassis (5th from up): http://172.28.0.90
 
-== Blade-management ==
+== In the office ==
 
 * CSC02 / blade02: http://172.28.201.2/home.asp <--- management ei saa osoitetta, asennuksen jälkeen ainakaan ping ei mene läpi
+* CSC91 / blade91: http://172.28.201.91/home.asp <--- Out of order
+
+== Blade-management ==
 
 
 RACK 1 - CMC6 Chassis 1 (1st from up): http://172.28.0.89
@@ -140,7 +143,7 @@ RACK 2 - CMC14 Chassis 4 (4th from up): http://172.28.0.91
 
 RACK 2 - CMC15 Chassis 5 (5th from up): http://172.28.0.90
 * CSC90 / blade90: http://172.28.201.90/home.asp
-* CSC02 / blade02: http://172.28.201.2/home.asp
+* EMPTY
 * CSC92 / blade92: http://172.28.201.92/home.asp
 * CSC93 / blade93: http://172.28.201.93/home.asp
 * CSC94 / blade94: http://172.28.201.94/home.asp
