@@ -1,6 +1,6 @@
 #!/bin/bash -       
-#title:        bull-blade-pxe-install-postscript-nvidia.sh
-#description:  This script is run after the PXE-install of KAMK Bull NVIDIA GPU blades
+#title:        bull-blade-curtin-install-postscript-nvidia.sh
+#description:  This script is run after the Curtin-install of KAMK Bull NVIDIA GPU blades
 #organization: Kajaani University of Applied Sciences (KAMK)
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
 #author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
@@ -9,10 +9,10 @@
 #version:      1.0
 #usage:        bull-blade-pxe-install-postscript-nvidia.sh
 #OS:           CentOS 7
-#attention:    It is not allowed to run "yum update -y" in order to complete
-#              NVIDIA Driver installation successfully. The update will install
-#              incompatible kernel-headers and NVIDIA Driver installation
-#              fails.
+#attention:    It is not allowed to run "yum update -y" before NVIDIA Driver
+#              installation in order to completethe installation successfully.
+#              The update will install incompatible kernel-headers and
+#              NVIDIA Driver installation fails.
 #==============================================================================
 
 #==============================================================================
@@ -27,8 +27,6 @@ yum clean all
 yum -y install ntp
 systemctl enable ntpd
 systemctl start ntpd
-#chkconfig ntpd on
-#service ntpd start
 timedatectl set-timezone Europe/Helsinki
 sed -i 's/SYNC_HWCLOCK=no/SYNC_HWCLOCK=yes/g' /etc/sysconfig/ntpdate /etc/sysconfig/ntpdate
 
@@ -51,7 +49,7 @@ sed -i -r 's/.?PermitRootLogin.+/PermitRootLogin yes/' /etc/ssh/sshd_config
 # Install NVIDIA Driver
 #==============================================================================
 
-# Development tools should be installed at the Kickstart for the NVIDIA script because this install cannot find
+# Development tools should be installed at the Curtin for the NVIDIA script because this install cannot find
 ## kernel-devel and kernel-headers for the default kernel version
 # yum groupinstall -y "Development tools"
 # yum install -y kernel-devel-$(uname -r)
