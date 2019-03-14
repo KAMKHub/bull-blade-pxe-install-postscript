@@ -87,20 +87,12 @@ rpm -i cuda-repo-*.rpm
 yum install -y cuda-10-0
 rm -f /etc/profile.d/cudapath.sh
 touch /etc/profile.d/cudapath.sh
+#LD_LIBRARY_PATH=/usr/local/cuda/lib64;$LD_LIBRARY_PATH
+#LD_LIBRARY_PATH=/usr/local/cuda/lib64
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 echo "export PATH=/usr/local/cuda/bin:$PATH" > /etc/profile.d/cudapath.sh
 echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/cudapath.sh
-
-# Remove NVIDIA Driver 418.39 which is not working with CUDA 10.0. The driver was installed automatically when installing CUDA Tookit
-yum remove nvidia-driver-418.39-4.el7.x86_64.rpm
-
-# Remove NDIVIA-repository for not installing any updates for NVIDIA
-rm -f /etc/yum.repos.d/cuda.repo
-
-# Reinstall NVIDIA Driver 410.79
-cd /root
-sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 
 # Info: Verify driver version by looking at:
 # cat /proc/driver/nvidia/version
@@ -178,56 +170,6 @@ pip install --ignore-installed tensorflow-gpu
 # In [6]: quit
 #==============================================================================
 
-#==============================================================================
-# Docker installation
-#==============================================================================
-
-# Install required packages for Docker
-yum install -y yum-utils \
-  device-mapper-persistent-data \
-  lvm2
-
-# Set up the stable repository
-yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
-
-# Install the latest version of Docker CE
-yum install docker-ce  -y
-
-# Enable Docker
-systemctl enable docker
-
-# Start Docker
-systemctl start docker
-
-# Install Docker Compose (docker-compose pip install fails with pip 10.0.0 or later; need to downgrade)
-pip install --upgrade --force-reinstall pip==9.0.3
-pip install docker-compose
-pip install --upgrade pip
-
-#==============================================================================
-# Install NVIDIA Container Runtime for Docker
-#==============================================================================
-
-## Add the package repositories
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.repo | \
-  sudo tee /etc/yum.repos.d/nvidia-docker.repo
-
-# Install nvidia-docker2 and reload the Docker daemon configuration
-yum install -y nvidia-docker2
-pkill -SIGHUP dockerd
-
-# Info: Test nvidia-smi with the latest official CUDA image
-# docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
-# nvidia-docker run --rm nvidia/cuda:10.0-base nvidia-smi
-
-# Info: Run a TensorFlow container
-# cd /root
-# docker pull tensorflow/tensorflow # Download latest image
-# docker run -it -p 8888:8888 tensorflow/tensorflow # Start a Jupyter notebook server
+DO-NOT-INSTALL-CUDA
 
 yum update -y
-
-DO-NOT-INSTALL-CUDA

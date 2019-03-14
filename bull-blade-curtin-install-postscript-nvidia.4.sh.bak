@@ -82,6 +82,14 @@ sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 #==============================================================================
 
 cd /root
+wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-10-0-10.0.130-1.x86_64.rpm
+rpm -i cuda-10-0-10.0.130-1.x86_64.rpm
+
+cd /root
+wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-10.0.130-1.x86_64.rpm
+rpm -i cuda-10.0.130-1.x86_64.rpm
+
+cd /root
 wget https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-repo-rhel7-10.0.130-1.x86_64.rpm
 rpm -i cuda-repo-*.rpm
 yum install -y cuda-10-0

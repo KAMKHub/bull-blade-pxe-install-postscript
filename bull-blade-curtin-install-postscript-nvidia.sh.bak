@@ -229,5 +229,3 @@ pkill -SIGHUP dockerd
 # docker run -it -p 8888:8888 tensorflow/tensorflow # Start a Jupyter notebook server
 
 yum update -y
-
-DO-NOT-INSTALL-CUDA
