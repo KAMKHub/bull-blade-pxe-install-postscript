@@ -5,7 +5,7 @@
 #project:      Bull Supercomputer - bullx DLC blade system - B700 Series
 #author:       Jukka Jurvansuu <jukka.jurv@nsuu.fi>
 #created:      2019-03-09
-#modified:     2019-03-11
+#modified:     2019-03-15
 #version:      1.0
 #usage:        bull-blade-pxe-install-postscript-nvidia.sh
 #OS:           CentOS 7
@@ -75,7 +75,7 @@ sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 # lshw -numeric -C display
 # nvidia-smi
 
-: <<'DO-NOT-INSTALL-CUDA'
+# : <<'DO-NOT-INSTALL-CUDA'
 
 #==============================================================================
 # Install CUDA Toolkit using repository and set path
@@ -93,7 +93,7 @@ echo "export PATH=/usr/local/cuda/bin:$PATH" > /etc/profile.d/cudapath.sh
 echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/cudapath.sh
 
 # Remove NVIDIA Driver 418.39 which is not working with CUDA 10.0. The driver was installed automatically when installing CUDA Tookit
-yum remove nvidia-driver-418.39-4.el7.x86_64.rpm
+yum remove -y nvidia-driver-418.39
 
 # Remove NDIVIA-repository for not installing any updates for NVIDIA
 rm -f /etc/yum.repos.d/cuda.repo
@@ -161,8 +161,8 @@ pip install --upgrade pip
 pip install ipython
 
 #==============================================================================
-# Install Tensorflow Nightly build with GPU support (unstable). Support for
-# CUDA 10 and cuDNN 7.
+# Install Tensorflow with GPU support (unstable).
+# Support for CUDA 10 and cuDNN 7.
 #==============================================================================
 
 pip install --ignore-installed tensorflow-gpu
@@ -225,9 +225,11 @@ pkill -SIGHUP dockerd
 
 # Info: Run a TensorFlow container
 # cd /root
-# docker pull tensorflow/tensorflow # Download latest image
-# docker run -it -p 8888:8888 tensorflow/tensorflow # Start a Jupyter notebook server
+# nvidia-docker run -d --name tensorflow-gpu-py3-jupyter -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter
+## nvidia-docker exec -it tensorflow-gpu-py3-jupyter bash
+## jupyter notebook list
+## http://127.0.0.1:8888/?token=[token]
 
 yum update -y
 
-DO-NOT-INSTALL-CUDA
+# DO-NOT-INSTALL-CUDA
