@@ -75,6 +75,8 @@ sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 # lshw -numeric -C display
 # nvidia-smi
 
+: <<'DO-NOT-INSTALL-CUDA'
+
 #==============================================================================
 # Install CUDA Toolkit using repository and set path
 #==============================================================================
@@ -167,5 +169,7 @@ pip install --ignore-installed tensorflow-gpu
 # In [5]: print(sess.run(hello))
 # In [6]: quit
 #==============================================================================
+
+DO-NOT-INSTALL-CUDA
 
 yum update -y
