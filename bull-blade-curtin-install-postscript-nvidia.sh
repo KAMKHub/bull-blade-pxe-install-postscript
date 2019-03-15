@@ -93,12 +93,18 @@ echo "export PATH=/usr/local/cuda/bin:$PATH" > /etc/profile.d/cudapath.sh
 echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/cudapath.sh
 
 # Remove NVIDIA Driver 418.39 which is not working with CUDA 10.0. The driver was installed automatically when installing CUDA Tookit
+# rmmod nvidia_drm
+# rmmod nvidia_modeset
+# rmmod nvidia -v
+
 yum remove -y nvidia-driver-418.39
 
 # Remove NDIVIA-repository for not installing any updates for NVIDIA
 rm -f /etc/yum.repos.d/cuda.repo
 
 # Reinstall NVIDIA Driver 410.79
+## DOES NOT WORK YET. HAVE TO INSTALL AFTER THE BOOT.
+## lsmod
 cd /root
 sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 

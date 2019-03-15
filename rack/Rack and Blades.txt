@@ -13,8 +13,16 @@ RACK 2 CHASSIS 1 - CMC11 Chassis (1st from up): http://172.28.0.94
 * JANNE     CSC55 / blade55n: http://172.28.201.55/home.asp
 * JP        CSC56 / blade56n: http://172.28.201.56/home.asp
 
-RACK 2 CHASIS 3 - CMC13 Chassis (3rd from up): http://172.28.0.92
-* HULIS - Whole rack for testing purposes
+RACK 2 - CMC12 Chassis 2 (2nd from up): http://172.28.0.93
+* JUKKA CSC60 / blade60-nvidia: http://172.28.201.60/home.asp
+* JUKKA CSC61 / blade61-nvidia: http://172.28.201.61/home.asp
+* JUKKA CSC62 / blade62-nvidia: http://172.28.201.62/home.asp
+* JUKKA CSC63 / blade63-nvidia: http://172.28.201.63/home.asp
+* JUKKA CSC64 / blade64-nvidia: http://172.28.201.64/home.asp
+* JUKKA CSC65 / blade65-nvidia: http://172.28.201.65/home.asp
+* JUKKA CSC66 / blade66-nvidia: http://172.28.201.66/home.asp
+* JUKKA CSC28 / blade28-intel: http://172.28.201.28/home.asp
+* JUKKA CSC29 / blade29-intel: http://172.28.201.29/home.asp
 
 === Rack / Chassis ===
 
@@ -108,26 +116,28 @@ RACK 2 - CMC11 Chassis 1 (1st from up): http://172.28.0.94
 * CSC58 / blade58: EMPTY
 
 RACK 2 - CMC12 Chassis 2 (2nd from up): http://172.28.0.93
-* CSC60 / blade60: http://172.28.201.60/home.asp
-* CSC61 / blade61: http://172.28.201.61/home.asp
-* CSC62 / blade62: http://172.28.201.62/home.asp
-* CSC63 / blade63: http://172.28.201.63/home.asp
-* CSC64 / blade64: http://172.28.201.64/home.asp
-* CSC65 / blade65: http://172.28.201.65/home.asp
-* CSC66 / blade66: http://172.28.201.66/home.asp
-* CSC67 / blade67: EMPTY
-* CSC68 / blade68: EMPTY
+* CSC60 / blade60-nvidia: http://172.28.201.60/home.asp
+* CSC61 / blade61-nvidia: http://172.28.201.61/home.asp
+* CSC62 / blade62-nvidia: http://172.28.201.62/home.asp
+* CSC63 / blade63-nvidia: http://172.28.201.63/home.asp
+* CSC64 / blade64-nvidia: http://172.28.201.64/home.asp
+* CSC65 / blade65-nvidia: http://172.28.201.65/home.asp
+* CSC66 / blade66-nvidia: http://172.28.201.66/home.asp
+* CSC28 / blade28-intel: http://172.28.201.28/home.asp
+* CSC29 / blade29-intel: http://172.28.201.29/home.asp
 
 RACK 2 - CMC13 Chassis 3 (3rd from up): http://172.28.0.92
-* CSC53 / blade53: http://172.28.201.53/home.asp
-* CSC54 / blade54: http://172.28.201.54/home.asp
-* CSC23 / blade23: http://172.28.201.23/home.asp
-* CSC24 / blade24: http://172.28.201.24/home.asp
-* CSC25 / blade25: http://172.28.201.25/home.asp
-* CSC26 / blade26: http://172.28.201.26/home.asp
-* CSC27 / blade27: http://172.28.201.27/home.asp
-* CSC28 / blade28: http://172.28.201.28/home.asp
-* CSC29 / blade29: http://172.28.201.29/home.asp
+* CSC53 / blade53-nvidia: http://172.28.201.53/home.asp
+* CSC54 / blade54-nvidia: http://172.28.201.54/home.asp
+* CSC23 / blade23-intel: http://172.28.201.23/home.asp
+* CSC24 / blade24-intel: http://172.28.201.24/home.asp
+* CSC25 / blade25-intel: http://172.28.201.25/home.asp
+* CSC26 / blade26-intel: http://172.28.201.26/home.asp
+* CSC27 / blade27-intel: http://172.28.201.27/home.asp
+* CSC28 / blade28-intel: http://172.28.201.28/home.asp
+* CSC29 / blade29-intel: http://172.28.201.29/home.asp
+* CSC67 / blade67: EMPTY
+* CSC68 / blade68: EMPTY
 
 RACK 2 - CMC14 Chassis 4 (4th from up): http://172.28.0.91
 * CSC80 / blade80: http://172.28.201.80/home.asp
