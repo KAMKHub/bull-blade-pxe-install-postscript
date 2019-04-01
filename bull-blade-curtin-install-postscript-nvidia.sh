@@ -230,7 +230,7 @@ pkill -SIGHUP dockerd
 # nvidia-docker run --rm nvidia/cuda:10.0-base nvidia-smi
 
 # Info: Run a TensorFlow container
-# cd /root
+# cd
 # nvidia-docker run -d --name tensorflow-gpu-py3-jupyter -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter
 ## nvidia-docker exec -it tensorflow-gpu-py3-jupyter bash
 ## jupyter notebook list
