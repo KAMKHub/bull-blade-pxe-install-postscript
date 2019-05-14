@@ -30,8 +30,9 @@ RACK 2 - CMC15 Chassis 5 (5th from up): http://172.28.0.90
 
 === Blades NOT in use ===
 
-* CSC82 / blade82-nvidia: http://172.28.201.82/home.asp (leaking coolant)
-* CSC93 / blade93-nvidia: http://172.28.201.93/home.asp (not booting)
+* CSC02 / blade2-intel: http://172.28.201.2/home.asp (Balde management not responding)
+* CSC82 / blade82-nvidia: http://172.28.201.82/home.asp (Leaking coolant)
+* CSC93 / blade93-nvidia: http://172.28.201.93/home.asp (Not booting)
 
 === Rack / Chassis ===
 
@@ -56,15 +57,15 @@ RACK 2
 == Blade-management ==
 
 RACK 1 - CMC6 Chassis 1 (1st from up): http://172.28.0.89
-* CSC01 / blade01: http://172.28.201.1/home.asp
+* CSC01 / blade01-intel: http://172.28.201.1/home.asp
 * TYHJÄ
-* CSC03 / blade03: http://172.28.201.3/home.asp
-* CSC04 / blade04: http://172.28.201.4/home.asp
-* CSC05 / blade05: http://172.28.201.5/home.asp
-* CSC06 / blade06: http://172.28.201.6/home.asp
-* CSC07 / blade07: http://172.28.201.7/home.asp
-* CSC08 / blade08: http://172.28.201.8/home.asp
-* CSC09 / blade09: http://172.28.201.9/home.asp
+* CSC03 / blade03-intel: http://172.28.201.3/home.asp
+* CSC04 / blade04-intel: http://172.28.201.4/home.asp
+* CSC05 / blade05-intel: http://172.28.201.5/home.asp
+* CSC06 / blade06-intel: http://172.28.201.6/home.asp
+* CSC07 / blade07-intel: http://172.28.201.7/home.asp
+* CSC08 / blade08-intel: http://172.28.201.8/home.asp
+* CSC09 / blade09-intel: http://172.28.201.9/home.asp
 
 RACK 1 - CMC5 Chassis 2 (2nd from up): http://172.28.0.88
 * CSC11 / blade11-intel: http://172.28.201.11/home.asp
