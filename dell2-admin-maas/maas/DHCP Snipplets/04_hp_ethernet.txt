@@ -1,0 +1,59 @@
+### MAAS Name: hp ethernet, Type: Subnet, Applies to: 172.28.0.0/16
+
+# Blade ethernet addresses
+
+host hp-065
+{
+hardware ethernet e8:39:35:f0:43:b4;
+fixed-address 172.28.203.65;
+option host-name "hp-065";
+}
+
+host hp-066
+{
+hardware ethernet e8:39:35:f0:36:a0;
+fixed-address 172.28.203.66;
+option host-name "hp-066";
+}
+
+host hp-067
+{
+hardware ethernet e8:39:35:f0:34:04;
+fixed-address 172.28.203.67;
+option host-name "hp-067";
+}
+
+host hp-068
+{
+hardware ethernet e8:39:35:f0:41:00;
+fixed-address 172.28.203.68;
+option host-name "hp-068";
+}
+
+host hp-069
+{
+hardware ethernet e8:39:35:f0:35:44;
+fixed-address 172.28.203.69;
+option host-name "hp-069";
+}
+
+host hp-070
+{
+hardware ethernet e8:39:35:f0:46:18;
+fixed-address 172.28.203.70;
+option host-name "hp-070";
+}
+
+host hp-071
+{
+hardware ethernet e8:39:35:f0:3f:dc;
+fixed-address 172.28.203.71;
+option host-name "hp-071";
+}
+
+host hp-101
+{
+hardware ethernet 00:9c:02:97:cd:38;
+fixed-address 172.28.203.101;
+option host-name "hp-101";
+}
