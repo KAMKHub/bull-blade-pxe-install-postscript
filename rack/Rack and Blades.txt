@@ -1,6 +1,6 @@
 === Blades NOT in use ===
 
-* CSC02 / blade2-intel: http://172.28.201.2/home.asp (Balde management not responding)
+* CSC02 / blade2-intel: http://172.28.201.2/home.asp (Blade management not responding)
 * CSC82 / blade82-nvidia: http://172.28.201.82/home.asp (Leaking coolant)
 
 === Rack / Chassis ===
