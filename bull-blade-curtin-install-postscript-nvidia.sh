@@ -68,7 +68,7 @@ grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
 # Install NVIDIA driver from the source (required approach for CentOS 7).
 cd /root
 yum install -y dkms
-wget http://172.28.0.253/centos7_x64_everything_1804/nvidia/NVIDIA-Linux-x86_64-410.79.run
+wget http://172.28.0.254/centos7_x64_everything_1804/nvidia/NVIDIA-Linux-x86_64-410.79.run
 sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 
 # Info: How to test NVIDIA driver
@@ -127,7 +127,7 @@ sh NVIDIA-Linux-x86_64-410.79.run --dkms -s
 #==============================================================================
 
 cd /root
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.254/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
 rpm -Uvh libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
 
 #==============================================================================
@@ -135,7 +135,7 @@ rpm -Uvh libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
 #==============================================================================
 
 cd /root
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.254/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
 rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
 
 #==============================================================================
@@ -143,7 +143,7 @@ rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
 #==============================================================================
 
 cd /root
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.254/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
 rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
 
 #==============================================================================

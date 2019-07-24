@@ -45,10 +45,10 @@ sed -i -r 's/.?PermitRootLogin.+/PermitRootLogin yes/' /etc/ssh/sshd_config
 #==============================================================================
 
 cd /root
-wget "http://172.28.0.253/centos7_x64_everything_1804/mpss-modules-3.10.0-862.el7.x86_64-3.8.4-1.x86_64.rpm"
+wget "http://172.28.0.254/centos7_x64_everything_1804/mpss-modules-3.10.0-862.el7.x86_64-3.8.4-1.x86_64.rpm"
 rpm -Uvh mpss-modules-3.10.0-862.el7.x86_64-3.8.4-1.x86_64.rpm
 modprobe mic
-wget "http://172.28.0.253/centos7_x64_everything_1804/mpss-3.8.4-linux.tar"
+wget "http://172.28.0.254/centos7_x64_everything_1804/mpss-3.8.4-linux.tar"
 tar -xf mpss-3.8.4-linux.tar
 yum -y install mpss-3.8.4/*.rpm
 yum -y install mpss-3.8.4/perf/*.rpm

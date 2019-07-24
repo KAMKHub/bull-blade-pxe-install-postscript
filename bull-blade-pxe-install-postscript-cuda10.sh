@@ -102,7 +102,7 @@ echo "LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> /etc/profile.d/
 #==============================================================================
 
 cd /root
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.254/centos7_x64_everything_1804/libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
 rpm -Uvh libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
 
 #==============================================================================
@@ -110,7 +110,7 @@ rpm -Uvh libcudnn7-7.4.2.24-1.cuda10.0.x86_64.rpm
 #==============================================================================
 
 cd /root
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.254/centos7_x64_everything_1804/libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
 rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
 
 #==============================================================================
@@ -118,7 +118,7 @@ rpm -Uvh libcudnn7-devel-7.4.2.24-1.cuda10.0.x86_64.rpm
 #==============================================================================
 
 cd /root
-wget http://172.28.0.253/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
+wget http://172.28.0.254/centos7_x64_everything_1804/libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
 rpm -Uvh libcudnn7-doc-7.4.2.24-1.cuda10.0.x86_64.rpm
 
 #==============================================================================
